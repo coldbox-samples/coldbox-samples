@@ -13,7 +13,7 @@ Description :
 Modification History:
 3/19/2007 - Created Template
 ---------------------------------------------------------------------->
-<cfcomponent name="users" extends="coldbox.system.eventhandler" output="false" autowire="true">
+<cfcomponent name="users" extends="coldbox.system.EventHandler" output="false" autowire="true">
 	
 	<!--- Dependency Injection from the cache --->
 	<cfproperty name="Transfer" type="ocm" scope="instance" />

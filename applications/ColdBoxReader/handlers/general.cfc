@@ -10,7 +10,7 @@ feb/13/2006 - Oscar Arevalo
 aug/20/2006 - Luis Majano
 	- Modified for 1.1.0
 ----------------------------------------------------------------------->
-<cfcomponent name="general" extends="coldbox.system.eventhandler" output="false" autowire="true">
+<cfcomponent name="general" extends="coldbox.system.EventHandler" output="false" autowire="true">
 
 	<!--- Dependency Injections --->
 	<cfproperty name="userService" type="ioc" scope="instance" />

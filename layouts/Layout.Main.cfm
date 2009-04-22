@@ -2,25 +2,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>ColdBox: A ColdFusion Framework : #getResource("samplesgallery")#</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="description" content="Your website description goes here" />
-<meta name="keywords" content="your,keywords,goes,here" />
-
-<link rel="stylesheet" href="includes/styles/andreas08.css" type="text/css" media="screen,projection" />
-<link rel="stylesheet" href="includes/javascript/Thickbox/ThickBox.css" type="text/css" media="screen,projection" />
-<link rel="stylesheet" href="includes/javascript/tabs/tabs.css" type="text/css" media="screen,projection" />
-
-<!--- JQUERY CODE --->
-<script language="javascript" src="includes/javascript/jquery-latest.pack.js"></script>
-<script language="javascript" src="includes/javascript/Thickbox/thickbox.js"></script>
-<script language="javascript" src="includes/javascript/tabs/jquery.tabs.pack.js"></script>
-
-<script language="javascript">
-$(document).ready(function() {
-      $('##mytabs').tabs({fxFade: true, fxSpeed: 'fast'});
-  });
-</script>
+	<title>ColdBox: A ColdFusion Framework : #getResource("samplesgallery")#</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Your website description goes here" />
+	<meta name="keywords" content="your,keywords,goes,here" />
+	
+	<base href="#getSetting("htmlBaseURL")#" />
+	
+	<link rel="stylesheet" href="includes/styles/andreas08.css" type="text/css" media="screen,projection" />
+	<link rel="stylesheet" href="includes/javascript/Thickbox/ThickBox.css" type="text/css" media="screen,projection" />
+	<link rel="stylesheet" href="includes/javascript/tabs/tabs.css" type="text/css" media="screen,projection" />
+	
+	<!--- JQUERY CODE --->
+	<script language="javascript" src="includes/javascript/jquery-latest.pack.js"></script>
+	<script language="javascript" src="includes/javascript/Thickbox/thickbox.js"></script>
+	<script language="javascript" src="includes/javascript/tabs/jquery.tabs.pack.js"></script>
+	
+	<script language="javascript">
+	$(document).ready(function() {
+	      $('##mytabs').tabs({fxFade: true, fxSpeed: 'fast'});
+	  });
+	</script>
 </head>
 
 <body>
@@ -32,16 +34,16 @@ $(document).ready(function() {
 
 	<div id="navigation">
 		<ul>
-			<li class="selected"><a href="#cgi.SCRIPT_NAME#">#getResource("sampleshome")#</a></li>
+			<li class="selected"><a href="index.cfm">#getResource("sampleshome")#</a></li>
 			<li><a href="http://www.luismajano.com"  target="_blank">Luis Majano</a></li>
-			<li><a href="http://www.coldboxframework.com"  target="_blank">ColdBox Site</a></li>
+			<li><a href="http://www.coldboxframework.com"  target="_blank">Official ColdBox Site</a></li>
 		</ul>
 
 		<div align="right">
 		#getResource("changelanguage")#
-		<select name="locale" onChange="window.location='index.cfm?event=ehSamples.doChangeLocale&locale=' + this.value">
-		   	<option value="en_US" <cfif getPlugin("i18n").getfwLocale() eq "en_US">selected</cfif>>English</option>
-		   	<option value="es_SV" <cfif getPlugin("i18n").getfwLocale() eq "es_SV">selected</cfif>>Spanish</option>
+		<select name="locale" onChange="window.location='#event.buildLink('samples.doChangeLocale')#/locale/' + this.value">
+		   	<option value="en_US" <cfif getfwLocale() eq "en_US">selected="selected"</cfif>>English</option>
+		   	<option value="es_SV" <cfif getfwLocale() eq "es_SV">selected="selected"</cfif>>Spanish</option>
 		</select>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_2.6.0.xsd">
+	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_3.0.0.xsd">
 	<Settings>
 		<Setting name="AppName"						value="Illudium PU-36 Code Generator"/>
 		<Setting name="DebugMode" 					value="false" />
@@ -22,7 +22,7 @@
 		<Setting name="MessageboxStyleOverride"		value="" />
 		<Setting name="HandlersIndexAutoReload"   	value="false" />
 		<Setting name="ConfigAutoReload"          	value="false" />
-		<Setting name="MyPluginsLocation"   		value="" />
+		<Setting name="PluginsExternalLocation"   		value="" />
 		<Setting name="HandlerCaching" 				value="true"/>
 	</Settings>
 
@@ -36,9 +36,6 @@
 
 	<!--Emails to Send bug reports, you can create as many as you like-->
 	<BugTracerReports />
-
-	<!--List url dev environments, this determines your dev/pro environment for the framework-->
-	<DevEnvironments />
 
 	<WebServices />
 	

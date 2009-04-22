@@ -10,7 +10,7 @@ Description :
 	This proxy is an inherited coldbox remote proxy used for enabling
 	coldbox as a model framework.
 ----------------------------------------------------------------------->
-<cfcomponent name="ehAjax" extends="coldbox.system.eventhandler" output="false">
+<cfcomponent name="ehAjax" extends="coldbox.system.EventHandler" output="false">
 	
 	<!--- This init format is mandatory if you are writing init code else is optional, include the super.init(arguments.controller). ---> 
 	<cffunction name="init" access="public" returntype="any" output="false">

@@ -1,0 +1,131 @@
+﻿@charset "utf-8";
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a {
+	font:Arial, Helvetica, sans-serif;
+	color: #06C;
+}
+a:hover {
+	color: #F60;
+}
+blockquote {
+	font-style:italic;
+}
+em {
+	color: #03C;
+}
+li {
+	list-style:square;
+}
+li a {
+	list-style:square;
+	font-size:13px;
+	font-family:Verdana, Geneva, sans-serif;
+	text-decoration:none;
+}
+h1 {
+	font-size: 18px;
+	font-weight:normal;
+	color: #FFF;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	margin:0px;
+}
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+	padding-bottom:4px;
+	border-bottom:1px solid #CCC;
+}
+h3 {
+	font-size: 17px;
+	font-weight: bold;
+	color:#633;
+}
+h4 {
+	font-size: 15px;
+	font-weight: bold;
+}
+img {
+	margin: 4px;
+	vertical-align: top;
+}
+pre { 
+	color:#006;
+}
+
+.bracket {
+	color:#000;
+	font-weight:bold;
+}
+.cfcomments { 
+	color:#000000;
+	background-color:#FF9;
+}
+.cftag { 
+	color:#606;
+	font-weight:bold;
+}
+.docContents {
+	background-color:#CC9;
+	float:right;
+	padding:8px;
+	text-indent:0px;
+	margin:10px;
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+}
+.docContents li {
+	list-style:none;
+}
+.docContents li a {
+	font-size:11px;
+}
+.docC1 {
+	text-indent:12px;
+}
+.docC2 {
+	text-indent:24px;
+}
+.dropfont {
+	font-size:12px;
+}
+.framing {
+	margin-left:40px;
+	margin-right:40px;
+}
+.imgCaption {
+	font-family:"MS Serif", "New York", serif;
+	font-size:12px;
+	font-style:italic;
+}
+.imgFrame {
+	border:1px solid #CCC;
+	padding:4px;
+}
+.note {
+	font-size:13px;
+	color:#F00;
+}
+.orderedList {
+	list-style:decimal;
+}
+.scrcomments {
+	color:#030;
+}
+.titles {
+	font:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #069;
+	padding: 5px 5px 5px 5px;
+	height: 30px;
+	text-align:center;
+}

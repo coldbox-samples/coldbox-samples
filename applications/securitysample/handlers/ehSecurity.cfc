@@ -1,4 +1,4 @@
-<cfcomponent name="ehSecurity" extends="coldbox.system.eventhandler" output="false" autowire="true">
+<cfcomponent name="ehSecurity" extends="coldbox.system.EventHandler" output="false" autowire="true">
 	
 	<cfproperty name="securityManager" type="ioc" scope="variables">
 	

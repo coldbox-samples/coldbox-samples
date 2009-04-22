@@ -1,4 +1,4 @@
-<cfcomponent name="ehProduct" extends="coldbox.system.eventhandler" output="false">
+<cfcomponent name="ehProduct" extends="coldbox.system.EventHandler" output="false">
 	
 	<cffunction name="dspProducts" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">

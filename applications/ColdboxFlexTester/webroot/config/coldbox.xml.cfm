@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_2.6.0.xsd">
+	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_3.0.0.xsd">
 	<Settings>
 		<Setting name="AppName" 					value="Coldbox Flex Tester"/>
 		<Setting name="AppMapping" 					value="/coldbox/samples/applications/ColdboxFlexTester/webroot"/>
@@ -28,7 +28,7 @@
 		<Setting name="ConfigAutoReload"			value="false" />
 		<Setting name="ExceptionHandler"     		value="" />
 		<Setting name="onInvalidEvent" 				value="" />
-		<Setting name="MyPluginsLocation" 			value=""/>
+		<Setting name="PluginsExternalLocation" 			value=""/>
 		<Setting name="HandlerCaching" 				value="false"/>
 		<Setting name="IOCFramework" 				value=""/>
 		<Setting name="IOCDefinitionFile"		 	value=""/>
@@ -48,11 +48,6 @@
 	<BugTracerReports>
 		<BugEmail>info@coldboxframework.com</BugEmail>
 	</BugTracerReports>
-
-	<DevEnvironments>
-		<url>dev</url>
-		<url>lmajano</url>
-	</DevEnvironments>
 
 	<WebServices >
 		<WebService URL="http://www.test.com/test.cfc?wsdl" name="TestWS"/>

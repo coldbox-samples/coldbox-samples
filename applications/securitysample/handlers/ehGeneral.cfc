@@ -1,4 +1,4 @@
-<cfcomponent name="ehGeneral" extends="coldbox.system.eventhandler" output="false">
+<cfcomponent name="ehGeneral" extends="coldbox.system.EventHandler" output="false">
 	
 	<cffunction name="index" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_2.6.0.xsd">
+	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_3.0.0.xsd">
 	<Settings>
 		<Setting name="AppName" 					value="Coldbox Samples Browser"/>
 		<Setting name="DebugMode" 					value="false"/>
@@ -10,10 +10,10 @@
 		<Setting name="EnableColdfusionLogging" 	value="false"/>
 		<Setting name="EnableColdboxLogging"   		value="true" />
 		<Setting name="ColdboxLogsLocation"	   		value="logs" />
-		<Setting name="DefaultEvent" 				value="ehSamples.dspHome"/>
+		<Setting name="DefaultEvent" 				value="Samples.index"/>
 		<Setting name="RequestStartHandler" 		value=""/>
 		<Setting name="RequestEndHandler" 			value=""/>
-		<Setting name="ApplicationStartHandler" 	value="ehSamples.onAppInit"/>
+		<Setting name="ApplicationStartHandler" 	value=""/>
 		<Setting name="OwnerEmail" 					value="myemail@gmail.com"/>
 		<Setting name="EnableBugReports" 			value="false"/>
 		<Setting name="UDFLibraryFile" 				value=""/>
@@ -22,7 +22,7 @@
 		<Setting name="MessageboxStyleOverride" 	value=""/>
 		<Setting name="HandlersIndexAutoReload" 	value="false"/>
 		<Setting name="ConfigAutoReload" 			value="false"/>
-		<Setting name="MyPluginsLocation" 			value="" />
+		<Setting name="PluginsExternalLocation" 	value="" />
 		<Setting name="HandlerCaching" 				value="true" />
 		<Setting name="EventCaching" 				value="true" />
 	</Settings>
@@ -51,9 +51,6 @@
 	<!--Emails to Send bug reports-->
 	<BugTracerReports />
 
-	<!--List url dev environments, this determines your dev/pro environment-->
-	<DevEnvironments />
-
 	<!--Webservice declarations your use in your app, if not use, leave blank
 		<WebServices />
 	-->
@@ -70,10 +67,14 @@
 		<DefaultResourceBundle>includes/i18n/main</DefaultResourceBundle>
 		<!--Java Standard Locale-->
 		<DefaultLocale>en_US</DefaultLocale>
-		<!--session or client-->
+		<!--session or client or cookie-->
 		<LocaleStorage>cookie</LocaleStorage>
 	</i18N>
 	
-	<Interceptors />
+	<Interceptors >
+		<Interceptor class="coldbox.system.interceptors.SES">
+			<Property name="configFile">config/routes.cfm</Property>
+		</Interceptor>
+	</Interceptors>
 
 </Config>

@@ -7,7 +7,7 @@ Modification History:
 Sep/25/2005 - Luis Majano
 	-Created the template.
 ----------------------------------------------------------------------->
-<cfcomponent name="ehGeneral" extends="coldbox.system.eventhandler" output="false">
+<cfcomponent name="ehGeneral" extends="coldbox.system.EventHandler" output="false">
 
 	<!--- ************************************************************* --->
 	<cffunction name="onAppStart" access="public" returntype="void" output="false">

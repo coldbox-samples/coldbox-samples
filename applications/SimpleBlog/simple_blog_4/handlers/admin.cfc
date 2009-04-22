@@ -6,10 +6,10 @@ Description :
 
 Please note that the extends needs to point to the eventhandler.cfc
 in the ColdBox system directory.
-extends = coldbox.system.eventhandler
+extends = coldbox.system.EventHandler
 	
 ----------------------------------------------------------------------->
-<cfcomponent displayname="admin" extends="coldbox.system.eventhandler" output="false" autowire="true">
+<cfcomponent displayname="admin" extends="coldbox.system.EventHandler" output="false" autowire="true">
 	
 	<!--- Dependencies --->
 	<cfproperty name="SecurityService" type="ioc" scope="instance">

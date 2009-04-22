@@ -1,4 +1,4 @@
-<cfcomponent name="user" extends="coldbox.system.eventhandler" output="false" autowire="true">
+<cfcomponent name="user" extends="coldbox.system.EventHandler" output="false" autowire="true">
 	
 	<!--- Dependency Injections --->
 	<cfproperty name="tagService"  type="ioc" scope="instance" />

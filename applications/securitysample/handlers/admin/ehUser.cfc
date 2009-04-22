@@ -1,4 +1,4 @@
-<cfcomponent name="ehUser" extends="coldbox.system.eventhandler" output="false">
+<cfcomponent name="ehUser" extends="coldbox.system.EventHandler" output="false">
 	
 	<cffunction name="dspUsers" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="coldbox.system.beans.requestContext">

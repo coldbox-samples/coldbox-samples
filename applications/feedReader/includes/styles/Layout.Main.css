@@ -1,0 +1,91 @@
+﻿@charset "utf-8";
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a {
+	font:Arial, Helvetica, sans-serif;
+	/*font-size: 12px;*/
+	color: #06C;
+}
+a:hover {
+	color: #F60;
+}
+blockquote {
+	font-style:italic;
+	padding-bottom:10px;
+	text-indent:0px;
+}
+em {
+	color: #03C;
+}
+fieldset {
+	border: 1px solid gray;
+}
+h1 {
+	font-size: 18px;
+	font-weight:normal;
+	color: #FFF;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	margin:0px;
+}
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+	padding-bottom:4px;
+	border-bottom:1px solid #CCC;
+}
+h3 {
+	font-size: 17px;
+	font-weight: bold;
+	color:#633;
+}
+h4 {
+	font-size: 15px;
+	font-weight: bold;
+}
+img {
+	border: 0px;
+	margin: 4px;
+	vertical-align: top;
+}
+label {
+	font-weight: bold;
+	color:#666;
+}
+legend {
+	font-size: 17px;
+	font-weight: bold;
+}
+#footnote {
+	font-size: 11px;
+	font-weight: normal;
+	color:#999;
+}
+.divider {
+	border-bottom:1px solid grey;
+}
+.feedImg {
+	margin-left:20px;
+	margin-right:20px;
+}
+.itemstat {
+	font-size:10px;
+}
+.keywords {
+	padding-bottom:14px;
+	font-size:11px;
+}
+.logo {
+	float:right;
+	border:0px;
+}
+.pageStats {
+	font-size:14px;
+	text-align:center;
+}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_2.6.0.xsd">
+	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_3.0.0.xsd">
 	<Settings>
 		<!--The name of your application.-->
 		<Setting name="AppName"						value="lightwiresample"/>
@@ -49,7 +49,7 @@
 		<!--Flag to auto reload the config.xml settings. False for production. -->
 		<Setting name="ConfigAutoReload"          	value="true" />
 		<!-- Declare the custom plugins base invocation path, if used. You have to use dot notation.Example: mymapping.myplugins	-->
-		<Setting name="MyPluginsLocation"   		value="" />
+		<Setting name="PluginsExternalLocation"   		value="" />
 		<!--Flag to cache handlers. Default if left blank is true. -->
 		<Setting name="HandlerCaching" 				value="false"/>
 		<!--IOC Framework if Used, else leave blank-->
@@ -79,12 +79,6 @@
 	<BugEmail>myemail@gmail.com</BugEmail>	
 	-->
 	<BugTracerReports></BugTracerReports>
-
-	<!--List url dev environments, this determines your dev/pro environment for the framework-->
-	<DevEnvironments>
-		<url>dev</url>
-		<url>dev1</url>
-	</DevEnvironments>
 
 	<!--Webservice declarations your use in your application, if not use, leave blank
 	Note that for the same webservice name you can have a development url and a production url.

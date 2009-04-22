@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_2.6.0.xsd">
+	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_3.0.0.xsd">
 	<Settings>
 		<Setting name="AppName" 					value="Sample UDF Library Usage"/>
 		<Setting name="DebugMode" 					value="true"/>
@@ -21,7 +21,7 @@
 		<Setting name="MessageboxStyleOverride" 		value=""/>
 		<Setting name="HandlersIndexAutoReload" 	value="false"/>
 		<Setting name="ConfigAutoReload" 			value="false"/>
-		<Setting name="MyPluginsLocation" 			value=""/>
+		<Setting name="PluginsExternalLocation" 			value=""/>
 	</Settings>
 
 	<YourSettings />
@@ -36,11 +36,6 @@
 	<BugTracerReports>
 		<!--<BugEmail>cfcoldbox@gmail.com</BugEmail>-->
 	</BugTracerReports>
-
-	<DevEnvironments>
-		<url>dev</url>
-		<url>localhost</url>
-	</DevEnvironments>
 
 	<WebServices />
 

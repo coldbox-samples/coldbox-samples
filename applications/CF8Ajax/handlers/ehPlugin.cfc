@@ -8,7 +8,7 @@ Author      :	Sana Ullah
 Date        :	March 05 2008
 Description :	ColdBox Plugins are very powerfull for AOP, I will try to have sample of each one.
 ----------------------------------------------------------------------->
-<cfcomponent name="ehPlugin" extends="coldbox.system.eventhandler" output="false">
+<cfcomponent name="ehPlugin" extends="coldbox.system.EventHandler" output="false">
 	
 	<!--- This init format is mandatory if you are writing init code else is optional, include the super.init(arguments.controller). ---> 
 	<cffunction name="init" access="public" returntype="any" output="false">

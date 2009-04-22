@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_2.6.0.xsd">
+	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_3.0.0.xsd">
 	<Settings>
 		<!--The name of your app-->
 		<Setting name="AppName" 				value="Sample Login Application"/>
@@ -38,11 +38,6 @@
 	<BugTracerReports>
 		<!--<BugEmail>cfcoldbox@gmail.com</BugEmail>-->
 	</BugTracerReports>
-
-	<!--List url dev environments, this determines your dev/pro environment-->
-	<DevEnvironments>
-		<url>dev</url>
-	</DevEnvironments>
 
 	<!--Webservice declarations your use in your app, if not use, leave blank
 	<WebServices />

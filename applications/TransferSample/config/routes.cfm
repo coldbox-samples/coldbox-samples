@@ -56,7 +56,7 @@
 	of which course to use.
 	
 	Here's the general setup:
-	<cfset addCourse(	pattern="handler/action/:id",	# Set the pattern
+	<cfset addRoute(	pattern="handler/action/:id",	# Set the pattern
 						handler="handler_name",		# Set the handler
 						action="action_name" )>				# Set the action
 						
@@ -82,19 +82,19 @@
 	to put quotes and stuff
 	
 	Examples:
-	<cfset addCourse(	pattern="blog/entry/:year/:month/:day",
+	<cfset addRoute(	pattern="blog/entry/:year/:month/:day",
 						handler="blog",
 						action="entry" )>
-	<cfset addCourse(	pattern="profile/view/:username",
+	<cfset addRoute(	pattern="profile/view/:username",
 						handler="profile",
 						action="view" )>	
-	<cfset addCourse(":handler/:action/:id")>
-	<cfset addCourse(":handler/:action")>
-	<cfset addCourse(":handler")>			
+	<cfset addRoute(":handler/:action/:id")>
+	<cfset addRoute(":handler/:action")>
+	<cfset addRoute(":handler")>			
 -------------------------------------------- --->
 					
 <!--- CUSTOM COURSES GO HERE (they will be checked in order) --->
 
 
 <!--- STANDARD COLDBOX COURSES, DO NOT MODIFY UNLESS YOU DON'T LIKE THEM --->
-<cfset addCourse(":handler/:action?/:id?")>
+<cfset addRoute(":handler/:action?/:id?")>

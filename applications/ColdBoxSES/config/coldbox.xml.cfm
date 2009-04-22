@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_2.6.0.xsd">
+	xsi:noNamespaceSchemaLocation="http://www.coldboxframework.com/schema/config_3.0.0.xsd">
 	<Settings>
 		<!--The name of your application.-->
 		<Setting name="AppName"						value="ColdBox_SES_Sample"/>
@@ -69,7 +69,7 @@
 		<!--Flag to auto reload the config.xml settings. False for production. -->
 		<Setting name="ConfigAutoReload"          	value="false" />
 		<!-- Declare the custom plugins base invocation path, if used. You have to use dot notation.Example: mymapping.myplugins	-->
-		<Setting name="MyPluginsLocation"   		value="" />
+		<Setting name="PluginsExternalLocation"   		value="" />
 		<!-- Declare the external views location. It can be relative to this app or external. This in turn is used to do cfincludes. -->
 		<Setting name="ViewsExternalLocation" 		value=""/>
 		<!-- Declare the external handlers base invocation path, if used. You have to use dot notation.Example: mymapping.myhandlers	-->
@@ -163,16 +163,11 @@
 	-->
 	<BugTracerReports/>
 
-	<!--List url dev environments, this determines your dev/pro environment for the framework-->
-	<DevEnvironments>
-		<url>dev</url>
-	</DevEnvironments>
-
 	<!--Webservice declarations your use in your application, if not use, leave blank
 	Note that for the same webservice name you can have a development url and a production url.
 	<WebServices>
-		<WebService name="TESTWS1" URL="http://www.test.com/test1.cfc?wsdl" DevURL="http://dev.test.com/test1.cfc?wsdl" />
-		<WebService name="TESTWS2" URL="http://www.test.com/test2.cfc?wsdl" DevURL="http://dev.test.com/test2.cfc?wsdl" />
+		<WebService name="TESTWS1" URL="http://www.test.com/test1.cfc?wsdl" />
+		<WebService name="TESTWS2" URL="http://www.test.com/test2.cfc?wsdl" />
 	</WebServices>
 	-->
 	<WebServices />
