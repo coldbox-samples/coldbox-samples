@@ -2,8 +2,8 @@
 <cfsetting showDebugOutput="No">
 <!--- Look for two application variables we are using to store the feed updated date and ETag --->
 <cfif getplugin('applicationstorage').exists('feedETag') and getplugin('applicationstorage').exists('feedTimeStamp')>
-  <cfset rc.feedETag = getplugin('applicationstorage').getVar('feedETag')/>
-  <cfset rc.feedTimeStamp = getplugin('applicationstorage').getVar('feedTimeStamp')/>
+	<cfset rc.feedETag = getplugin('applicationstorage').getVar('feedETag')/>
+	<cfset rc.feedTimeStamp = getplugin('applicationstorage').getVar('feedTimeStamp')/>
 </cfif>
 <!--- Scan the incoming HTTP header for a Conditional Get 'If-Modified-Since' request --->
 <cfif StructKeyExists(GetHttpRequestData().headers, "If-Modified-Since")>
@@ -11,7 +11,7 @@
 	<cfset rc.httpModSinceDate = ParseDateTime(GetHttpRequestData().headers["If-Modified-Since"])/>
   <!--- Compare the Conditional Get value with our application variables --->
 	<cfif DateDiff("n", rc.feedTimeStamp, rc.httpModSinceDate) is 0 and GetHttpRequestData().headers["If-None-Match"] eq rc.feedETag>
-  	<!--- If the compare matches, send a header 304 code stating our feed has not changed.
+	<!--- If the compare matches, send a header 304 code stating our feed has not changed.
 		      This tells the browser or reader to use a local cache copy --->
 		<cfheader statuscode="304" statustext="Not Modified"/> 
 		<cfabort/>

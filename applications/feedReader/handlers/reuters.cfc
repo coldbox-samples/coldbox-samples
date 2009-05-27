@@ -22,7 +22,7 @@ Description :
 		<cfargument name="Event" type="any">
 		<cfset var rc = event.getCollection()>
 		<!--- Default values when there is no form submission --->
-    
+		
 		<!--- Set the View To Display, after Logic --->
 		<cfset Event.setView("reuters/empty")>
 	</cffunction>
@@ -31,13 +31,13 @@ Description :
 	<cffunction name="list" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = event.getCollection()>
-    <!--- Obtain Reuters Top News feed --->
-    <cfset rc.getReutersURL = '#getSetting("ReutersURL")#?format=xml'/>
+		<!--- Obtain Reuters Top News feed --->
+		<cfset rc.getReutersURL = '#getSetting("ReutersURL")#?format=xml'/>
 		<cfset rc.rdata = getPlugin("feedReader").readFeed(Feedurl=rc.getReutersURL,itemsType="query")>
-    <!--- Organise data --->
+		<!--- Organise data --->
 		<cfset Event.setView("reuters/results")>
 	</cffunction>
 
 <!------------------------------------------- PRIVATE EVENTS ------------------------------------------>
-  
+	
 </cfcomponent>

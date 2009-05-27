@@ -9,7 +9,7 @@ body {
 	margin-bottom: 0px;
 }
 a {
-	font:Arial, Helvetica, sans-serif;
+	font-family:Arial, Helvetica, sans-serif;
 	color: #06C;
 }
 a:hover {
@@ -120,7 +120,7 @@ pre {
 	color:#030;
 }
 .titles {
-	font:Arial, Helvetica, sans-serif;
+	font-family:Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
 	color: #FFF;

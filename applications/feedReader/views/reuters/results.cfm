@@ -5,11 +5,11 @@
 <blockquote>#rc.rdata.description#</blockquote>
 <div class="itemstat">#rc.rdata.rights.copyright#</div>
 <p class="keywords divider">Reuters Feed URL: <a href="#rc.getReutersURL#">#rc.getReutersURL#</a><br />
-Last News Revision: #TimeFormat(rc.rdata.datebuilt,'h:mm tt')#, #DateFormat(rc.rdata.datebuilt,'d mmm. yyyy')#
+Last News Revision: #getPlugin("i18n").datetimeLocaleFormat(rc.rdata.datebuilt,'long')#
 </cfoutput>
 </p>
 <cfoutput query="rc.rdata.items">
 	<h3 style="margin-bottom:0px;padding-bottom:0px;"><a href="#rc.rdata.items.url#">#rc.rdata.items.title#</a></h3>
-  <h5 style="margin-top:0px;padding-top:0px;">#TimeFormat(rc.rdata.items.dateUpdated,'h:mm tt')#, #getPlugin(plugin="Utilities",customPlugin=true).numberSuffix(DateFormat(rc.rdata.items.dateUpdated,'d'))# #DateFormat(rc.rdata.items.dateUpdated,'mmmm yyyy')#</h5>
-  <blockquote class="divider" style="margin:0px;padding:0px;">#rc.rdata.items.body#</blockquote>
+	<h5 style="margin-top:0px;padding-top:0px;">#getPlugin("i18n").datetimeLocaleFormat(rc.rdata.items.dateUpdated,'long')#</h5>
+	<blockquote class="divider" style="margin:0px;padding:0px;">#rc.rdata.items.body#</blockquote>
 </cfoutput>
