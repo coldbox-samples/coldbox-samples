@@ -1,5 +1,5 @@
 ﻿<div class="framing">
-	<cfif rc.compileFeed>
+	<cfif len(rc.compileFeed)>
 	<!--- If the Request Collection compileFeed variable is true display this message --->
 	<h2>Congratulations the feed was successfully updated</h2>
 	<cfelse>
