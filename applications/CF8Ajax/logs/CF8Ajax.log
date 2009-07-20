@@ -1,0 +1,3 @@
+"Severity","Appender","Date","Time","Category","Message"
+"WARN","coldboxfile","07/19/2009","18:15:44","CF8Ajax","The BeanFactory definition file cannot be located -> /cf8ajax/config/ModelMappings.cfm"
+"WARN","coldboxfile","07/19/2009","18:16:30","CF8Ajax","The BeanFactory definition file cannot be located -> /cf8ajax/config/ModelMappings.cfm"
