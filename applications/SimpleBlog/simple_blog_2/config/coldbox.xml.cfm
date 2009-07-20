@@ -27,12 +27,6 @@
 		<Setting name="EventName" 					value="event"/>
 		<!--This feature is enabled by default to permit the url dumpvar parameter-->
 		<Setting name="EnableDumpVar"				value="true" />
-		<!--Log Errors and entries on the coldfusion server logs, disabled by default if not used-->
-		<Setting name="EnableColdfusionLogging" 	value="false" />
-		<!--Log Errors and entries in ColdBox's own logging facilities. You choose the location, finally per application logging.-->
-		<Setting name="EnableColdboxLogging"		value="true" />
-		<!--The absolute or relative path to where you want to store your log files for this application-->
-		<Setting name="ColdboxLogsLocation"			value="logs" />
 		<!--Default Event to run if no event is set or passed. Usually the event to be fired first (NOTE: use event handler syntax)-->
 		<Setting name="DefaultEvent" 				value="general.index"/>
 		<!--Event Handler to run on the start of a request, leave blank if not used. Emulates the Application.cfc onRequestStart method	-->
@@ -110,6 +104,26 @@
 	<YourSettings>
 		
 	</YourSettings>
+	
+	<!-- 
+		ColdBox Logging via LogBox
+		Levels: -1=OFF,0=FATAL,1=ERROR,2=WARN,3=INFO,4=DEBUG,5=TRACE
+	-->
+	<LogBox>
+		<!-- Log to console -->
+		<Appender name="console" class="coldbox.system.logging.appenders.ConsoleAppender" />
+		<!-- Log to ColdBox Files -->
+		<Appender name="coldboxfile" class="coldbox.system.logging.appenders.AsyncRollingFileAppender">
+			<Property name="filePath">logs</Property>
+			<Property name="fileName">${AppName}</Property>
+			<Property name="autoExpand">true</Property>
+			<Property name="fileMaxSize">2000</Property>
+			<Property name="fileMaxArchives">2</Property>		
+		</Appender>
+		<!-- Root Logger Definition -->
+		<Root levelMin="0" levelMax="4" appenders="*" />
+		<!-- Category Definitions Below -->
+	</LogBox>
 	
 	<!-- Custom Conventions : You can override the framework wide conventions
 		<Conventions>

@@ -40,13 +40,6 @@
 		<Setting name="onInvalidEvent" 				value=""/>
 		<Setting name="CustomErrorTemplate"			value="" />
 		
-		<!-- Logging -->
-		<Setting name="EnableColdfusionLogging" 	value="false"/>
-		<Setting name="EnableColdboxLogging" 		value="true"/>
-		<Setting name="ColdboxLogsLocation" 		value="logs"/>
-		<!-- 0-fatal,1-error,2-warning,3-information,4-debug -->
-		<Setting name="DefaultLogLevel" 			value="4"/>
-
 		<!-- Application Aspects -->
 		<Setting name="HandlerCaching" 				value="false"/>
 		<Setting name="EventCaching" 				value="false"/>
@@ -74,16 +67,25 @@
 		
 	</YourSettings>
 	
-	<!-- Custom Conventions : You can override the framework wide conventions of the locations of the needed objects
-	<Conventions>
-		<handlersLocation></handlersLocation>
-		<pluginsLocation></pluginsLocation>
-		<layoutsLocation></layoutsLocation>
-		<viewsLocation></viewsLocation>
-		<eventAction></eventAction>	
-		<modelsLocation></modelsLocation>	
-	</Conventions>	
+	<!-- 
+		ColdBox Logging via LogBox
+		Levels: -1=OFF,0=FATAL,1=ERROR,2=WARN,3=INFO,4=DEBUG,5=TRACE
 	-->
+	<LogBox>
+		<!-- Log to console -->
+		<Appender name="console" class="coldbox.system.logging.appenders.ConsoleAppender" />
+		<!-- Log to ColdBox Files -->
+		<Appender name="coldboxfile" class="coldbox.system.logging.appenders.AsyncRollingFileAppender">
+			<Property name="filePath">logs</Property>
+			<Property name="fileName">${AppName}</Property>
+			<Property name="autoExpand">true</Property>
+			<Property name="fileMaxSize">2000</Property>
+			<Property name="fileMaxArchives">2</Property>		
+		</Appender>
+		<!-- Root Logger Definition -->
+		<Root levelMin="0" levelMax="4" appenders="*" />
+		<!-- Category Definitions Below -->
+	</LogBox>
 	
 	<!--
 	PersistentTracers : Activate tracers in your application for development

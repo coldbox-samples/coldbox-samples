@@ -8,9 +8,6 @@
 		<Setting name="ReinitPassword" 				value=""/>
 		<Setting name="EventName" 					value="event"/>
 		<Setting name="EnableDumpVar"				value="true" />
-		<Setting name="EnableColdfusionLogging" 	value="false" />
-		<Setting name="EnableColdboxLogging"		value="false" />
-		<Setting name="ColdboxLogsLocation"			value="logs" />
 		<Setting name="DefaultEvent" 				value="examples.index"/>
 		<Setting name="RequestStartHandler" 		value="main.onRequestStart"/>
 		<Setting name="RequestEndHandler" 			value=""/>
@@ -43,6 +40,26 @@
 	<YourSettings>
 		<Setting name="ColdBoxSideBar" value="false" />
  	</YourSettings>
+	
+	<!-- 
+		ColdBox Logging via LogBox
+		Levels: -1=OFF,0=FATAL,1=ERROR,2=WARN,3=INFO,4=DEBUG,5=TRACE
+	-->
+	<LogBox>
+		<!-- Log to console -->
+		<Appender name="console" class="coldbox.system.logging.appenders.ConsoleAppender" />
+		<!-- Log to ColdBox Files -->
+		<Appender name="coldboxfile" class="coldbox.system.logging.appenders.AsyncRollingFileAppender">
+			<Property name="filePath">logs</Property>
+			<Property name="fileName">${AppName}</Property>
+			<Property name="autoExpand">true</Property>
+			<Property name="fileMaxSize">2000</Property>
+			<Property name="fileMaxArchives">2</Property>		
+		</Appender>
+		<!-- Root Logger Definition -->
+		<Root levelMin="0" levelMax="4" appenders="*" />
+		<!-- Category Definitions Below -->
+	</LogBox>
 	
 	<DebuggerSettings>
 		<PersistentRequestProfiler>true</PersistentRequestProfiler>

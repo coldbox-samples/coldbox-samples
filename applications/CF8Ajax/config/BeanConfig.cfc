@@ -67,7 +67,7 @@ Adds a constructor property to a bean.
 
 	<cffunction name="init" output="false" returntype="any" hint="I initialize the config bean.">
 		<cfscript>
-			var ColdboxFactory = CreateObject("component","coldbox.system.extras.ColdboxFactory");
+			var ColdboxFactory = CreateObject("component","coldbox.system.ioc.ColdboxFactory");
 			var dsn	= ColdboxFactory.getDatasource("cfartgallery").getAlias();
 			// Call the base init() method to set sensible defaults. Do NOT remove this.
 			Super.init();

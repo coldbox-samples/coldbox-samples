@@ -42,7 +42,7 @@ Description :
 		<cfargument name="targetPage" type="string" required="true" />
 		<!--- ************************************************************* --->
 		<cfsetting enablecfoutputonly="yes">
-
+		<cfsetting showdebugoutput="false">
 		<!--- Reload Checks --->
 		<cfset reloadChecks()>
 		
