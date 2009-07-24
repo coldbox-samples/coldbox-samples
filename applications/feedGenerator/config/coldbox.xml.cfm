@@ -26,7 +26,6 @@
 		<Setting name="PluginsExternalLocation"   		value="" />
 		<Setting name="ViewsExternalLocation" 		value=""/>
 		<Setting name="HandlersExternalLocation"   	value="" />
-		<Setting name="ModelsExternalLocation"   	value="" />
 		<Setting name="HandlerCaching" 				value="false"/>
 		<Setting name="EventCaching" 				value="false"/>
 		<Setting name="IOCFramework"				value="" />
@@ -57,7 +56,7 @@
 			<Property name="fileMaxArchives">2</Property>		
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="0" levelMax="4" appenders="*" />
+		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 	

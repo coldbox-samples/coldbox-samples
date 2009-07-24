@@ -47,17 +47,6 @@
 		<Setting name="MessageboxStyleOverride"		value="false" />
 		<Setting name="ProxyReturnCollection" 		value="false"/>
 		<Setting name="FlashURLPersistScope" 		value="session"/>
-		
-		<!--Model Integration -->
-		<Setting name="ModelsExternalLocation"   	value="" />
-		<Setting name="ModelsObjectCaching"   		value="true" />
-		<Setting name="ModelsDefinitionFile" 		value="config/ModelMappings.cfm"/>
-		<!-- Uncomment More Model Integration Settings:
-			<Setting name="ModelsSetterInjection"   	value="false" />
-			<Setting name="ModelsDICompleteUDF"   		value="onDIComplete" />
-			<Setting name="ModelsStopRecursion"   		value="" />
-			<Setting name="ModelsDebugMode"   			value="true" />
-		-->
 	</Settings>
 
 	<!-- Complex Settings follow JSON Syntax. www.json.org.  
@@ -83,7 +72,7 @@
 			<Property name="fileMaxArchives">2</Property>		
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="0" levelMax="4" appenders="*" />
+		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 	

@@ -49,7 +49,7 @@
 			<Property name="fileMaxArchives">2</Property>		
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="0" levelMax="4" appenders="*" />
+		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 
