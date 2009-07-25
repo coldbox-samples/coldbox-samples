@@ -6,9 +6,7 @@
 		<Setting name="DebugMode" 					value="true"/>
 		<Setting name="DebugPassword" 				value=""/>
 		<Setting name="EventName" 					value="event"/>
-		<Setting name="EnableDumpVar" 				value="true"/>
 		<Setting name="DefaultEvent" 				value="Samples.index"/>
-		<Setting name="EnableBugReports" 			value="false"/>
 		<Setting name="HandlersIndexAutoReload" 	value="false"/>
 		<Setting name="ConfigAutoReload" 			value="false"/>
 		<Setting name="HandlerCaching" 				value="true" />
@@ -52,17 +50,6 @@
 		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
-
-	<!--Optional,if blank it will use the CFMX administrator settings.-->
-	<MailServerSettings />
-
-	<!--Emails to Send bug reports-->
-	<BugTracerReports />
-
-	<!--Webservice declarations your use in your app, if not use, leave blank
-		<WebServices />
-	-->
-	<WebServices/>
 
 	<!--Declare Layouts for your app here-->
 	<Layouts>
