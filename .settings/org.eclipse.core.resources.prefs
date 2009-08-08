@@ -1,3 +1,25 @@
-#Sat Jul 25 13:28:05 PDT 2009
+#Sat Aug 08 11:20:42 PDT 2009
 eclipse.preferences.version=1
+encoding//applications/CF8Ajax/config/coldbox.xml.cfm=UTF-8
+encoding//applications/CF9/config/coldbox.xml.cfm=UTF-8
+encoding//applications/ColdBoxReader/config/coldbox.xml.cfm=UTF-8
+encoding//applications/ColdBoxSES/config/coldbox.xml.cfm=UTF-8
+encoding//applications/ColdboxFlexTester/webroot/config/coldbox.xml.cfm=UTF-8
+encoding//applications/NewsWebservice/config/coldbox.xml.cfm=UTF-8
+encoding//applications/SimpleBlog/simple_blog/config/coldbox.xml.cfm=UTF-8
+encoding//applications/SimpleBlog/simple_blog_2/config/coldbox.xml.cfm=UTF-8
+encoding//applications/SimpleBlog/simple_blog_3/config/coldbox.xml.cfm=UTF-8
+encoding//applications/SimpleBlog/simple_blog_4/config/coldbox.xml.cfm=UTF-8
+encoding//applications/TransferSample/config/coldbox.xml.cfm=UTF-8
+encoding//applications/cfcGenerator/config/coldbox.xml.cfm=UTF-8
+encoding//applications/cfcViewerSample/config/coldbox.xml.cfm=UTF-8
+encoding//applications/feedGenerator/config/coldbox.xml.cfm=ISO-8859-1
+encoding//applications/feedReader/config/coldbox.xml.cfm=ISO-8859-1
+encoding//applications/helloworld/config/coldbox.xml.cfm=UTF-8
+encoding//applications/i18NSample/config/coldbox.xml.cfm=UTF-8
+encoding//applications/javaloader/config/coldbox.xml.cfm=UTF-8
+encoding//applications/lightwiresample/config/coldbox.xml.cfm=UTF-8
+encoding//applications/sampleloginapp/config/coldbox.xml.cfm=UTF-8
+encoding//applications/securitysample/config/coldbox.xml.cfm=UTF-8
+encoding//applications/udf_library_usage/config/coldbox.xml.cfm=UTF-8
 encoding//config/coldbox.xml.cfm=UTF-8

@@ -6,12 +6,9 @@
 		<Setting name="DebugMode" 				value="true" />
 		<Setting name="DebugPassword" 			value="Coldbox"/>
 		<Setting name="EventName" 					value="event"/>
-		<Setting name="EnableDumpVar"			value="true" />
 		<Setting name="DefaultEvent" 			value="ehGeneral.dspHello"/>
 		<Setting name="RequestStartHandler" 	value=""/>
 		<Setting name="RequestEndHandler" 		value=""/>
-		<Setting name="OwnerEmail"				value="myemail@email.com" />
-		<Setting name="EnableBugReports" 		value="true"/>
 		<Setting name="UDFLibraryFile" 			value="" />
 		<Setting name="CustomErrorTemplate" 	value=""/>
 		<Setting name="ExceptionHandler" 		value=""/>
@@ -38,7 +35,7 @@
 			<Property name="fileMaxArchives">2</Property>		
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
+		<Root levelMin="FATAL" levelMax="DEBUG" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 

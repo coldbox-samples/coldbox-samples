@@ -2,7 +2,7 @@
 <beans default-autowire="byName">
     
 	<!-- ColdBox Related Beans -->
-	<bean id="ColdboxFactory" class="coldbox.system.extras.ColdboxFactory" autowire="no" />
+	<bean id="ColdboxFactory" class="coldbox.system.ioc.ColdboxFactory" autowire="no" />
     <bean id="datasourceBean" factory-bean="ColdBoxFactory" factory-method="getDatasource">
 		<constructor-arg name="alias">
 			<value>coldboxreader</value>

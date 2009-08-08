@@ -8,18 +8,14 @@
 		<Setting name="DebugPassword" 				value=""/>
 		<Setting name="ReinitPassword" 				value=""/>
 		<Setting name="EventName" 					value="event"/>
-		<Setting name="EnableDumpVar" 				value="true"/>
 		<Setting name="DefaultEvent" 				value="ehFlex.nothing"/>
 		<Setting name="RequestStartHandler" 		value=""/>
 		<Setting name="RequestEndHandler" 			value=""/>
 		<Setting name="ApplicationStartHandler"		value="ehGeneral.onApplicationStart" />
 		<Setting name="SessionStartHandler"		    value="" />
 		<Setting name="SessionEndHandler"		    value="" />
-		<Setting name="OwnerEmail" 					value="info@luismajano.com"/>
-		<Setting name="EnableBugReports" 			value="false"/>
 		<Setting name="UDFLibraryFile" 				value="" />
 		<Setting name="CustomErrorTemplate"			value="" />
-		<Setting name="CustomEmailBugReport"		value="" />
 		<Setting name="MessageboxStyleOverride"		value="false" />
 		<Setting name="HandlersIndexAutoReload"   	value="true" />
 		<Setting name="ConfigAutoReload"			value="false" />
@@ -27,9 +23,6 @@
 		<Setting name="onInvalidEvent" 				value="" />
 		<Setting name="PluginsExternalLocation" 			value=""/>
 		<Setting name="HandlerCaching" 				value="false"/>
-		<Setting name="IOCFramework" 				value=""/>
-		<Setting name="IOCDefinitionFile"		 	value=""/>
-		<Setting name="IOCObjectCaching"			value=""/>
 		<Setting name="RequestContextDecorator"		value="" />		
 		<Setting name="ProxyReturnCollection" 		value="false" />
 	</Settings>
@@ -49,13 +42,10 @@
 		<!-- Log to ColdBox Files -->
 		<Appender name="coldboxfile" class="coldbox.system.logging.appenders.AsyncRollingFileAppender">
 			<Property name="filePath">logs</Property>
-			<Property name="fileName">${AppName}</Property>
-			<Property name="autoExpand">true</Property>
-			<Property name="fileMaxSize">2000</Property>
-			<Property name="fileMaxArchives">2</Property>		
+			<Property name="fileName">${AppName}</Property>	
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
+		<Root levelMin="FATAL" levelMax="DEBUG" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 	
@@ -68,7 +58,7 @@
 
 	<WebServices >
 		<WebService URL="http://www.test.com/test.cfc?wsdl" name="TestWS"/>
-		<WebService URL="http://www.coldbox.com/testit.cfc?wsdl" name="AnotherTestWS" DevURL="http://test.coldbox.com/test.cfm?wsdl"/>
+		<WebService URL="http://www.coldbox.com/testit.cfc?wsdl" name="AnotherTestWS"/>
 	</WebServices>
 
 	<Layouts>

@@ -6,13 +6,10 @@
 		<Setting name="DebugMode" 					value="false" />
 		<Setting name="DebugPassword" 				value=""/>
 		<Setting name="EventName" 					value="event"/>
-		<Setting name="EnableDumpVar"				value="true" />
 		<Setting name="DefaultEvent" 				value="generator.dspHome"/>
 		<Setting name="RequestStartHandler" 		value=""/>
 		<Setting name="RequestEndHandler" 			value=""/>
 		<Setting name="ApplicationStartHandler" 	value=""/>
-		<Setting name="OwnerEmail" 					value="" />
-		<Setting name="EnableBugReports" 			value="false"/>
 		<Setting name="UDFLibraryFile" 				value="" />
 		<Setting name="ExceptionHandler"			value="" />
 		<Setting name="CustomErrorTemplate"			value="" />
@@ -44,7 +41,7 @@
 			<Property name="fileMaxArchives">2</Property>		
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
+		<Root levelMin="FATAL" levelMax="DEBUG" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 

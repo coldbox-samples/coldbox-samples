@@ -7,15 +7,12 @@
 		<Setting name="DebugPassword" 				value=""/>
 		<Setting name="ReinitPassword" 				value=""/>
 		<Setting name="EventName" 					value="event"/>
-		<Setting name="EnableDumpVar"				value="true" />
 		<Setting name="DefaultEvent" 				value="youtube.index"/>
 		<Setting name="RequestStartHandler" 		value="main.onRequestStart"/>
 		<Setting name="RequestEndHandler" 			value=""/>
 		<Setting name="ApplicationStartHandler" 	value="main.onAppInit"/>
 		<Setting name="SessionStartHandler" 		value=""/>
 		<Setting name="SessionEndHandler" 			value=""/>
-		<Setting name="OwnerEmail" 					value="" />
-		<Setting name="EnableBugReports" 			value="false"/>
 		<Setting name="UDFLibraryFile" 				value="includes/helpers/ApplicationHelper.cfm" />
 		<Setting name="ExceptionHandler"			value="" />
 		<Setting name="onInvalidEvent" 				value="" />
@@ -28,9 +25,6 @@
 		<Setting name="HandlersExternalLocation"   	value="" />
 		<Setting name="HandlerCaching" 				value="true"/>
 		<Setting name="EventCaching" 				value="true"/>
-		<Setting name="IOCFramework"				value="" />
-		<Setting name="IOCDefinitionFile"			value="" />
-		<Setting name="IOCObjectCaching"			value="false" />
 		<Setting name="RequestContextDecorator" 	value=""/>
 		<Setting name="ProxyReturnCollection" 		value="false"/>
 		<Setting name="FlashURLPersistScope" 		value="session"/>
@@ -62,7 +56,7 @@
 			<Property name="fileMaxArchives">2</Property>		
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
+		<Root levelMin="FATAL" levelMax="DEBUG" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 	

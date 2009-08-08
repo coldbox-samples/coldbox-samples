@@ -10,13 +10,11 @@
 			 is not set, then coldbox will try to auto-calculate it for you. Please read the docs.
 		<Setting name="AppMapping"					value="/MyApp"/> -->
 		<Setting name="EventName"					value="event" />
-		<Setting name="OwnerEmail" 					value="" />
 		
 		<!-- Development Settings -->
 		<Setting name="DebugMode" 					value="true"/>
 		<Setting name="DebugPassword" 				value=""/>
 		<Setting name="ReinitPassword" 				value=""/>
-		<Setting name="EnableDumpVar" 				value="true"/>
 		<Setting name="HandlersIndexAutoReload" 	value="true"/>
 		<Setting name="ConfigAutoReload" 			value="false"/>
 		
@@ -43,7 +41,6 @@
 		<!-- Application Aspects -->
 		<Setting name="HandlerCaching" 				value="false"/>
 		<Setting name="EventCaching" 				value="false"/>
-		<Setting name="EnableBugReports" 			value="false"/>
 		<Setting name="MessageboxStyleOverride"		value="false" />
 		<Setting name="ProxyReturnCollection" 		value="false"/>
 		<Setting name="FlashURLPersistScope" 		value="session"/>
@@ -72,7 +69,7 @@
 			<Property name="fileMaxArchives">2</Property>		
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
+		<Root levelMin="FATAL" levelMax="DEBUG" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 	
@@ -83,7 +80,6 @@
 	maxRCPanelQueryRows : If a query is dumped in the RC panel, it will be truncated to this many rows.
 	-->
 	<DebuggerSettings>
-		<PersistentTracers>true</PersistentTracers>
 		<PersistentRequestProfiler>true</PersistentRequestProfiler>
 		<maxPersistentRequestProfilers>10</maxPersistentRequestProfilers>
 		<maxRCPanelQueryRows>50</maxRCPanelQueryRows>

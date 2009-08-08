@@ -12,8 +12,6 @@
 		<Setting name="ReinitPassword" 				value=""/>
 		<!--Default event name variable to use in URL/FORM etc. -->
 		<Setting name="EventName"					value="event" />
-		<!--This feature is enabled by default to permit the url dumpvar parameter-->
-		<Setting name="EnableDumpVar"				value="true" />
 		<!--Default Event to run if no event is set or passed. Usually the event to be fired first (NOTE: use event handler syntax)-->
 		<Setting name="DefaultEvent" 				value="general.dspHome"/>
 		<!--Event Handler to run on the start of a request, leave blank if not used. Emulates the Application.cfc onRequestStart method	-->
@@ -22,12 +20,6 @@
 		<Setting name="RequestEndHandler" 			value="main.onRequestEnd"/>
 		<!--Event Handler to run at the start of an application, leave blank if not used. Emulates the Application.cfc onApplicationStart method	-->
 		<Setting name="ApplicationStartHandler" 	value="main.onAppInit"/>
-		<!--The Email address from which all outgoing framework emails will be sent. -->
-		<Setting name="OwnerEmail" 					value="myemail@gmail.com" />
-		<!-- Enable Bug Reports to be emailed out, set to true by default if left blank
-			A sample template has been provided to you in includes/generic_error.cfm
-		 -->
-		<Setting name="EnableBugReports" 			value="true"/>
 		<!--UDF Library To Load on every request for your views and handlers -->
 		<Setting name="UDFLibraryFile" 				value="" />
 		<!--The event handler to execute on all framework exceptions. Event Handler syntax required.-->
@@ -46,14 +38,12 @@
 		<Setting name="PluginsExternalLocation"   		value="" />
 		<!--Flag to cache handlers. Default if left blank is true. -->
 		<Setting name="HandlerCaching" 				value="false"/>
-		<!--IOC Framework if Used, else leave blank-->
-		<Setting name="IOCFramework"				value="lightwire" />
-		<!--IOC Definition File Path, relative or absolute -->
-		<Setting name="IOCDefinitionFile"			value="coldbox.samples.applications.lightwiresample.config.BeanConfig" />
-		<!--IOC Object Caching, true/false. For ColdBox to cache your IoC beans-->
-		<Setting name="IOCObjectCaching"			value="false" />
 	</Settings>
 
+	<IOC>
+		<Framework type="lightwire">coldbox.samples.applications.lightwiresample.config.BeanConfig</Framework>
+	</IOC>
+	
 	<!--Your Settings can go here, if not needed, use <YourSettings />. You can use these for anything you like.
 		<YourSettings name="MySetting"  				value="WOW" />
 	 -->
@@ -77,7 +67,7 @@
 			<Property name="fileMaxArchives">2</Property>		
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
+		<Root levelMin="FATAL" levelMax="DEBUG" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 

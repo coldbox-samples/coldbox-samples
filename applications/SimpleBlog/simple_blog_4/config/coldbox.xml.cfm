@@ -24,8 +24,6 @@
 		<Setting name="ReinitPassword" 				value=""/>
 		<!--Event Name -->
 		<Setting name="EventName" 					value="event"/>
-		<!--This feature is enabled by default to permit the url dumpvar parameter-->
-		<Setting name="EnableDumpVar"				value="true" />
 		<!--Default Event to run if no event is set or passed. Usually the event to be fired first (NOTE: use event handler syntax)-->
 		<Setting name="DefaultEvent" 				value="general.index"/>
 		<!--Event Handler to run on the start of a request, leave blank if not used. Emulates the Application.cfc onRequestStart method	-->
@@ -38,10 +36,6 @@
 		<Setting name="SessionStartHandler" 		value=""/>
 		<!--Event Handler to run at the end of a session, leave blank if not used.-->
 		<Setting name="SessionEndHandler" 			value=""/>
-		<!--The Email address from which all outgoing framework emails will be sent. -->
-		<Setting name="OwnerEmail" 					value="myemail@email.com" />
-		<!-- Enable Bug Reports to be emailed out, set to true by default if left blank -->
-		<Setting name="EnableBugReports" 			value="false"/>
 		<!--UDF Library To Load on every request for your views and handlers -->
 		<Setting name="UDFLibraryFile" 				value="" />
 		<!--The event handler to execute on all framework exceptions. Event Handler syntax required.-->
@@ -66,12 +60,6 @@
 		<Setting name="HandlerCaching" 				value="false"/>
 		<!--Flag to cache events if metadata declared. Default is true -->
 		<Setting name="EventCaching" 				value="true"/>
-		<!--IOC Framework if Used, else leave blank-->
-		<Setting name="IOCFramework"				value="coldspring" />
-		<!--IOC Definition File Path, relative or absolute -->
-		<Setting name="IOCDefinitionFile"			value="config/beans.xml.cfm" />
-		<!--IOC Object Caching, true/false. For ColdBox to cache your IoC beans-->
-		<Setting name="IOCObjectCaching"			value="false" />
 		<!--Request Context Decorator, leave blank if not using. Full instantiation path -->
 		<Setting name="RequestContextDecorator" 	value=""/>
 		<!--Flag if the proxy returns the entire request collection or what the event handlers return, default is false -->
@@ -79,6 +67,10 @@
 		<!-- What scope are flash persistance variables using. -->
 		<Setting name="FlashURLPersistScope" 		value="session"/>
 	</Settings>
+	
+	<IOC>
+		<Framework type="coldspring">config/beans.xml.cfm</Framework>
+	</IOC>
 
 	<!-- Your Settings can go here, if not needed, use <YourSettings />. You can use these for anything you like.
 		<YourSettings>
@@ -123,7 +115,7 @@
 			<Property name="fileMaxArchives">2</Property>		
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
+		<Root levelMin="FATAL" levelMax="DEBUG" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 	

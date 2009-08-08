@@ -11,8 +11,6 @@
 		<Setting name="RequestStartHandler" 		value=""/>
 		<Setting name="RequestEndHandler" 			value=""/>
 		<Setting name="ApplicationStartHandler" 	value="" />
-		<Setting name="OwnerEmail" 					value="myemail@email.com" />
-		<Setting name="EnableBugReports" 			value="true"/>
 		<Setting name="UDFLibraryFile" 				value="" />
 		<Setting name="CustomErrorTemplate" 		value=""/>
 		<Setting name="ExceptionHandler" 			value=""/>
@@ -40,7 +38,7 @@
 			<Property name="fileMaxArchives">2</Property>		
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
+		<Root levelMin="FATAL" levelMax="DEBUG" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 

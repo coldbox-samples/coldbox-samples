@@ -6,13 +6,10 @@
 		<Setting name="DebugMode" 					value="false"/>
 		<Setting name="DebugPassword" 				value=""/>
 		<Setting name="EventName" 					value="event"/>
-		<Setting name="EnableDumpVar" 				value="true"/>
 		<Setting name="DefaultEvent" 				value="general.dspStart"/>
 		<Setting name="ApplicationStartHandler"		value=""/>
 		<Setting name="RequestStartHandler" 		value="main.onRequestStart"/>
 		<Setting name="RequestEndHandler" 			value=""/>
-		<Setting name="OwnerEmail" 					value="myemail@email.com"/>
-		<Setting name="EnableBugReports" 			value="false"/>
 		<Setting name="UDFLibraryFile" 				value="" />
 		<Setting name="CustomErrorTemplate" 		value=""/>
 		<Setting name="ExceptionHandler" 			value="main.onException"/>
@@ -20,10 +17,11 @@
 		<Setting name="HandlersIndexAutoReload" 	value="false"/>
 		<Setting name="ConfigAutoReload" 			value="false"/>
 		<Setting name="HandlerCaching"				value="false" />
-		<Setting name="IOCFramework" 				value="lightwire"/>
-		<Setting name="IOCDefinitionFile" 			value="config/services.xml.cfm"/>
-		<Setting name="IOCObjectCaching"			value="true" />
 	</Settings>
+	
+	<IOC>
+		<Framework type="lightwire" objectCaching="true">config/services.xml.cfm</Framework>
+	</IOC>
 
 	<YourSettings>
 		<Setting name="Version" value="2.1.0" />
@@ -46,13 +44,10 @@
 		<!-- Log to ColdBox Files -->
 		<Appender name="coldboxfile" class="coldbox.system.logging.appenders.AsyncRollingFileAppender">
 			<Property name="filePath">logs</Property>
-			<Property name="fileName">${AppName}</Property>
-			<Property name="autoExpand">true</Property>
-			<Property name="fileMaxSize">2000</Property>
-			<Property name="fileMaxArchives">2</Property>		
+			<Property name="fileName">${AppName}</Property>	
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
+		<Root levelMin="FATAL" levelMax="DEBUG" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 

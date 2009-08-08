@@ -2,7 +2,7 @@
 <beans default-autowire="byName">
 	
 	<!-- Coldbox Factory -->
-	<bean id="ColdboxFactory" class="coldbox.system.extras.ColdboxFactory" singleton="true"/>
+	<bean id="ColdboxFactory" class="coldbox.system.ioc.ColdboxFactory" singleton="true"/>
 	
 	
 	<!-- coldbox bean factory -->
@@ -22,7 +22,7 @@
 	
 	
 	<!-- Coldbox-transfer Config Factory -->
-	<bean id="TransferConfigFactory" class="coldbox.system.extras.transfer.TransferConfigFactory" singleton="true" />
+	<bean id="TransferConfigFactory" class="coldbox.system.orm.transfer.TransferConfigFactory" singleton="true" />
 	
 	
 	<!-- Transfer Factory-->
@@ -78,7 +78,7 @@
 	
 	
 	<!-- coldbox-transfer observer -->
-	<bean id="TDOBeanInjectorObserver" class="coldbox.system.extras.transfer.TDOBeanInjectorObserver" lazy-init="false">
+	<bean id="TDOBeanInjectorObserver" class="coldbox.system.orm.transfer.TDOBeanInjectorObserver" lazy-init="false">
 		<constructor-arg name="Transfer"><ref bean="Transfer"></ref></constructor-arg>
 		<constructor-arg name="ColdBoxBeanFactory"><ref bean="ColdBoxBeanFactory"></ref></constructor-arg>
 	</bean>

@@ -28,8 +28,6 @@
 		<Setting name="ReinitPassword" 				value=""/>
 		<!--Default event name variable to use in URL/FORM etc. -->
 		<Setting name="EventName"					value="event" />
-		<!--This feature is enabled by default to permit the url dumpvar parameter-->
-		<Setting name="EnableDumpVar"				value="true" />
 		<!--Default Event to run if no event is set or passed. Usually the event to be fired first (NOTE: use event handler syntax)-->
 		<Setting name="DefaultEvent" 				value="ehGeneral.index"/>
 		<!--Event Handler to run on the start of a request, leave blank if not used. Emulates the Application.cfc onRequestStart method	-->
@@ -48,12 +46,6 @@
 		<Setting name="onInvalidEvent" 				value="" />
 		<!--Full path from the application's root to your custom error page, else leave blank. -->
 		<Setting name="CustomErrorTemplate"			value="" />
-		<!--The Email address from which all outgoing framework emails will be sent. -->
-		<Setting name="OwnerEmail" 					value="" />
-		<!-- Enable Bug Reports to be emailed out, set to true by default if left blank
-			A sample template has been provided to you in includes/generic_error.cfm
-		 -->
-		<Setting name="EnableBugReports" 			value="true"/>
 		<!--UDF Library To Load on every request for your views and handlers -->
 		<Setting name="UDFLibraryFile" 				value="" />
 		<!--Messagebox Style Override. A boolean of wether to override the styles using your own css.-->
@@ -72,12 +64,6 @@
 		<Setting name="HandlerCaching" 				value="true"/>
 		<!--Flag to cache events if metadata declared. Default is true -->
 		<Setting name="EventCaching" 				value="false"/>
-		<!--IOC Framework if Used, else leave blank-->
-		<Setting name="IOCFramework"				value="" />
-		<!--IOC Definition File Path, relative or absolute -->
-		<Setting name="IOCDefinitionFile"			value="" />
-		<!--IOC Object Caching, true/false. For ColdBox to cache your IoC beans-->
-		<Setting name="IOCObjectCaching"			value="false" />
 		<!--Request Context Decorator, leave blank if not using. Full instantiation path -->
 		<Setting name="RequestContextDecorator" 	value=""/>
 		<!--Flag if the proxy returns the entire request collection or what the event handlers return, default is false -->
@@ -132,7 +118,7 @@
 			<Property name="fileMaxArchives">2</Property>		
 		</Appender>
 		<!-- Root Logger Definition -->
-		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
+		<Root levelMin="FATAL" levelMax="DEBUG" appenders="*" />
 		<!-- Category Definitions Below -->
 	</LogBox>
 	

@@ -31,26 +31,6 @@
 		<Setting name="SecurityApp" 		value="applications/securitysample" />
 	</YourSettings>
 	
-	<!-- 
-		ColdBox Logging via LogBox
-		Levels: -1=OFF,0=FATAL,1=ERROR,2=WARN,3=INFO,4=DEBUG,5=TRACE
-	-->
-	<LogBox>
-		<!-- Log to console -->
-		<Appender name="console" class="coldbox.system.logging.appenders.ConsoleAppender" />
-		<!-- Log to ColdBox Files -->
-		<Appender name="coldboxfile" class="coldbox.system.logging.appenders.AsyncRollingFileAppender">
-			<Property name="filePath">logs</Property>
-			<Property name="fileName">${AppName}</Property>
-			<Property name="autoExpand">true</Property>
-			<Property name="fileMaxSize">2000</Property>
-			<Property name="fileMaxArchives">2</Property>		
-		</Appender>
-		<!-- Root Logger Definition -->
-		<Root levelMin="FATAL" levelMax="TRACE" appenders="*" />
-		<!-- Category Definitions Below -->
-	</LogBox>
-
 	<!--Declare Layouts for your app here-->
 	<Layouts>
 		<!--Declare the default layout, this is mandatory-->
