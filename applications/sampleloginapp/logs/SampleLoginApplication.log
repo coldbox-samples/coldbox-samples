@@ -1,0 +1,2 @@
+"Severity","Appender","Date","Time","Category","Message"
+"WARN","coldboxfile","08/08/2009","11:18:32","Sample Login Application","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/sampleloginapp/config/ModelMappings.cfm"

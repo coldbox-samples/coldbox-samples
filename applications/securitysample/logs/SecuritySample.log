@@ -1,0 +1,229 @@
+"Severity","Appender","Date","Time","Category","Message"
+"WARN","coldboxfile","08/08/2009","11:19:28","Security Sample","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/securitysample/config/ModelMappings.cfm"
+"INFO","coldboxfile","08/08/2009","11:19:32","Security Sample","ehGeneral.index Did not match this rule: {permissions={}, roles={Administrator}, securelist={^admin}, whitelist={ehSecurity\..*,main\..*}, redirect={ehSecurity.dspLogin}}"
+"INFO","coldboxfile","08/08/2009","11:19:32","Security Sample","ehGeneral.index Did not match this rule: {permissions={}, roles={User,Administrator}, securelist={^user}, whitelist={ehSecurity\..*,main\..*}, redirect={ehSecurity.dspLogin}}"
+"ERROR","coldboxfile","08/08/2009","11:19:34","Security Sample","Application Execution Exception ExtraInfo:CFErrorType=java.lang.unsupportedoperationexceptionCFMessage=Band count exceeds non-unity number of constants.CFStackTrace=Band count exceeds non-unity number of constants.
+	at javax.media.jai.BorderExtenderConstant.clamp(BorderExtenderConstant.java:84):84
+	at javax.media.jai.BorderExtenderConstant.extend(BorderExtenderConstant.java:238):238
+	at javax.media.jai.PlanarImage.copyExtendedData(PlanarImage.java:2415):2415
+	at com.sun.media.jai.opimage.BorderOpImage.computeTile(BorderOpImage.java:220):220
+	at com.sun.media.jai.util.SunTileScheduler.scheduleTile(SunTileScheduler.java:912):912
+	at javax.media.jai.OpImage.getTile(OpImage.java:1139):1139
+	at javax.media.jai.PlanarImage.copyData(PlanarImage.java:2356):2356
+	at javax.media.jai.RenderedOp.copyData(RenderedOp.java:2310):2310
+	at javax.media.jai.PlanarImage.getAsBufferedImage(PlanarImage.java:2538):2538
+	at javax.media.jai.PlanarImage.getAsBufferedImage(PlanarImage.java:2559):2559
+	at railo.runtime.img.Image.addBorder(Image.java:223):223
+	at railo.runtime.tag.Chart.copy(Chart.java:720):720
+	at railo.runtime.tag.Chart.writeOut(Chart.java:684):684
+	at railo.runtime.tag.Chart.chartPie(Chart.java:515):515
+	at railo.runtime.tag.Chart.doEndTag(Chart.java:439):439
+	at tags.reports.cachereport_cfm$cf.call(/Users/lmajano/Documents/MyDevelopment/Frameworks/transfer/tags/reports/cacheReport.cfm:99):99
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:613):613
+	at railo.runtime.tag.CFTag.doInclude(CFTag.java:536):536
+	at railo.runtime.tag.CFTag.cfmlStartTag(CFTag.java:492):492
+	at railo.runtime.tag.CFTag.doStartTag(CFTag.java:175):175
+	at coldbox.samples.applications.securitysample.layouts.layout_main_cfm322$cf.call(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/layouts/Layout.Main.cfm:53):53
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:613):613
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:594):594
+	at coldbox.system.plugins.renderer_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/Renderer.cfc:226):226
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
+	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
+	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:617):617
+	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
+	at coldbox.system.coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:200):200
+	at coldbox.system.coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
+	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
+	at coldbox.samples.applications.securitysample.application_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/Application.cfc:51):51
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
+	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
+	at railo.runtime.listener.ModernAppListener.call(ModernAppListener.java:282):282
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:102):102
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:23):23
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:1679):1679
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:248):248
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:32):32
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91):91
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103):103
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:175):175
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:240):240
+	at com.caucho.server.hmux.HmuxRequest.handleRequest(HmuxRequest.java:424):424
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:481):481
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:685):685
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:607):607
+	at java.lang.Thread.run(Thread.java:613):613
+	at railo.runtime.op.Caster.toPageException(Caster.java:2923):2923
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:616):616
+	at railo.runtime.tag.CFTag.doInclude(CFTag.java:536):536
+	at railo.runtime.tag.CFTag.cfmlStartTag(CFTag.java:492):492
+	at railo.runtime.tag.CFTag.doStartTag(CFTag.java:175):175
+	at coldbox.samples.applications.securitysample.layouts.layout_main_cfm322$cf.call(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/layouts/Layout.Main.cfm:53):53
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:613):613
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:594):594
+	at coldbox.system.plugins.renderer_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/Renderer.cfc:226):226
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
+	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
+	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:617):617
+	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
+	at coldbox.system.coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:200):200
+	at coldbox.system.coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
+	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
+	at coldbox.samples.applications.securitysample.application_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/Application.cfc:51):51
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
+	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
+	at railo.runtime.listener.ModernAppListener.call(ModernAppListener.java:282):282
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:102):102
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:23):23
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:1679):1679
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:248):248
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:32):32
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91):91
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103):103
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:175):175
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:240):240
+	at com.caucho.server.hmux.HmuxRequest.handleRequest(HmuxRequest.java:424):424
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:481):481
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:685):685
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:607):607
+	at java.lang.Thread.run(Thread.java:613):613
+CFTagContext=ID: ??; LINE: 99; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/Frameworks/transfer/tags/reports/cacheReport.cfm ID: ??; LINE: 53; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/layouts/Layout.Main.cfm ID: ??; LINE: 226; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/Renderer.cfc ID: ??; LINE: 200; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc ID: ??; LINE: 51; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/Application.cfc ID: ??; LINE: 53; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/layouts/Layout.Main.cfm ID: ??; LINE: 226; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/Renderer.cfc ID: ??; LINE: 200; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc ID: ??; LINE: 51; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/Application.cfc"
+"INFO","coldboxfile","08/08/2009","11:19:45","Security Sample","ehGeneral.index Did not match this rule: {permissions={}, roles={Administrator}, securelist={^admin}, whitelist={ehSecurity\..*,main\..*}, redirect={ehSecurity.dspLogin}}"
+"INFO","coldboxfile","08/08/2009","11:19:45","Security Sample","ehGeneral.index Did not match this rule: {permissions={}, roles={User,Administrator}, securelist={^user}, whitelist={ehSecurity\..*,main\..*}, redirect={ehSecurity.dspLogin}}"
+"ERROR","coldboxfile","08/08/2009","11:19:45","Security Sample","Application Execution Exception ExtraInfo:CFErrorType=java.lang.unsupportedoperationexceptionCFMessage=Band count exceeds non-unity number of constants.CFStackTrace=Band count exceeds non-unity number of constants.
+	at javax.media.jai.BorderExtenderConstant.clamp(BorderExtenderConstant.java:84):84
+	at javax.media.jai.BorderExtenderConstant.extend(BorderExtenderConstant.java:238):238
+	at javax.media.jai.PlanarImage.copyExtendedData(PlanarImage.java:2415):2415
+	at com.sun.media.jai.opimage.BorderOpImage.computeTile(BorderOpImage.java:220):220
+	at com.sun.media.jai.util.SunTileScheduler.scheduleTile(SunTileScheduler.java:912):912
+	at javax.media.jai.OpImage.getTile(OpImage.java:1139):1139
+	at javax.media.jai.PlanarImage.copyData(PlanarImage.java:2356):2356
+	at javax.media.jai.RenderedOp.copyData(RenderedOp.java:2310):2310
+	at javax.media.jai.PlanarImage.getAsBufferedImage(PlanarImage.java:2538):2538
+	at javax.media.jai.PlanarImage.getAsBufferedImage(PlanarImage.java:2559):2559
+	at railo.runtime.img.Image.addBorder(Image.java:223):223
+	at railo.runtime.tag.Chart.copy(Chart.java:720):720
+	at railo.runtime.tag.Chart.writeOut(Chart.java:684):684
+	at railo.runtime.tag.Chart.chartPie(Chart.java:515):515
+	at railo.runtime.tag.Chart.doEndTag(Chart.java:439):439
+	at tags.reports.cachereport_cfm$cf.call(/Users/lmajano/Documents/MyDevelopment/Frameworks/transfer/tags/reports/cacheReport.cfm:116):116
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:613):613
+	at railo.runtime.tag.CFTag.doInclude(CFTag.java:536):536
+	at railo.runtime.tag.CFTag.cfmlStartTag(CFTag.java:492):492
+	at railo.runtime.tag.CFTag.doStartTag(CFTag.java:175):175
+	at coldbox.samples.applications.securitysample.layouts.layout_main_cfm322$cf.call(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/layouts/Layout.Main.cfm:53):53
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:613):613
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:594):594
+	at coldbox.system.plugins.renderer_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/Renderer.cfc:226):226
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
+	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
+	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:617):617
+	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
+	at coldbox.system.coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:200):200
+	at coldbox.system.coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
+	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
+	at coldbox.samples.applications.securitysample.application_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/Application.cfc:51):51
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
+	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
+	at railo.runtime.listener.ModernAppListener.call(ModernAppListener.java:282):282
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:102):102
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:23):23
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:1679):1679
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:248):248
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:32):32
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91):91
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103):103
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:175):175
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:240):240
+	at com.caucho.server.hmux.HmuxRequest.handleRequest(HmuxRequest.java:424):424
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:481):481
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:685):685
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:607):607
+	at java.lang.Thread.run(Thread.java:613):613
+	at railo.runtime.op.Caster.toPageException(Caster.java:2923):2923
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:616):616
+	at railo.runtime.tag.CFTag.doInclude(CFTag.java:536):536
+	at railo.runtime.tag.CFTag.cfmlStartTag(CFTag.java:492):492
+	at railo.runtime.tag.CFTag.doStartTag(CFTag.java:175):175
+	at coldbox.samples.applications.securitysample.layouts.layout_main_cfm322$cf.call(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/layouts/Layout.Main.cfm:53):53
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:613):613
+	at railo.runtime.PageContextImpl.doInclude(PageContextImpl.java:594):594
+	at coldbox.system.plugins.renderer_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/Renderer.cfc:226):226
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
+	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
+	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:617):617
+	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
+	at coldbox.system.coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:200):200
+	at coldbox.system.coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
+	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
+	at coldbox.samples.applications.securitysample.application_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/Application.cfc:51):51
+	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
+	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
+	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
+	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
+	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
+	at railo.runtime.listener.ModernAppListener.call(ModernAppListener.java:282):282
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:102):102
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:23):23
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:1679):1679
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:248):248
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:32):32
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91):91
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103):103
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:175):175
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:240):240
+	at com.caucho.server.hmux.HmuxRequest.handleRequest(HmuxRequest.java:424):424
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:481):481
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:685):685
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:607):607
+	at java.lang.Thread.run(Thread.java:613):613
+CFTagContext=ID: ??; LINE: 116; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/Frameworks/transfer/tags/reports/cacheReport.cfm ID: ??; LINE: 53; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/layouts/Layout.Main.cfm ID: ??; LINE: 226; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/Renderer.cfc ID: ??; LINE: 200; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc ID: ??; LINE: 51; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/Application.cfc ID: ??; LINE: 53; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/layouts/Layout.Main.cfm ID: ??; LINE: 226; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/Renderer.cfc ID: ??; LINE: 200; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc ID: ??; LINE: 51; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/securitysample/Application.cfc"
+"WARN","coldboxfile","08/08/2009","11:19:50","Security Sample","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/securitysample/config/ModelMappings.cfm"
+"INFO","coldboxfile","08/08/2009","11:19:52","Security Sample","ehGeneral.index Did not match this rule: {permissions={}, roles={Administrator}, securelist={^admin}, whitelist={ehSecurity\..*,main\..*}, redirect={ehSecurity.dspLogin}}"
+"INFO","coldboxfile","08/08/2009","11:19:52","Security Sample","ehGeneral.index Did not match this rule: {permissions={}, roles={User,Administrator}, securelist={^user}, whitelist={ehSecurity\..*,main\..*}, redirect={ehSecurity.dspLogin}}"
+"INFO","coldboxfile","08/08/2009","11:20:03","Security Sample","ehSecurity.dspLogin found in whitelist: ehSecurity\..*,main\..*"
+"INFO","coldboxfile","08/08/2009","11:20:03","Security Sample","ehSecurity.dspLogin found in whitelist: ehSecurity\..*,main\..*"

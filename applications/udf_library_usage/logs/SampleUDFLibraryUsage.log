@@ -1,0 +1,2 @@
+"Severity","Appender","Date","Time","Category","Message"
+"WARN","coldboxfile","08/08/2009","11:25:16","Sample UDF Library Usage","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/udf_library_usage/config/ModelMappings.cfm"

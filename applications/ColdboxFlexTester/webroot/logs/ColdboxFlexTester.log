@@ -1,0 +1,3 @@
+"Severity","Appender","Date","Time","Category","Message"
+"WARN","coldboxfile","08/08/2009","10:45:56","Coldbox Flex Tester","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/ColdboxFlexTester/webroot/config/ModelMappings.cfm"
+"INFO","coldboxfile","08/08/2009","10:45:56","Coldbox Flex Tester","AppStart Fired"

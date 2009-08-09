@@ -1,0 +1,3 @@
+"Severity","Appender","Date","Time","Category","Message"
+"WARN","coldboxfile","08/08/2009","11:18:09","lightwiresample","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/lightwiresample/config/ModelMappings.cfm"
+"WARN","coldboxfile","08/08/2009","11:18:10","lightwiresample","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/lightwiresample/config/ModelMappings.cfm"
