@@ -82,7 +82,7 @@
 				</p>
 				
 				<!--- Feed Generator --->
-				<h3>Feed Reader Generator</h3>
+				<h3>Feed Generator Samples</h3>
 				<p> #getresource("by")# Ben Garrett
 				  <br />
 				  <a href="applications/feedGenerator/index.cfm" target="_blank">#getresource("opensample")#</a><br />
