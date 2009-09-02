@@ -73,7 +73,21 @@
 				  <br />
 				  <a href="applications/NewsWebservice/index.cfm" target="_blank">#getresource("opensample")#</a><br />
 				</p>
-	
+				
+				<!--- Feed Reader --->
+				<h3>Feed Reader Samples</h3>
+				<p> #getresource("by")# Ben Garrett
+				  <br />
+				  <a href="applications/feedReader/index.cfm" target="_blank">#getresource("opensample")#</a><br />
+				</p>
+				
+				<!--- Feed Generator --->
+				<h3>Feed Reader Generator</h3>
+				<p> #getresource("by")# Ben Garrett
+				  <br />
+				  <a href="applications/feedGenerator/index.cfm" target="_blank">#getresource("opensample")#</a><br />
+				</p>
+
 				<!--- Sample Login App --->
 				<h3>Sample Login App</h3>
 				<p> #getresource("by")# Luis Majano
