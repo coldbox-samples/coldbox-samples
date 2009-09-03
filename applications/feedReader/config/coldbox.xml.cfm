@@ -32,12 +32,14 @@
 
 	<YourSettings>
 		<Setting name="ColdBoxSideBar" value="false" />
-    <Setting name="FlickrURL" value="http://api.flickr.com/services/feeds/photos_public.gne" />
-    <Setting name="FlickrTags" value="all" />
-    <Setting name="ReutersURL" value="http://feeds.reuters.com/reuters/topNews" />
-    <Setting name="YouTubeURL" value="http://gdata.youtube.com/feeds/api/videos" />
-    <Setting name="YouTubeDefaultStartIndex" value="1" />
-    <Setting name="YouTubeDefaultMaxResults" value="5" />
+		<Setting name="APURL" value="http://hosted.ap.org/lineups/WORLDHEADS-rss_2.0.xml" />
+		<Setting name="BBCIntURL" value="http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/world/rss.xml" />
+	    <Setting name="FlickrURL" value="http://api.flickr.com/services/feeds/photos_public.gne" />
+	    <Setting name="FlickrTags" value="all" />
+	    <Setting name="ReutersURL" value="http://feeds.reuters.com/reuters/topNews" />
+	    <Setting name="YouTubeURL" value="http://gdata.youtube.com/feeds/api/videos" />
+	    <Setting name="YouTubeDefaultStartIndex" value="1" />
+	    <Setting name="YouTubeDefaultMaxResults" value="5" />
  	</YourSettings>
  	
  	<!-- 
