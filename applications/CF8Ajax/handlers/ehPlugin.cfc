@@ -19,14 +19,14 @@ Description :	ColdBox Plugins are very powerfull for AOP, I will try to have sam
 	</cffunction>
 	
 	<cffunction name="preHandler" output="false" returntype="void" access="public">
-	  <cfargument name="Event" type="any">
+	  <cfargument name="Event" type="coldbox.system.beans.requestContext">
 	  <cfscript>
 	  //Execute any pre-event code here. Like AOP logging, etc.
 	  </cfscript>
 	</cffunction>
 
 	<cffunction name="dspHome" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- Do Your Logic Here to prepare a view --->
 		<cfset Event.setValue("welcomeMessage","Welcome to ColdBox!")>	
 		<!--- Set the View To Display, after Logic --->
@@ -35,7 +35,7 @@ Description :	ColdBox Plugins are very powerfull for AOP, I will try to have sam
 	
 	<!--- application storage plugin  ---> 
 	<cffunction name="dspApplicationStorage" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- get Request Collection --->
 		<cfset var rc = event.getCollection() />
 		
@@ -52,7 +52,7 @@ Description :	ColdBox Plugins are very powerfull for AOP, I will try to have sam
 	
 	<!--- Session Storage plugin  --->
 	<cffunction name="dspSessionStorage" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- get Request Collection --->
 		<cfset var rc = event.getCollection() />
 		
@@ -69,7 +69,7 @@ Description :	ColdBox Plugins are very powerfull for AOP, I will try to have sam
 	
 	<!--- Session Storage plugin  --->
 	<cffunction name="dspCookieStorage" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- get Request Collection --->
 		<cfset var rc = event.getCollection() />
 		<cfset var UserInfo = structNew() />
@@ -93,7 +93,7 @@ Description :	ColdBox Plugins are very powerfull for AOP, I will try to have sam
 	</cffunction>
 	
 	<cffunction name="postHandler" output="false" returntype="void" access="public">
-	  <cfargument name="Event" type="any">
+	  <cfargument name="Event" type="coldbox.system.beans.requestContext">
 	  <cfscript>
 	  //Execute any pre-event code here. Like AOP logging, etc.
 	  </cfscript>

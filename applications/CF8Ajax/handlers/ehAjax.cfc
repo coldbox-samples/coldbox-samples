@@ -21,7 +21,7 @@ Description :
 	</cffunction>
 
 	<cffunction name="dspHome" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- Do Your Logic Here to prepare a view --->
 		<cfset Event.setValue("welcomeMessage","Welcome to ColdBox!")>	
 		<!--- Set the View To Display, after Logic --->
@@ -30,7 +30,7 @@ Description :
 	
 	<!--- CFGRID example --->
 	<cffunction name="dspGrid" access="public" returntype="any" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- Do Your Logic Here to prepare a view --->
 		<cfset Event.setValue("welcomeMessage","Welcome to ColdBox and CF8 CFGRID!")>
 		<!--- Set the View To Display, after Logic --->
@@ -39,7 +39,7 @@ Description :
 	
 	<!--- CFINPUT Auto Suggest example --->
 	<cffunction name="dspCFInput" access="public" returntype="any" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- Do Your Logic Here to prepare a view --->
 		<cfset Event.setValue("welcomeMessage","Welcome to ColdBox and CF8 CFINPUT Aut-Suggest!")>
 		<!--- Set the View To Display, after Logic --->
@@ -48,21 +48,21 @@ Description :
 	
 	<!--- cfselect with bind --->
 	<cffunction name="dspSelectBind" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- Set the View To Display, after Logic --->
 		<cfset Event.setView("ajax/vwSelectBind")>
 	</cffunction>
 	
 	<!--- cflayout with tabs --->
 	<cffunction name="dspTabLayout" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- Set the View To Display, after Logic --->
 		<cfset Event.setView("ajax/vwTabLayout")>
 	</cffunction>
 	
 	<!--- tab1 content --->
 	<cffunction name="dspTab1" access="public" returntype="string" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- Set the View To Display, after Logic --->
 		<!--- no debuggin panel --->
 		<cfset Event.showdebugpanel(false)  />
@@ -74,7 +74,7 @@ Description :
 	
 	<!--- tab2 content --->
 	<cffunction name="dspTab2" access="public" returntype="any" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- no debuggin panel --->
 		<cfset Event.showdebugpanel(false)  />
 		<!--- set view without any layout --->
@@ -85,12 +85,12 @@ Description :
 	
 	<!--- display ajax example (html data) --->
 	<cffunction name="dspHtmlEvent" access="public" returntype="any" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<cfset Event.setView("ajax/vwHtmlWithEvent")>
 	</cffunction>
 	<!--- send back html data --->
 	<cffunction name="doHtmlEvent" access="public" returntype="any" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- no debuggin panel --->
 		<cfset Event.showdebugpanel(false)  />
 		<!--- set view without any layout --->
@@ -101,7 +101,7 @@ Description :
 	
 	<!--- CFAJAXPROXY feature... using client side javascript  --->
 	<cffunction name="dspAjaxProxy" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		
 		<!--- Do Your Logic Here to prepare a view --->
 		<cfset Event.setValue("welcomeMessage","Welcome to ColdBox and CF8 Ajax Proxy feature!")>	
@@ -111,7 +111,7 @@ Description :
 	
 		<!--- login form --->
 	<cffunction name="dspLogin" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<!--- Set the View To Display, after Logic --->
 		<cfset Event.setView("ajax/vwLoginForm")>
 	</cffunction>

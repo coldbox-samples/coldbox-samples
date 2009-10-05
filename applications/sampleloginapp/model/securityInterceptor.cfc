@@ -26,7 +26,7 @@ Description :
 	<!--- Pre execution process --->
 	<cffunction name="preProcess" access="public" returntype="void" hint="Executes before any event execution occurs" output="false" >
 		<!--- ************************************************************* --->
-		<cfargument name="event" required="true" type="any" hint="The event object.">
+		<cfargument name="event" required="true" type="coldbox.system.beans.requestContext" hint="The event object.">
 		<cfargument name="interceptData" required="true" type="struct" hint="interceptData of intercepted info.">
 		<!--- ************************************************************* --->
 		<cfscript>

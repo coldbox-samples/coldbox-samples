@@ -1,7 +1,7 @@
 <cfcomponent name="ssl" output="false" extends="coldbox.system.interceptor">
 
 	<cffunction name="preEvent" access="public" returntype="void" output="false" >
-		<cfargument name="event" required="true" type="any">
+		<cfargument name="event" required="true" type="coldbox.system.beans.requestContext">
 		
 		<!--- SSL check? --->
 		<cfif getProperty('isSSLCheck')>
@@ -11,7 +11,7 @@
 	</cffunction>
 
 	<cffunction name="sslCheck" access="public" returntype="void" output="false" >
-		<cfargument name="event" required="true" type="any">
+		<cfargument name="event" required="true" type="coldbox.system.beans.requestContext">
 	  	<!--- http or https? --->
 		<cfif not isSSL() and isSSLRequired(arguments.event)>
 			<!--- redirect with SSL (any post data is lost) --->
@@ -32,7 +32,7 @@
 	</cffunction>
 		
 	<cffunction name="isSSLRequired" access="public" returntype="boolean" output="false">
-		<cfargument name="event" required="true" type="any">
+		<cfargument name="event" required="true" type="coldbox.system.beans.requestContext">
 		
 		<cfset var isSSLRequired = false>
 	  	<cfset var currentEvent = LCASE( arguments.event.getCurrentEvent() )>

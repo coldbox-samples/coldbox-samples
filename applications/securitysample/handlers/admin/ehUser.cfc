@@ -1,7 +1,7 @@
 <cfcomponent name="ehUser" extends="coldbox.system.EventHandler" output="false">
 	
 	<cffunction name="dspUsers" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<cfset var rc = Event.getCollection() />
 		<cfset rc.users = getPlugin("ioc").getBean("UserManager").getUsers() />
 		
@@ -13,7 +13,7 @@
 	</cffunction>
 	
 	<cffunction name="dspEditUser" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<cfset var rc = Event.getCollection() />
 		<!--- No user object in Event Collection? (Will exist after validation) --->
 		<cfif not isDefined("rc.user")>
@@ -28,7 +28,7 @@
 	</cffunction>
 	
 	<cffunction name="dspUser" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		<cfset var rc = Event.getCollection() />
 		<!--- No user object passed? --->
 		<cfif not isDefined("rc.user")>
@@ -41,7 +41,7 @@
 	</cffunction>
 	
 	<cffunction name="doSaveUser" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 		
 		<cfset var isValidationError  = 0>
 		<cfset var userType = getPlugin("ioc").getBean("UserManager").getUserType( Event.getValue("userTypeId") )>
@@ -73,7 +73,7 @@
 	</cffunction>
 	
 	<cffunction name="dspDelUser" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 
 		<cfset var rc = Event.getCollection() />
 		<cfset rc.user = getPlugin("ioc").getBean("UserManager").getUser( Event.getValue("userId","") ) />	
@@ -83,7 +83,7 @@
 	</cffunction>
 	
 	<cffunction name="doDelUser" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 
 		<cfset var rc = Event.getCollection() />
 		<cfset rc.user = getPlugin("ioc").getBean("UserManager").getUser( Event.getValue("userId","") ) />
@@ -93,7 +93,7 @@
 	</cffunction>
 	
 	<cffunction name="dspReadByProperty" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
+		<cfargument name="Event" type="coldbox.system.beans.requestContext">
 
 		<cfset var rc = Event.getCollection() />
 		<cfset rc.user = getPlugin("ioc").getBean("UserManager").getUserByUserName( Event.getValue("userName","") ) />	
