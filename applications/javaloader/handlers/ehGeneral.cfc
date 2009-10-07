@@ -11,13 +11,13 @@ Sep/25/2005 - Luis Majano
 
 	<!--- ************************************************************* --->
 	<cffunction name="onAppStart" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="coldbox.system.beans.requestContext">
+		<cfargument name="Event" type="any">
 	</cffunction>
 	<!--- ************************************************************* --->
 
 	<!--- ************************************************************* --->
 	<cffunction name="dspHello" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="coldbox.system.beans.requestContext">
+		<cfargument name="Event" type="any">
 		<cfscript>
 		//Load the hello world class
 		Event.setvalue("HelloWorldObj", getPlugin("JavaLoader").create("HelloWorld").init());

@@ -20,13 +20,13 @@ Modification History:
 
 
 	<cffunction name="dspHome" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="coldbox.system.beans.requestContext">
+		<cfargument name="Event" type="any">
 		<!--- Set the View To Display --->
 		<cfset Event.setView("vwHome")>
 	</cffunction>
 
 	<cffunction name="dspUsers" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="coldbox.system.beans.requestContext">
+		<cfargument name="Event" type="any">
 		<cfset var rc = event.getCollection()>
 		<!--- Do Your Logic Here to prepare a view --->
 		<cfset rc.Users = instance.transfer.list("users.users","lname",false)>
@@ -35,7 +35,7 @@ Modification History:
 	</cffunction>
 
 	<cffunction name="doDelete" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="coldbox.system.beans.requestContext">
+		<cfargument name="Event" type="any">
 		<cfset var rc = event.getCollection()>
 		<cfset var i = 1>
 		<!--- Do Your Logic Here to prepare a view --->
@@ -48,13 +48,13 @@ Modification History:
 	</cffunction>
 
 	<cffunction name="dspAddUser" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="coldbox.system.beans.requestContext">
+		<cfargument name="Event" type="any">
 		<!--- Set the View To Display, after Logic --->
 		<cfset Event.setView("vwAdd")>
 	</cffunction>
 
 	<cffunction name="doAdd" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="coldbox.system.beans.requestContext">
+		<cfargument name="Event" type="any">
 		<cfset var rc = event.getCollection()>
 		<cfset var oUser = "">
 		<!--- Get Transfer Object --->
@@ -69,7 +69,7 @@ Modification History:
 	</cffunction>
 
 	<cffunction name="dspEditUser" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="coldbox.system.beans.requestContext">
+		<cfargument name="Event" type="any">
 		<cfset var rc = event.getCollection()>
 		<!--- Get User id --->
 		<cfset rc.oUser = instance.transfer.get("users.users",rc.id)>
@@ -78,7 +78,7 @@ Modification History:
 	</cffunction>
 
 	<cffunction name="doUpdate" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="coldbox.system.beans.requestContext">
+		<cfargument name="Event" type="any">
 		<cfset var rc = event.getCollection()>
 		<cfset var oUser = "">
 		<!--- Get Transfer Object --->
