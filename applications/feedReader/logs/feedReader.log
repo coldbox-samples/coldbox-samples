@@ -77,8 +77,8 @@
 	at railo.runtime.ComponentImpl.callWithNamedValues(ComponentImpl.java:1505):1505
 	at railo.runtime.util.VariableUtilImpl.callFunctionWithNamedValues(VariableUtilImpl.java:651):651
 	at railo.runtime.PageContextImpl.getFunctionWithNamedValues(PageContextImpl.java:1274):1274
-	at coldbox.system.coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:186):186
-	at coldbox.system.coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
+	at coldbox.system.Coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:186):186
+	at coldbox.system.Coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
 	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
 	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
 	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
@@ -162,8 +162,8 @@
 	at railo.runtime.ComponentImpl.callWithNamedValues(ComponentImpl.java:1505):1505
 	at railo.runtime.util.VariableUtilImpl.callFunctionWithNamedValues(VariableUtilImpl.java:651):651
 	at railo.runtime.PageContextImpl.getFunctionWithNamedValues(PageContextImpl.java:1274):1274
-	at coldbox.system.coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:186):186
-	at coldbox.system.coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
+	at coldbox.system.Coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:186):186
+	at coldbox.system.Coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
 	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
 	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
 	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
@@ -247,8 +247,8 @@
 	at railo.runtime.ComponentImpl.callWithNamedValues(ComponentImpl.java:1505):1505
 	at railo.runtime.util.VariableUtilImpl.callFunctionWithNamedValues(VariableUtilImpl.java:651):651
 	at railo.runtime.PageContextImpl.getFunctionWithNamedValues(PageContextImpl.java:1274):1274
-	at coldbox.system.coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:186):186
-	at coldbox.system.coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
+	at coldbox.system.Coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:186):186
+	at coldbox.system.Coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
 	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
 	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
 	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
