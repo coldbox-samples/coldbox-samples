@@ -17,7 +17,6 @@
 		<Setting name="ExceptionHandler"			value="" />
 		<Setting name="onInvalidEvent" 				value="" />
 		<Setting name="CustomErrorTemplate"			value="" />
-		<Setting name="MessageboxStyleOverride"		value="false" />
 		<Setting name="HandlersIndexAutoReload"   	value="false" />
 		<Setting name="ConfigAutoReload"          	value="false" />
 		<Setting name="PluginsExternalLocation"   		value="" />

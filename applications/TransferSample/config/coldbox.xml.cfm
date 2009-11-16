@@ -27,8 +27,6 @@
 		<Setting name="onInvalidEvent" 				value="users.dspHome" />
 		<!--Full path from the application's root to your custom error page, else leave blank. -->
 		<Setting name="CustomErrorTemplate"			value="" />
-		<!--Messagebox Style (css) class name to use. Look at the messagebox.cfm in the includes directory-->
-		<Setting name="MessageboxStyleOverride"		value="" />
 		<!--Flag to Auto reload the internal handlers directory listing. False for production. -->
 		<Setting name="HandlersIndexAutoReload"   	value="false" />
 		<!--Flag to auto reload the config.xml settings. False for production. -->

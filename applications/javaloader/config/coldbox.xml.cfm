@@ -13,7 +13,6 @@
 		<Setting name="UDFLibraryFile" 				value="" />
 		<Setting name="CustomErrorTemplate" 		value=""/>
 		<Setting name="ExceptionHandler" 			value=""/>
-		<Setting name="MessageboxStyleOverride" 		value=""/>
 		<Setting name="HandlersIndexAutoReload" 	value="false"/>
 		<Setting name="ConfigAutoReload" 			value="false"/>		
 		<Setting name="PluginsExternalLocation" 			value=""/>
