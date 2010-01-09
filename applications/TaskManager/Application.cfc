@@ -34,7 +34,9 @@ component extends="coldbox.system.Coldbox" output="false"{
 		cfclocation="model",
 		dbcreate = "update",
 		dialect = "MySQLwithInnoDB",
-		logSQL = true
+		logSQL = true,
+		eventhandling = true,
+		eventhandler = "model.ORMEventHandler"
 	};
 	
 	//ORMReload();
