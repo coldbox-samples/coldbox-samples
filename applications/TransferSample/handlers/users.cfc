@@ -42,7 +42,7 @@ Modification History:
 		<cfset event.paramValue("idlist","")>
 		<cfloop list="#rc.idlist#" index="i">
 			<cfset instance.transfer.delete(instance.transfer.get("users.users",i))>
-			<cfset getPlugin("messagebox").setMessage("info","User(s) removed successfully")>
+			<cfset getPlugin("MessageBox").setMessage("info","User(s) removed successfully")>
 		</cfloop>
 		<cfset setNextRoute("users/dspUsers")>
 	</cffunction>
@@ -60,10 +60,10 @@ Modification History:
 		<!--- Get Transfer Object --->
 		<cfset oUser = instance.transfer.new("users.users")>
 		<!--- Populate it with RC data --->
-		<cfset getPlugin("beanFactory").populateBean(oUser)>
+		<cfset getPlugin("BeanFactory").populateBean(oUser)>
 		<!--- Add new User --->
 		<cfset instance.transfer.save(oUser)>
-		<cfset getPlugin("messagebox").setMessage("info", "User inserted")>
+		<cfset getPlugin("MessageBox").setMessage("info", "User inserted")>
 		<!--- RElocate to listing --->
 		<cfset setNextRoute("users/dspUsers")>
 	</cffunction>
@@ -84,10 +84,10 @@ Modification History:
 		<!--- Get Transfer Object --->
 		<cfset oUser = instance.transfer.get("users.users",rc.id)>
 		<!--- Populate it with RC data --->
-		<cfset getPlugin("beanFactory").populateBean(oUser)>
+		<cfset getPlugin("BeanFactory").populateBean(oUser)>
 		<!--- Update User --->
 		<cfset instance.transfer.save(oUser)>
-		<cfset getPlugin("messagebox").setMessage("info", "User Updated")>
+		<cfset getPlugin("MessageBox").setMessage("info", "User Updated")>
 		<!--- RElocate to listing --->
 		<cfset setNextRoute("users/dspUsers")>
 	</cffunction>

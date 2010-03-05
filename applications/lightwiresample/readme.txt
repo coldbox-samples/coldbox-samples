@@ -76,7 +76,7 @@ How to start?
    scope as a requirement. 
    
    - The client scope needs to be enabled if using the clientstorage plugin.
-   - The messagebox plugin can use the session or client scope. By default it uses session.
+   - The MessageBox plugin can use the session or client scope. By default it uses session.
 
 4) Now that you have completed editing your config and Application.cfc, you are ready to see 
    results. Point your web browser to your application folder and you will see a message display:

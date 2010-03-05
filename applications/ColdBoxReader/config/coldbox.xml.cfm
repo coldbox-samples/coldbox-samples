@@ -25,7 +25,7 @@
 	<YourSettings>
 		<Setting name="Version" value="2.1.0" />
 		<Setting name="ModelBasePath" value="coldbox.samples.applications.ColdBoxReader.components" />
-		<Setting name="messagebox_style_override"   value="true" />
+		<Setting name="MessageBox_style_override"   value="true" />
 		<!-- FeedReader Settings -->
 		<Setting name="feedReader_useCache" 		value="true" />
 		<Setting name="feedReader_cacheType" 		value="file" />
@@ -71,7 +71,7 @@
 	</Datasources>
 	
 	<Interceptors>
-		<Interceptor class="coldbox.system.interceptors.autowire" />
+		<Interceptor class="coldbox.system.interceptors.Autowire" />
 	</Interceptors>
 
 </Config>

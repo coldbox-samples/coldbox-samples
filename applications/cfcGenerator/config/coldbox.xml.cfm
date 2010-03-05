@@ -70,7 +70,7 @@
 	<Datasources />
 	
 	<Interceptors>
-		<Interceptor class="coldbox.system.interceptors.autowire" />
+		<Interceptor class="coldbox.system.interceptors.Autowire" />
 	</Interceptors>
 
 </Config>

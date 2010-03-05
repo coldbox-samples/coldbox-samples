@@ -29,7 +29,7 @@ Description :
 		<cfargument name="event" required="true" type="any" hint="The event object.">
 		<cfargument name="interceptdata" required="true" type="struct" hint="Metadata of intercepted info.">
 		<!--- ************************************************************* --->
-		<cfset getPlugin("logger").logEntry("warning","I just executed a custom interception point. #arguments.interceptdata.toString()#")>
+		<cfset getPlugin("Logger").logEntry("warning","I just executed a custom interception point. #arguments.interceptdata.toString()#")>
 	</cffunction>
 
 </cfcomponent>

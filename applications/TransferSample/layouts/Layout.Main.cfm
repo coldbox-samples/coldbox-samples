@@ -92,7 +92,7 @@ padding:10px;
   </tr>
   <tr>
     <td  rowspan="2" align="center" valign="middle">
-		#getPlugin("messagebox").renderit()#
+		#getPlugin("MessageBox").renderit()#
 		#renderView()#
 	</td>
   </tr>

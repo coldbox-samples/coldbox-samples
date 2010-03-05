@@ -15,7 +15,7 @@
 	<cffunction name="doNewPost" access="public" returntype="void" output="false" hint="Action to handle new post operation">
 		<cfargument name="Event" type="any" required="yes">
 	    <cfset var rc = event.getCollection()>
-	    <cfset var newPost = "">	    <cfscript>	    	/* Get a new transfer entry object  */	    	newPost = instance.transfer.new("posts.entry");	    	/* Populate the sucker */	    	getPlugin("beanFactory").populateBean(newPost);	    	/* Save it */	    	instance.transfer.save(newPost);	    	/* Clear event caching */	    	getColdboxOcm().clearEvent("general.blog");	    	/* Re-Route */	    	setNextRoute("general/blog");	    		    </cfscript>    
+	    <cfset var newPost = "">	    <cfscript>	    	/* Get a new transfer entry object  */	    	newPost = instance.transfer.new("posts.entry");	    	/* Populate the sucker */	    	getPlugin("BeanFactory").populateBean(newPost);	    	/* Save it */	    	instance.transfer.save(newPost);	    	/* Clear event caching */	    	getColdboxOcm().clearEvent("general.blog");	    	/* Re-Route */	    	setNextRoute("general/blog");	    		    </cfscript>    
 	     
 	</cffunction>		<!--- viewPost --->
 	<cffunction name="viewPost" access="public" returntype="void" output="false" hint="Shows one particular post and related comments" cache="true" cacheTimeout="10" >

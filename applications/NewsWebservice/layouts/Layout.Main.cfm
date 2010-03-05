@@ -44,7 +44,7 @@ a:hover {
 <body>
 <table width="100%" border="0" cellspacing="0" cellpadding="10">
   <tr style="border-bottom:1px solid #eaeaea">
-    <td bgcolor="#0066CC"><span class="style1">ColdBox WebServices Example using: <cfoutput>#getPlugin("webservices").getWS("newsfeed")#</cfoutput></span></td>
+    <td bgcolor="#0066CC"><span class="style1">ColdBox WebServices Example using: <cfoutput>#getPlugin("Webservices").getWS("newsfeed")#</cfoutput></span></td>
   </tr>
   <tr>
     <td><cfoutput>#renderView()#</cfoutput> </td>

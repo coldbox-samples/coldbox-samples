@@ -87,10 +87,10 @@
 	</Datasources>
 	
 	<Interceptors>
-		<Interceptor class="coldbox.system.interceptors.ses">
+		<Interceptor class="coldbox.system.interceptors.SES">
 			<Property name="configFile">config/routes.cfm</Property>
 		</Interceptor>
-		<Interceptor class="coldbox.system.interceptors.autowire">
+		<Interceptor class="coldbox.system.interceptors.Autowire">
 		</Interceptor>
 		<!-- Transfer Loader -->
 		<Interceptor class="coldbox.system.orm.transfer.TransferLoader">

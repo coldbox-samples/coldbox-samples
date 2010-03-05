@@ -52,7 +52,7 @@ Description :
 		<!--- Its very iteresting.. how I am intracting with service-layer, just bypassing controller layer --->
 		<cfset results = getBean("ArtService").getFindByName(arguments.search) />
 		<!--- get plugin to convert query values into Array --->
-		<cfset plugin = getPlugin("queryHelper") />
+		<cfset plugin = getPlugin("QueryHelper") />
 		
 		<cfset ReturnValue = plugin.getColumnArray(qry = results, ColumnName = "ARTNAME") />
 		<!--- <cfdump var="#ReturnValue#"> <cfabort> --->

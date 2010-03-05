@@ -150,7 +150,7 @@
 	
 	<Interceptors>
 		<!-- config file is relative to app root -->
-		<Interceptor class="coldbox.system.interceptors.ses">
+		<Interceptor class="coldbox.system.interceptors.SES">
 			<Property name="configFile">config/routes.cfm</Property>
 		</Interceptor>
 	</Interceptors>

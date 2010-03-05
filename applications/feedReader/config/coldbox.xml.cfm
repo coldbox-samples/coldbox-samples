@@ -113,13 +113,13 @@
 	</Cache>
 
 	<Interceptors>
-		<Interceptor class="coldbox.system.interceptors.environmentControl">
+		<Interceptor class="coldbox.system.interceptors.EnvironmentControl">
 			<Property name='configFile'>config/environments.xml.cfm</Property>
 		</Interceptor>
-		<Interceptor class="coldbox.system.interceptors.autowire">
+		<Interceptor class="coldbox.system.interceptors.Autowire">
 			<Property name='enableSetterInjection'>true</Property>
 		</Interceptor>
-		<Interceptor class="coldbox.system.interceptors.ses">
+		<Interceptor class="coldbox.system.interceptors.SES">
 			<Property name="configFile">config/routes.cfm</Property>
 		</Interceptor>
 	</Interceptors>

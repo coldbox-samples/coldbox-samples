@@ -84,7 +84,7 @@
 			<Setting name="cookiestorage_encryption_algorithm" value="CFMX_COMPAT or BD_DEFAULT"/>
 			
 			Messagebox Plugin (You can now override the storage scope without affecting all framework applications)
-			<Setting name="messagebox_storage_scope" value="session or client" />
+			<Setting name="MessageBox_storage_scope" value="session or client" />
 			
 			Complex Settings follow JSON Syntax. www.json.org.  
 			*IMPORTANT: use single quotes in this xml file for JSON notation, ColdBox will translate it to double quotes.
@@ -97,7 +97,7 @@
 		<Setting name="cookiestorage_encryption" value="true"/>
 		<Setting name="cookiestorage_encryption_seed" value="coldboxseskey"/>
 		
-		<Setting name="messagebox_storage_scope" value="session" />
+		<Setting name="MessageBox_storage_scope" value="session" />
 	</YourSettings>
 	
 	<!-- 
@@ -220,16 +220,16 @@
 	
 	<Interceptors>
 		<!-- config file is relative to app root -->
-		<Interceptor class="coldbox.system.interceptors.environmentControl"> 
+		<Interceptor class="coldbox.system.interceptors.EnvironmentControl"> 
 			<Property name="configFile">/ColdBoxSES/config/environments.xml.cfm</Property>
 			<Property name="afterConfigurationLoad">true</Property>
 		</Interceptor>
 		<!-- config file is relative to app root -->
-		<Interceptor class="coldbox.system.interceptors.ses">
+		<Interceptor class="coldbox.system.interceptors.SES">
 			<Property name="configFile">config/routes.cfm</Property>
 		</Interceptor>
 		<!-- Developer's ColdBox Sidebar -->
-		<Interceptor class="coldbox.system.interceptors.coldboxSideBar">
+		<Interceptor class="coldbox.system.interceptors.ColdboxSideBar">
 			<!-- Y offset: number, else leave blank -->
 			<Property name="yOffset"></Property>
 			<!-- Scroll: true/false, else leave blank -->

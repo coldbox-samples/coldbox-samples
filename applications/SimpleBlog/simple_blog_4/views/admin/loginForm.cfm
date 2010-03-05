@@ -4,7 +4,7 @@
 <p>Please login using your username and password.</p>
 
 <!--- display any messages in the event --->
-#getPlugin("messagebox").renderit()#
+#getPlugin("MessageBox").renderit()#
 
 <form name="loginForm" method="POST" action="#event.buildLink('admin/doLogin')#">
 	<p>Username:<br/>

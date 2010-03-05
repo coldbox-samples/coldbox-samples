@@ -67,7 +67,7 @@ extends = coldbox.system.EventHandler
 	    
 	    <cfscript>
 	    	newPost = instance.EntryService.getEntry("posts.entry");
-	    	getPlugin("beanFactory").populateBean(newPost);
+	    	getPlugin("BeanFactory").populateBean(newPost);
 	    	instance.EntryService.saveEntry(newPost);
 	    	getColdboxOcm().clearAllEvents(false);
 	    	setNextRoute("general/blog");
@@ -83,7 +83,7 @@ extends = coldbox.system.EventHandler
 			<cfif instance.SecurityService.isUserVerified(rc.username, rc.password)>
 				<cfset setNextRoute("admin/index")>
 			<cfelse>
-				<cfset getPlugin("messagebox").setMessage("error","Login Failed: Please try again.")>
+				<cfset getPlugin("MessageBox").setMessage("error","Login Failed: Please try again.")>
 				<cfset setNextRoute("admin/loginForm")>
 			</cfif>
 			

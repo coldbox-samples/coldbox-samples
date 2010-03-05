@@ -84,7 +84,7 @@
 		<Setting name="cookiestorage_encryption_algorithm" value="CFMX_COMPAT or BD_DEFAULT"/>
 		
 		Messagebox Plugin (You can now override the storage scope without affecting all framework applications)
-		<Setting name="messagebox_storage_scope" value="session or client" />
+		<Setting name="MessageBox_storage_scope" value="session or client" />
 		
 		Complex Settings follow JSON Syntax. www.json.org.  
 		*IMPORTANT: use single quotes in this xml file for JSON notation, ColdBox will translate it to double quotes.
@@ -211,17 +211,17 @@
 	<Interceptors>
 		
 		<!-- SES interceptor -->
-		<Interceptor class="coldbox.system.interceptors.ses">
+		<Interceptor class="coldbox.system.interceptors.SES">
 			<Property name="configFile">config/routes.cfm</Property>
 		</Interceptor>
 		
 		<!-- Autowire Interceptor -->
-		<Interceptor class="coldbox.system.interceptors.autowire">
+		<Interceptor class="coldbox.system.interceptors.Autowire">
 			<Property name="enableSetterInjection">false</Property>
 		</Interceptor> 
 		
 		<!-- Security Interceptor -->
-		<Interceptor class="coldbox.system.interceptors.security">
+		<Interceptor class="coldbox.system.interceptors.Security">
 	        <Property name="useRoutes">true</Property>
 	        <Property name="rulesSource">xml</Property>
 	        <Property name="rulesFile">config/securityRules.xml.cfm</Property>

@@ -54,7 +54,7 @@ Description :
 		</cfif>
 		<!--- Obtain Google Data API version 2 feed --->
 		<cfset rc.getYoutubeURL = '#getSetting("YouTubeURL")#?q=#rc.search_query#&start-index=#rc.start_index#&max-results=#rc.max_results#&v=2'/>
-		<cfset rc.ytdata = getPlugin("feedReader").readFeed(Feedurl=rc.getYoutubeURL)>
+		<cfset rc.ytdata = getPlugin("FeedReader").readFeed(Feedurl=rc.getYoutubeURL)>
 		<!--- Adjust variables values with feed data --->
 		<cfset rc.total_pages = Ceiling(rc.ytdata.opensearch.totalresults/rc.ytdata.opensearch.itemsperpage)/>
 		<cfset rc.total_results = rc.ytdata.opensearch.totalresults/>

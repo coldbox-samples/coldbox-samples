@@ -171,11 +171,11 @@
 	<Interceptors>
 		<!-- config file is relative to app root -->
 		<!--
-		<Interceptor class="coldbox.system.interceptors.ses">
+		<Interceptor class="coldbox.system.interceptors.SES">
 			<Property name="configFile">config/routes.cfm</Property>
 		</Interceptor> -->
 		
-		<Interceptor class="coldbox.system.interceptors.autowire">
+		<Interceptor class="coldbox.system.interceptors.Autowire">
 			<Property name="enableSetterInjection">false</Property>
 		</Interceptor>
 		
@@ -186,7 +186,7 @@
 			<!-- <Property name="sslEventList">user.dspUser,user.dspEditUser,general.*</Property> -->
 		</Interceptor>
 
-		<Interceptor class="coldbox.system.interceptors.security">
+		<Interceptor class="coldbox.system.interceptors.Security">
 	        <Property name="rulesSource">xml</Property>
 	        <Property name="rulesFile">config/securityrules.xml.cfm</Property>
 	        <Property name="debugMode">true</Property>
@@ -198,7 +198,7 @@
 	</Interceptors>
 
 		<!--
-		<Interceptor class="transfersample.interceptors.security">
+		<Interceptor class="transfersample.interceptors.Security">
 			<Property name="administratorEventList">user.*</Property>
 			<Property name="userEventList">user.dspUsers</Property>
 		</Interceptor>		

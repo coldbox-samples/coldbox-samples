@@ -75,7 +75,7 @@ Adds a constructor property to a bean.
 		
 		// BEAN DEFINITIONS (see top of bean for instructions)
 		// Product Service
-		addSingleton("coldbox.samples.applications.lightwiresample.com.model.Product.ProductService");
+		addSingleton("coldbox.samples.applications.lightwiresample.com.model.product.ProductService");
 		addConstructorDependency("ProductService","ProdDAO");
 		addConstructorProperty("ProductService","MyTitle","My Title Goes Here");
 		addConstructorProperty("ProductService","MyTitle2","My Other Title Goes Here");
@@ -85,19 +85,19 @@ Adds a constructor property to a bean.
 		addMixinDependency("ProductService", "CategoryService");
 
 		// Product DAO
-		addSingleton("coldbox.samples.applications.lightwiresample.com.model.Product.ProductDAO","ProdDAO");
+		addSingleton("coldbox.samples.applications.lightwiresample.com.model.product.ProductDAO","ProdDAO");
 		
 		// Product
-		addTransient("coldbox.samples.applications.lightwiresample.com.model.Product.ProductBean","Product");
+		addTransient("coldbox.samples.applications.lightwiresample.com.model.product.ProductBean","Product");
 		addConstructorDependency("Product","ProdDAO");
 		
 		// Category Service
-		addSingleton("coldbox.samples.applications.lightwiresample.com.model.Category.CategoryService");
+		addSingleton("coldbox.samples.applications.lightwiresample.com.model.category.CategoryService");
 		addConstructorDependency("CategoryService","CategoryDAO");
 		addSetterDependency("CategoryService", "ProductService");
 		
 		// Category DAO with coldbox property
-		addSingleton("coldbox.samples.applications.lightwiresample.com.model.Category.CategoryDAO");
+		addSingleton("coldbox.samples.applications.lightwiresample.com.model.category.CategoryDAO");
 		addSetterProperty("CategoryDAO","dsn",getController().getSetting("DSN"));
 		
 		// Transfer Factory

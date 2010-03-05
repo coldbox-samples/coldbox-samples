@@ -32,7 +32,7 @@ Description :
 		<cfscript>
 			var rc = Event.getCollection();
 			var loggingIn = false;
-			var oSession = getPlugin("sessionstorage");
+			var oSession = getPlugin("SessionStorage");
 			
 			//Are we logging In
 			if ( event.getCurrentEvent() eq "ehGeneral.doLogin" )
@@ -42,7 +42,7 @@ Description :
 			if ( (not oSession.exists("loggedin") or not oSession.getVar("loggedin") ) and not loggingIn ){
 				//Override the incoming event.
 				Event.overrideEvent("ehGeneral.dspLogin");
-				getPlugin("messagebox").setMessage("warning", "Interceptor Says: Please log in first");
+				getPlugin("MessageBox").setMessage("warning", "Interceptor Says: Please log in first");
 			}
 		</cfscript>
 	</cffunction>

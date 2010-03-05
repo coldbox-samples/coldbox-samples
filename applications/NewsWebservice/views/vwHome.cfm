@@ -41,8 +41,8 @@ padding: 5px;
 	  <input name="event" type="hidden" id="event" value="#Event.getValue("xehGetNews")#" />
 	</form>
 	<p >&nbsp;</p>
-	<!--- Render a messagebox if set --->
-	#getPlugin("messagebox").renderit()#<br>
+	<!--- Render a MessageBox if set --->
+	#getPlugin("MessageBox").renderit()#<br>
 	</cfoutput>
 </td>
 </tr>
@@ -56,9 +56,9 @@ padding: 5px;
 </cfif>
 
 <!--- Display the news if found in the client storage plugin --->
-<cfif getPlugin("clientstorage").exists("newsfeed")>
+<cfif getPlugin("ClientStorage").exists("newsfeed")>
 	<div class="newsbox">
 	<h4>Client Storage News: <input type="button" name="clientclearbutton" id="clientclearbutton" value="Clear Client Storage News" onClick="disableButtons(true);window.location='index.cfm?event=#Event.getValue("xehDeleteNews")#'" />&nbsp;</h4>
-	<cfdump var="#getPlugin("clientstorage").getvar("newsfeed")#">
+	<cfdump var="#getPlugin("ClientStorage").getvar("newsfeed")#">
 	</div>
 </cfif>

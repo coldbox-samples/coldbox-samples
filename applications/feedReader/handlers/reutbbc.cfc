@@ -35,7 +35,7 @@ Description :
 		<cfset rc.getReutersURL = '#getSetting("ReutersURL")#?format=xml'/>
 		<cfset rc.getBBCIntURL = getSetting("BBCIntURL") />
 		<cfset rc.getAPURL = '#getSetting("APURL")#?SITE=ALANN&SECTION=HOME' />
-		<cfset rc.rdata = getPlugin("feedReader").readFeed(Feedurl="#rc.getReutersURL#,#rc.getBBCIntURL#,#rc.getAPURL#",itemsType="query",maxItems="15")>
+		<cfset rc.rdata = getPlugin("FeedReader").readFeed(Feedurl="#rc.getReutersURL#,#rc.getBBCIntURL#,#rc.getAPURL#",itemsType="query",maxItems="15")>
 		<!--- Organise data --->
 		<cfset Event.setView("reutbbc/results")>
 	</cffunction>

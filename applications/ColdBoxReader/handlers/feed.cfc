@@ -20,19 +20,19 @@
 		<cfif Event.getValue("continue_button","") neq "">
 			<!--- Validate Feed --->
 			<cfif trim(len(rc.FeedURL)) eq 0 or not getPlugin("Utilities").isURL(rc.FeedURL)>
-				<cfset getPlugin("messagebox").setMessage("error","Please enter a valid Feed URL")>
+				<cfset getPlugin("MessageBox").setMessage("error","Please enter a valid Feed URL")>
 			<cfelse>
 				<cftry>
 					<!--- Verify Feed in user's feeds --->
 					<cfif getFeedService().verifyFeed(rc.feedURL, rc.oUserBean.getuserID())>
-						<cfset getPlugin("messagebox").setMessage("warning","The feed you are trying to add is already in your feeds collection. You cannot add it twice.")>
+						<cfset getPlugin("MessageBox").setMessage("warning","The feed you are trying to add is already in your feeds collection. You cannot add it twice.")>
 					<cfelse>
 						<cfset rc.myFeed = getFeedService().retrieveFeed(rc.feedURL)>
 						<cfset rc.feedValidated = true>
 					</cfif>
 					<cfcatch type="any">
-						<cfset getPlugin("logger").logError("Error Parsing Feed", cfcatch)>
-						<cfset getPlugin("messagebox").setMessage("error", cfcatch.message & "<br>" & cfcatch.detail)>
+						<cfset getPlugin("Logger").logError("Error Parsing Feed", cfcatch)>
+						<cfset getPlugin("MessageBox").setMessage("error", cfcatch.message & "<br>" & cfcatch.detail)>
 					</cfcatch>
 				</cftry>
 			</cfif>
@@ -97,10 +97,10 @@
 		<cftry>
 			<cfset obj = getFeedService()>
 			<cfset obj.saveFeed(rc.feedID, rc.feedName, rc.feedURL, rc.FeedAuthor, rc.description, rc.imgURL, rc.siteURL, rc.oUserBean.getuserID())>
-			<cfset getPlugin("messagebox").setMessage("info", "The feed: #rc.feedName# has been added successfully")>
+			<cfset getPlugin("MessageBox").setMessage("info", "The feed: #rc.feedName# has been added successfully")>
 			<cfcatch type="any">
-				<cfset getPlugin("messagebox").setMessage("error","Error adding Feed:" & cfcatch.message & "<br>" & cfcatch.detail)>
-				<cfset getPlugin("logger").logError("Error Adding Feed", cfcatch)>
+				<cfset getPlugin("MessageBox").setMessage("error","Error adding Feed:" & cfcatch.message & "<br>" & cfcatch.detail)>
+				<cfset getPlugin("Logger").logError("Error Adding Feed", cfcatch)>
 				<cfset setNextEvent("feed.dspAddFeed")>
 			</cfcatch>
 		</cftry>
@@ -119,8 +119,8 @@
 			</cfif>
 
 			<cfcatch type="any">
-				<cfset getPlugin("logger").logError("Error Adding Tag", cfcatch)>
-				<cfset getPlugin("messagebox").setMessage("error", cfcatch.message & "<br>" & cfcatch.detail)>
+				<cfset getPlugin("Logger").logError("Error Adding Tag", cfcatch)>
+				<cfset getPlugin("MessageBox").setMessage("error", cfcatch.message & "<br>" & cfcatch.detail)>
 			</cfcatch>
 		</cftry>
 		<cfset setNextEvent("feed.dspFeedTags","feedID=#rc.feedID#")>
@@ -130,7 +130,7 @@
 		<cfargument name="Event" type="any">
 		<cfset var qryData = "">
 		<cfset var rc = Event.getCollection()>
-		<cfset var sessionstorage = getPlugin("sessionstorage")>
+		<cfset var sessionstorage = getPlugin("SessionStorage")>
 		
 		<cftry>
 			
@@ -143,8 +143,8 @@
 			<cfset setNextEvent("feed.dspSearchResults")>
 
 			<cfcatch type="any">
-				<cfset getPlugin("logger").logError("Error Searching by Tags", cfcatch)>
-				<cfset getPlugin("messagebox").setMessage("error", cfcatch.message & "<br>" & cfcatch.detail)>
+				<cfset getPlugin("Logger").logError("Error Searching by Tags", cfcatch)>
+				<cfset getPlugin("MessageBox").setMessage("error", cfcatch.message & "<br>" & cfcatch.detail)>
 				<cfset setNextEvent()>
 			</cfcatch>
 		</cftry>		
@@ -153,7 +153,7 @@
 	<cffunction name="doSearchByTerm" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var obj = "">
-		<cfset var sessionstorage = getPlugin("sessionstorage")>
+		<cfset var sessionstorage = getPlugin("SessionStorage")>
 		<cfset var rc = Event.getCollection()>
 		<cftry>
 			<cfset term = Event.getValue("searchTerm")>
@@ -163,8 +163,8 @@
 			<cfset sessionstorage.setVar("search_term", rc.searchTerm)>
 
 			<cfcatch type="any">
-				<cfset getPlugin("messagebox").setMessage("error", cfcatch.message & "<br>" & cfcatch.detail)>
-				<cfset getPlugin("logger").logError("Search by Term", cfcatch)>
+				<cfset getPlugin("MessageBox").setMessage("error", cfcatch.message & "<br>" & cfcatch.detail)>
+				<cfset getPlugin("Logger").logError("Search by Term", cfcatch)>
 				<cfset Event.setView("vwMain")>
 			</cfcatch>
 		</cftry>
@@ -173,7 +173,7 @@
 
 	<cffunction name="dspSearchResults" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
-		<cfset var sessionstorage = getPlugin("sessionstorage")>
+		<cfset var sessionstorage = getPlugin("SessionStorage")>
 		<cfset var rc = Event.getCollection()>
 		
 		<!--- EXIT HANDLERS: --->
@@ -193,7 +193,7 @@
 				<cfset Event.setValue("qryData",QueryNew(""))>
 				<cfset Event.setValue("tag","")>
 				<cfset Event.setValue("term","")>
-				<cfset getPlugin("messagebox").setMessage("error", cfcatch.message & "<br>" & cfcatch.detail)>
+				<cfset getPlugin("MessageBox").setMessage("error", cfcatch.message & "<br>" & cfcatch.detail)>
 			</cfcatch>
 		</cftry>
 	</cffunction>

@@ -40,7 +40,7 @@ Description :	ColdBox Plugins are very powerfull for AOP, I will try to have sam
 		<cfset var rc = event.getCollection() />
 		
 		<!--- rc scope will be available in our .cfc files, so set plugin rc scope---> 
-		<cfset rc.plugin = controller.getPlugin("applicationstorage") />
+		<cfset rc.plugin = controller.getPlugin("ApplicationStorage") />
 		
 		<cfif not rc.plugin.exists("MyTestComp")>
 			 <cfset rc.plugin.setVar(name = "MyTestComp", value= CreateObject("component","coldbox.samples.applications.CF8Ajax.model.test1")) />		
@@ -57,7 +57,7 @@ Description :	ColdBox Plugins are very powerfull for AOP, I will try to have sam
 		<cfset var rc = event.getCollection() />
 		
 		<!--- rc scope will be available in our .cfc files, so set plugin rc scope---> 
-		<cfset rc.plugin = controller.getPlugin("applicationstorage") />
+		<cfset rc.plugin = controller.getPlugin("ApplicationStorage") />
 		
 		<cfif not rc.plugin.exists("MyTestComp")>
 			 <cfset rc.plugin.setVar(name = "MyTestComp", value= CreateObject("component","coldbox.samples.applications.CF8Ajax.model.test1")) />		
@@ -81,7 +81,7 @@ Description :	ColdBox Plugins are very powerfull for AOP, I will try to have sam
 		<cfset UserInfo["Email"] = "test31@test31.co.uk" />
 		
 		<!--- rc scope will be available in our .cfc files, so set plugin rc scope---> 
-		<cfset rc.plugin = controller.getPlugin("cookiestorage") />
+		<cfset rc.plugin = controller.getPlugin("CookieStorage") />
 		
 		<cfif not rc.plugin.exists("UserInfo")>
 			 <cfset rc.plugin.setVar(name = "UserInfo", value= UserInfo, expires= 1) />

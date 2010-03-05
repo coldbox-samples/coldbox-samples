@@ -33,7 +33,7 @@ Description :
 		<cfset var rc = event.getCollection()>
 		<!--- Obtain BBC International Top News feed --->
 		<cfset rc.getBBCIntURL = '#getSetting("BBCIntURL")#?format=xml'/>
-		<cfset rc.rdata = getPlugin("feedReader").readFeed(Feedurl=rc.getBBCIntURL,itemsType="query",maxItems=5)>
+		<cfset rc.rdata = getPlugin("FeedReader").readFeed(Feedurl=rc.getBBCIntURL,itemsType="query",maxItems=5)>
 		<!--- Organise data --->
 		<cfset Event.setView("bbcint/results")>
 	</cffunction>

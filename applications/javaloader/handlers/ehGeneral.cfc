@@ -21,7 +21,7 @@ Sep/25/2005 - Luis Majano
 		<cfscript>
 		//Load the hello world class
 		Event.setvalue("HelloWorldObj", getPlugin("JavaLoader").create("HelloWorld").init());
-		getPlugin("logger").tracer("MyLoader just finished loading the HelloWorld Class object.");
+		getPlugin("Logger").tracer("MyLoader just finished loading the HelloWorld Class object.");
 		Event.setView("vwHello");
 	</cfscript>
 	</cffunction>

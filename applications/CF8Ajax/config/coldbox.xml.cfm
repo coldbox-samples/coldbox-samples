@@ -70,7 +70,7 @@
 			<Setting name="cookiestorage_encryption_algorithm" value="CFMX_COMPAT or BD_DEFAULT"/>
 			
 			Messagebox Plugin (You can now override the storage scope without affecting all framework applications)
-			<Setting name="messagebox_storage_scope" value="session or client" />
+			<Setting name="MessageBox_storage_scope" value="session or client" />
 		</YourSettings>
 	 -->
 	<YourSettings>
@@ -81,7 +81,7 @@
 		<!-- The encryption algorithm to use (According to CFML Engine) -->
 		<Setting name="cookiestorage_encryption_algorithm" value="CFMX_COMPAT"/>
 		<!-- Messagebox Plugin (You can now override the storage scope without affecting all framework applications) -->
-		<Setting name="messagebox_storage_scope" value="session" />
+		<Setting name="MessageBox_storage_scope" value="session" />
 		
 		<!-- set datasource -->
 		<Setting name="cfartgallery" value="cfartgallery" />
@@ -206,12 +206,12 @@
 	
 	<Interceptors>
 		<!-- config file is relative to app root -->
-		<Interceptor class="coldbox.system.interceptors.environmentControl"> 
+		<Interceptor class="coldbox.system.interceptors.EnvironmentControl"> 
 			<Property name="configFile">config/environments.xml.cfm</Property>
 			<Property name="afterConfigurationLoad">true</Property>
 		</Interceptor>
 		
-		<Interceptor class="coldbox.system.interceptors.ses">
+		<Interceptor class="coldbox.system.interceptors.SES">
 			<Property name="configFile">config/routes.cfm</Property>
 		</Interceptor>
 	</Interceptors>
