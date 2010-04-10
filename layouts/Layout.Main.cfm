@@ -1,5 +1,6 @@
+<cfset HTMLHelper = getPlugin("HTMLHelper")>
 <cfoutput>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+#HTMLHelper.docType()#
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<title>ColdBox: A ColdFusion Framework : #getResource("samplesgallery")#</title>
@@ -36,7 +37,7 @@
 		<ul>
 			<li class="selected"><a href="index.cfm">#getResource("sampleshome")#</a></li>
 			<li><a href="http://www.luismajano.com"  target="_blank">Luis Majano</a></li>
-			<li><a href="http://www.coldboxframework.com"  target="_blank">Official ColdBox Site</a></li>
+			<li><a href="http://www.coldbox.org"  target="_blank">Official ColdBox Site</a></li>
 		</ul>
 
 		<div align="right">

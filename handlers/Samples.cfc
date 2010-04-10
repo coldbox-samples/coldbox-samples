@@ -1,31 +1,17 @@
-<!-----------------------------------------------------------------------
-Author 	 :	Luis Majano
-Date     :	September 25, 2005
-Description :
-	General handler for my hello application. Please remember to alter
-	your extends base component using the Coldfusion Mapping.
-
-	example:
-		Mapping: fwsample
-		Argument Type: fwsample.system.eventhandler
-Modification History:
-Sep/25/2005 - Luis Majano
-	-Created the template.
------------------------------------------------------------------------>
-<cfcomponent name="Samples" extends="coldbox.system.EventHandler" output="false">
+<cfcomponent output="false">
 	
 	<cffunction name="index" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
-		<cfset var rc = Event.getCollection()>
-		<cfset Event.setView("home")>
+		<cfargument name="event" type="any">
+		<cfset event.setView("home")>
 	</cffunction>
 
 	<cffunction name="doChangeLocale" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
-		<!--- Change User Locale --->
-		<cfset getPlugin("i18n").setfwLocale(Event.getValue("locale"))>
+		<cfargument name="event" type="any">
 		
-		<cfset setNextEvent('Samples')>
+		<!--- Change User Locale --->
+		<cfset getPlugin("i18n").setfwLocale(event.getValue("locale"))>
+		
+		<cfset setNextevent('samples')>
 	</cffunction>
 
 </cfcomponent>
