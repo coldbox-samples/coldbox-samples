@@ -39,7 +39,7 @@ Optional Methods
 		// coldbox directives
 		coldbox = {
 			//Application Setup
-			appName 				= "Awesome Task Manager",
+			appName 				= "CF9",
 			
 			//Development Settings
 			debugMode				= true,
@@ -50,16 +50,16 @@ Optional Methods
 			
 			//Implicit Events
 			defaultEvent			= "General.index",
-			requestStartHandler		= "",
+			requestStartHandler		= "Main.onRequestStart",
 			requestEndHandler		= "",
-			applicationStartHandler = "",
+			applicationStartHandler = "Main.onAppInit",
 			applicationEndHandler	= "",
 			sessionStartHandler 	= "",
 			sessionEndHandler		= "",
 			missingTemplateHandler	= "",
 			
 			//Extension Points
-			UDFLibraryFile 			= "",
+			UDFLibraryFile 			= "includes/helpers/ApplicationHelper.cfm",
 			coldboxExtensionsLocation = "",
 			pluginsExternalLocation = "",
 			viewsExternalLocation	= "",
@@ -83,7 +83,18 @@ Optional Methods
 		//LogBox
 		logBox = {
 			appenders = {
-				coldboxTracer = {class="coldbox.system.logging.appenders.ColdboxTracerAppender"}
+				coldboxTracer = {class="coldbox.system.logging.appenders.ColdboxTracerAppender"},
+				fileLog = {
+					class="coldbox.system.logging.appenders.AsyncRollingFileAppender",
+				 	properties={
+						filePath = "logs",
+						fileName = coldbox.appName,
+						autoExpand = true,
+						fileMaxSize = 2000,
+						fileMaxArchives = 3
+					}
+				}
+			
 			},
 			root = {levelMax="DEBUG", appenders="*"}
 		};
@@ -98,8 +109,7 @@ Optional Methods
 			//Autowire
 			{class="coldbox.system.interceptors.Autowire"},
 			//SES
-			{class="coldbox.system.interceptors.SES",
-			 properties={ configFile="/#appMapping#/config/Routes.cfm"}}
+			{class="coldbox.system.interceptors.SES"}
 		];
 
 	}

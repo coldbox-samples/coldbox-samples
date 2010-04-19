@@ -27,16 +27,18 @@ component extends="coldbox.system.Coldbox" output="false"{
 	COLDBOX_CONFIG_FILE = "";
 	COLDBOX_APP_KEY = "";
 	
+	this.mappings["/TaskManager"] = COLDBOX_APP_ROOT_PATH;
+	
 	// ORM Setup
 	this.ormEnabled = true;
 	this.datasource = "taskmanager";
 	this.ormSettings = {
-		cfclocation="model",
 		dbcreate = "update",
 		dialect = "MySQLwithInnoDB",
 		logSQL = true,
 		eventhandling = true,
-		eventhandler = "model.ORMEventHandler"
+		eventhandler = "model.ORMEventHandler",
+		flushAtRequestEnd = false
 	};
 	
 	//ORMReload();
@@ -56,7 +58,6 @@ component extends="coldbox.system.Coldbox" output="false"{
 		if( structKeyExists(URL,"ORMReload") ){
 			ORMReload();
 		}
-		
 		
 		//Process a ColdBox request only
 		if( findNoCase('index.cfm',listLast(arguments.targetPage,"/")) ){
