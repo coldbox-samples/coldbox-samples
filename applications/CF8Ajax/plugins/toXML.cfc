@@ -30,7 +30,7 @@ If you find this app worthy, I have a Amazon wish list set up (www.amazon.com/o/
 --->
 <cfcomponent name="toXML"
 			 hint="Set of utility functions to generate XML."
-			 extends="coldbox.system.plugin"
+			 extends="coldbox.system.Plugin"
 			 output="false"
 			 cache="true">
 
@@ -170,32 +170,32 @@ If you find this app worthy, I have a Amazon wish list set up (www.amazon.com/o/
 	<cfargument name="value" type="string" required="yes">
 	<cfscript>
 		var string = value;
-		string = replaceNoCase(string,chr(8218),'&##8218;','all');	// ‚ 
-		string = replaceNoCase(string,chr(402),'&##402;','all');		// ƒ 
-		string = replaceNoCase(string,chr(8222),'&##8222;','all');	// „ 
-		string = replaceNoCase(string,chr(8230),'&##8230;','all');	// … 
-		string = replaceNoCase(string,chr(8224),'&##8224;','all');	// † 
-		string = replaceNoCase(string,chr(8225),'&##8225;','all');	// ‡ 
-		string = replaceNoCase(string,chr(710),'&##710;','all');		// ˆ 
-		string = replaceNoCase(string,chr(8240),'&##8240;','all');	// ‰ 
-		string = replaceNoCase(string,chr(352),'&##352;','all');		// Š 
-		string = replaceNoCase(string,chr(8249),'&##8249;','all');	// ‹ 
-		string = replaceNoCase(string,chr(338),'&##338;','all');		// Œ 
-		string = replaceNoCase(string,chr(8216),'&##8216;','all');	// ‘ 
-		string = replaceNoCase(string,chr(8217),'&##8217;','all');	// ’ 
-		string = replaceNoCase(string,chr(8220),'&##8220;','all');	// “ 
-		string = replaceNoCase(string,chr(8221),'&##8221;','all');	// ” 
-		string = replaceNoCase(string,chr(8226),'&##8226;','all');	// • 
-		string = replaceNoCase(string,chr(8211),'&##8211;','all');	// – 
-		string = replaceNoCase(string,chr(8212),'&##8212;','all');	// — 
-		string = replaceNoCase(string,chr(732),'&##732;','all');		// ˜ 
-		string = replaceNoCase(string,chr(8482),'&##8482;','all');	// ™ 
-		string = replaceNoCase(string,chr(353),'&##353;','all');		// š 
-		string = replaceNoCase(string,chr(8250),'&##8250;','all');	// › 
-		string = replaceNoCase(string,chr(339),'&##339;','all');		// œ 
-		string = replaceNoCase(string,chr(376),'&##376;','all');		// Ÿ 
-		string = replaceNoCase(string,chr(376),'&##376;','all');		// Ÿ 
-		string = replaceNoCase(string,chr(8364),'&##8364','all');		// € 
+		string = replaceNoCase(string,chr(8218),'&##8218;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(402),'&##402;','all');		// ï¿½ 
+		string = replaceNoCase(string,chr(8222),'&##8222;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(8230),'&##8230;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(8224),'&##8224;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(8225),'&##8225;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(710),'&##710;','all');		// ï¿½ 
+		string = replaceNoCase(string,chr(8240),'&##8240;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(352),'&##352;','all');		// ï¿½ 
+		string = replaceNoCase(string,chr(8249),'&##8249;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(338),'&##338;','all');		// ï¿½ 
+		string = replaceNoCase(string,chr(8216),'&##8216;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(8217),'&##8217;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(8220),'&##8220;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(8221),'&##8221;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(8226),'&##8226;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(8211),'&##8211;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(8212),'&##8212;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(732),'&##732;','all');		// ï¿½ 
+		string = replaceNoCase(string,chr(8482),'&##8482;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(353),'&##353;','all');		// ï¿½ 
+		string = replaceNoCase(string,chr(8250),'&##8250;','all');	// ï¿½ 
+		string = replaceNoCase(string,chr(339),'&##339;','all');		// ï¿½ 
+		string = replaceNoCase(string,chr(376),'&##376;','all');		// ï¿½ 
+		string = replaceNoCase(string,chr(376),'&##376;','all');		// ï¿½ 
+		string = replaceNoCase(string,chr(8364),'&##8364','all');		// ï¿½ 
 	</cfscript>
 	<cfreturn string>
 </cffunction>

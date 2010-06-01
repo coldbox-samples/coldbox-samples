@@ -1,4 +1,4 @@
-<cfcomponent name="date" output="false" extends="coldbox.system.plugin">
+<cfcomponent name="date" output="false" extends="coldbox.system.Plugin">
 
 	<cffunction name="init" access="public" returntype="any" output="false">
 		<cfargument name="controller" type="any">

@@ -1,4 +1,4 @@
-﻿<cfcomponent name="Utilities" hint="Extended utilities plugin for feedReader example" extends="coldbox.system.plugin" output="false" cache="true">
+﻿<cfcomponent name="Utilities" hint="Extended utilities plugin for feedReader example" extends="coldbox.system.Plugin" output="false" cache="true">
 
 <!------------------------------------------- CONSTRUCTOR ------------------------------------------->
 
