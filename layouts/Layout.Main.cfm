@@ -30,14 +30,15 @@
 <div id="container">
 
 	<div id="header" align="center">
-		<h1><img src="includes/images/coldbox_250.png" /></h1>
+		<h1><img src="includes/images/ColdBoxLogoSquare_125.png" /></h1>
 	</div>
 
 	<div id="navigation">
 		<ul>
 			<li class="selected"><a href="index.cfm">#getResource("sampleshome")#</a></li>
+			<li><a href="http://www.coldbox.org"  target="_blank">ColdBox Site</a></li>
+			<li><a href="http://www.ortussolutions.com"  target="_blank">Ortus Solutions</a></li>
 			<li><a href="http://www.luismajano.com"  target="_blank">Luis Majano</a></li>
-			<li><a href="http://www.coldbox.org"  target="_blank">Official ColdBox Site</a></li>
 		</ul>
 
 		<div align="right">
@@ -68,10 +69,9 @@
 		  <li><a href="http://www.luismajano.com">#getresource("mysite")#</a></li>
 		   <li><a href="#getSetting("AmazonURL")#">#getresource("myamazonwishlist")#</a></li>
 		  <li><a href="#getSetting("ColdboxURL")#" target="_blank">ColdBox #getresource("home")#</a></li>
-		  <li><a href="#getSetting("ForumsURL")#" target="_blank">ColdBox #getResource("forums")#</a></li>
 		  <li><a href="#getSetting("BlogURL")#" target="_blank">ColdBox Blog</a></li>
 		  <li><a href="#getSetting("ColdboxAPIURL")#" target="_blank">ColdBox API</a></li>
-		  <li><a href="#getSetting("TracURL")#" target="_blank">ColdBox Trac Site</a></li>
+		  <li><a href="#getSetting("trackerURL")#" target="_blank">ColdBox Bug Tracker</a></li>
 		</ul>
 		<br>
 

@@ -1,20 +1,20 @@
 <!-----------------------------------------------------------------------
 ********************************************************************************
 Copyright 2005-2007 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
-www.coldboxframework.com | www.luismajano.com | www.ortussolutions.com
+www.coldbox.org | www.luismajano.com | www.ortussolutions.com
 ********************************************************************************
 
 Author     :	Luis Majano
 Date        :	10/16/2007
 Description :
-	This is the Application.cfc for usage withing the ColdBox Framework.
-	Make sure that it extends the coldbox object:
-	coldbox.system.Coldbox
+	This is the bootstrapper Application.cfc for ColdBox Applications.
+	It uses inheritance on the CFC, so if you do not want inheritance
+	then use the Application_noinheritance.cfc instead.
 	
-	So if you have refactored your framework, make sure it extends coldbox.
+	
 ----------------------------------------------------------------------->
 <cfcomponent extends="coldbox.system.Coldbox" output="false">
-
+	<cfsetting enablecfoutputonly="yes">
 	<!--- APPLICATION CFC PROPERTIES --->
 	<cfset this.name = hash(getCurrentTemplatePath())> 
 	<cfset this.sessionManagement = true>
@@ -23,9 +23,12 @@ Description :
 	
 	<!--- COLDBOX STATIC PROPERTY, DO NOT CHANGE UNLESS THIS IS NOT THE ROOT OF YOUR COLDBOX APP --->
 	<cfset COLDBOX_APP_ROOT_PATH = getDirectoryFromPath(getCurrentTemplatePath())>
-
+	<!--- The web server mapping to this application. Used for remote purposes or static purposes --->
+	<cfset COLDBOX_APP_MAPPING   = "">
 	<!--- COLDBOX PROPERTIES --->
-	<cfset COLDBOX_CONFIG_FILE = "">
+	<cfset COLDBOX_CONFIG_FILE   = "">	
+	<!--- COLDBOX APPLICATION KEY OVERRIDE --->
+	<cfset COLDBOX_APP_KEY       = "">
 	
 	<!--- on Application Start --->
 	<cffunction name="onApplicationStart" returnType="boolean" output="false">
@@ -41,8 +44,6 @@ Description :
 		<!--- ************************************************************* --->
 		<cfargument name="targetPage" type="string" required="true" />
 		<!--- ************************************************************* --->
-		<cfsetting enablecfoutputonly="yes">
-
 		<!--- Reload Checks --->
 		<cfset reloadChecks()>
 		
@@ -52,32 +53,8 @@ Description :
 		</cfif>
 			
 		<!--- WHATEVER YOU WANT BELOW --->
-		<cfsetting enablecfoutputonly="no">
 		<cfreturn true>
 	</cffunction>
-	
-	<!--- on Application End --->
-	<cffunction name="onApplicationEnd" returnType="void"  output="false">
-		<!--- ************************************************************* --->
-		<cfargument name="applicationScope" type="struct" required="true">
-		<!--- ************************************************************* --->
-		<!--- WHATEVER YOU WANT BELOW --->
-	</cffunction>
-	
-	<!--- on Session Start --->
-	<cffunction name="onSessionStart" returnType="void" output="false">			
-		<cfset super.onSessionStart()>
-		<!--- WHATEVER YOU WANT BELOW --->
-	</cffunction>
-	
-	<!--- on Session End --->
-	<cffunction name="onSessionEnd" returnType="void" output="false">
-		<!--- ************************************************************* --->
-		<cfargument name="sessionScope" type="struct" required="true">
-		<cfargument name="appScope" 	type="struct" required="false">
-		<!--- ************************************************************* --->
-		<cfset super.onSessionEnd(argumentCollection=arguments)>
-		<!--- WHATEVER YOU WANT BELOW --->
-	</cffunction>
+
 	
 </cfcomponent>

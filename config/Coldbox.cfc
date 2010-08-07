@@ -27,12 +27,11 @@
 	
 		// custom settings
 		settings = {
-			forumsURL = "http://forums.coldbox.org",
 			amazonURL = "http://www.amazon.com/o/registry/7DPYG3RZG3AF",
 			coldboxURL = "http://coldbox.org",
 			blogURL = "http://blog.coldbox.org",
 			coldboxAPIURl = "http://coldbox.org/api",
-			tracURL = "http://coldbox.assembla.com",
+			trackerURL = "http://coldbox.assembla.com",
 			coldboxReaderApp = "applications/ColdBoxReader",
 			cfcGeneratorApp = "applications/cfcGenerator",
 			TransferApp = "applications/TransferSample",
