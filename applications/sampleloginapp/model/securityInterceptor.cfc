@@ -8,21 +8,23 @@ Author     :	Luis Majano
 Date        :	9/28/2007
 Description :
 	A simple security interceptor
+
+	extends="coldbox.system.interceptor" by default because the framework
+	knows its an interceptor by convension.
 ----------------------------------------------------------------------->
 <cfcomponent name="securityInterceptor"
 			 hint="This is a simple security interceptor"
-			 output="false"
-			 extends="coldbox.system.interceptor">
+			 output="false">
 
 <!------------------------------------------- CONSTRUCTOR ------------------------------------------->
 
 	<cffunction name="Configure" access="public" returntype="void" hint="This is the configuration method for your interceptors" output="false" >
 		<!--- Nothing --->
-		
+
 	</cffunction>
 
 <!------------------------------------------- INTERCEPTION POINTS ------------------------------------------->
-	
+
 	<!--- Pre execution process --->
 	<cffunction name="preProcess" access="public" returntype="void" hint="Executes before any event execution occurs" output="false" >
 		<!--- ************************************************************* --->
@@ -33,18 +35,18 @@ Description :
 			var rc = Event.getCollection();
 			var loggingIn = false;
 			var oSession = getPlugin("SessionStorage");
-			
+
 			//Are we logging In
-			if ( event.getCurrentEvent() eq "ehGeneral.doLogin" )
+			if ( event.getCurrentEvent() eq "General.doLogin" )
 				loggingIn = true;
-			
+
 			//Login Check
 			if ( (not oSession.exists("loggedin") or not oSession.getVar("loggedin") ) and not loggingIn ){
 				//Override the incoming event.
-				Event.overrideEvent("ehGeneral.dspLogin");
+				Event.overrideEvent("General.Login");
 				getPlugin("MessageBox").setMessage("warning", "Interceptor Says: Please log in first");
 			}
 		</cfscript>
 	</cffunction>
-	
+
 </cfcomponent>

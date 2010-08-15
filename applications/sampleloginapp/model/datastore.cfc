@@ -30,7 +30,7 @@
 		<cfif server.ColdFusion.ProductName eq "Coldfusion Server">
 			<cfset thePassword = hash(arguments.password,'SHA')>
 		<cfelse>
-			<cfset thePassword = hash(arguments.password)>
+			<cfset thePassword = hash(arguments.password,'SHA')>
 		</cfif>
 		<!--- Validate a user --->
 		<cfquery name="rtnStruct.qUser" dbtype="query">
