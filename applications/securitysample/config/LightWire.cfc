@@ -1,4 +1,4 @@
-<cfcomponent name="LightWire" extends="coldbox.system.extras.lightwire.BaseConfigObject" hint="A LightWire configuration bean.">
+<cfcomponent name="LightWire" extends="coldbox.system.ioc.lightwire.BaseConfigObject" hint="A LightWire configuration bean.">
 
   <cffunction name="init" output="false" returntype="any" hint="I initialize the config bean.">
     <cfscript>
@@ -7,14 +7,14 @@
 		super.init();
 		// OPTIONAL: Set lazy loading: true or false. If true, Singletons will only be created when requested. If false, they will all be created when LightWire is first initialized. Default if you don't set: LazyLoad = true.
 		setLazyLoad("false");
-		
+
 		// Transfer
 		addSingleton("transfer.TransferFactory","transferFactory");
 		addConstructorProperty("TransferFactory","datasourcePath",getController().getSetting('transferSettings.datasourcePath') );
 		addConstructorProperty("TransferFactory","configPath",getController().getSetting('transferSettings.configPath') );
 		addConstructorProperty("TransferFactory","definitionPath",getController().getSetting('transferSettings.definitionPath') );
 		addSingletonFromFactory("TransferFactory","getTransfer","transfer");
-		
+
 		// Security Manager
 		addSingleton("#cfcModelRoot#.model.managers.Security","securityManager");
 		addConstructorDependency("securityManager","transfer","transfer");

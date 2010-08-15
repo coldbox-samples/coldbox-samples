@@ -1,4 +1,4 @@
-<form action="?event=ehSecurity.doLogin" method="post">
+<form action="?event=Security.doLogin" method="post">
 	<table height="75%" width="100%">
 		<tr>
 			<td align="center">
@@ -20,7 +20,7 @@
 		</tr>
 	</table>
 </form>
-<form action="?event=ehSecurity.doLogin" method="post">
+<form action="?event=Security.doLogin" method="post">
 	<table height="75%" width="100%">
 		<tr>
 			<td align="center">
