@@ -38,6 +38,9 @@ Optional Methods
 // Configure ColdBox Application
 function configure(){
 
+	//converts the coldbox app mapping to a dot class path for instantiations, not part of a regular config
+	var appMapwithDots = reReplace(appMapping,"(/|\\)",".","all");
+
 	// coldbox directives
 	coldbox = {
 		//Application Setup
@@ -78,7 +81,7 @@ function configure(){
 	//Register interceptors as an array, we need order
 	interceptors = [
 		 //Autowire
-		 {class="#variables.appMapping#.model.securityInterceptor"}
+		 {class="#appMapwithDots#.model.securityInterceptor"}
 	];
 
 	//LogBox DSL
