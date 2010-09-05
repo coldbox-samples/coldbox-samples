@@ -56,15 +56,50 @@
 						<input type="button" value="Remove Comment" onclick="removeComment('#comment.getCommentID()#','#rc.oPost.getEntryID()#')" />
 					</div>
 				</cfif>
-				<div class="commentBody">#comment.getComment()#</div>
-				<div class="commentTime">#comment.getDisplayTime()#</div>
+				
+				<!--- Comment Itself --->
+				<div class="commentBody">
+					<!--- Avatar --->
+					<cfif len(comment.getAuthorEmail())>
+					<div class="commentAvatar">#getMyPlugin("Avatar").renderAvatar(comment.getAuthorEmail())#</div>
+					</cfif>
+					#comment.getComment()#
+				</div>
+				
+				<!--- Author Info --->
+				<cfif len(comment.getAuthor())>
+				<div class="commentPostInfo">By: 
+					<cfif len(comment.getAuthorURL())>
+					<a href="#comment.getAuthorURL#" target="_blank">#comment.getAuthor()#</a>
+					<cfelse>
+					#comment.getAuthor()#
+					</cfif>
+				</div>
+				</cfif>
+				<!--- Post Info --->
+				<div class="commentTime">On: #comment.getDisplayTime()#</div>
 			</div>
 		</cfloop>
 		
+		<br/>
 		
-		<div><h3>Enter your comment:</h3></div>
+		<!--- Comments --->
 		<form action="#event.buildLink('blog.doAddComment')#" method="POST">
-			<textarea id="comment" name="comment" cols="40" rows="8"></textarea>
+			
+			<!--- Comment --->
+			<div><h4>Enter your comment:</h4></div>
+			<textarea id="comment" name="comment" cols="52" rows="8">#flash.get("comment","")#</textarea>
+			<!--- Author --->
+			<div><h4>Your Name: (Optional)</h4></div>
+			<p><input name="author" id="author" type="text" size="60" value="#flash.get("author","")#"/></p>
+			<!--- Author Email --->
+			<div><h4>Your Email: (Optional)</h4></div>
+			<p><input name="authorEmail" id="authorEmail" type="text" size="60" value="#flash.get("authorEmail","")#"/></p>
+			<!--- Author URL --->
+			<div><h4>Your URL: (Optional)</h4></div>
+			<p><input name="authorURL" id="authorURL" type="text" size="60" value="#flash.get("authorURL","")#"/></p>
+			
+			<!--- Submit Comment --->
 			<p><input name="submit" id="commentSubmitButton" type="submit" value="Submit Comment">
 			<p><input type="hidden" id="entryID" name="entryID" value="#rc.oPost.getEntryId()#">
 		</form>

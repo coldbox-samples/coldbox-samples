@@ -37,10 +37,13 @@ img{
     padding:5px 0px;
 }
 
-.blogPost .commentTime {
+.blogPost .commentTime, .commentPostInfo {
     color:#777777;
 }
-
+.blogPost .commentAvatar{
+	float:left;
+	margin: 0px 10px 0px 0px;
+}
 .blogPost .commentBody {
     padding:10px 0px;
     border-bottom:1px solid #BBB;
@@ -49,6 +52,7 @@ img{
 	background-color: #CDCDCD;
 	margin:10px 0pt 15px;
 	border-spacing: 1px;
+	font-size: 11px;
 }
 .tablelisting tr{
 	background-color: #F7F7F7;
@@ -91,4 +95,13 @@ img{
 }
 .tablesorter td.center{
 	text-align: center;
+}
+/* Admin Stuff */
+.commentTablePostInfo{
+	color: #ff5458;
+	font-style: italic;
+}
+.commentTableAvatar{
+	float: left;
+	margin: 0px 5px 0px 0px;
 }

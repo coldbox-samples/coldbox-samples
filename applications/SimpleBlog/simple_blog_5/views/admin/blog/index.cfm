@@ -70,7 +70,7 @@
 <table name="comments" id="comments" class="tablelisting" width="98%">
 	<thead>
 		<tr>
-			<th>comment</th>
+			<th>Comment</th>
 			<th width="200" class="center">Post Info</th>
 			<th width="75" class="center">Actions</th>
 		</tr>
@@ -79,8 +79,25 @@
 	<tbody>
 		<cfloop array="#rc.comments#" index="comment">
 		<tr>
-			<td>#comment.getComment()#</td>
 			<td>
+				<span class="commentTablePostInfo">
+				Posted on <a href="#event.buildLink('entry')#/#comment.getPost().getEntryID()#">#comment.getPost().getTitle()#</a>
+				</span><br/>
+				#comment.getComment()#
+			</td>
+			<td>
+				<!--- Avatar --->
+				<cfif len(comment.getAuthorEmail())>
+				<div class="commentTableAvatar">#getMyPlugin("Avatar").renderAvatar(comment.getAuthorEmail(),30)#</div>
+				</cfif>
+				<!--- Author --->
+				<cfif len(comment.getAuthorURL())>
+					<a href="#comment.getAuthorURL#" target="_blank">#comment.getAuthor()#</a>
+				<cfelse>
+					#comment.getAuthor()#
+				</cfif>
+				<br/>
+				<!--- Display Time --->
 				#comment.getDisplayTime()#
 			</td>
 			<td class="center">

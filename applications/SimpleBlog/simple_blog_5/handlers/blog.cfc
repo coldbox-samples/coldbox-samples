@@ -49,13 +49,25 @@ component{
 		var oComment 	= commentService.new();
 		
 		if( NOT len(event.getTrimValue("comment")) ){
-			getPlugin("MessageBox").warn("Comments needs text");
+			
+			// flash variables, so user does not retype
+			var data = {
+				author = rc.author,
+				authorEmail = rc.authorEmail,
+				authorURL = rc.authorURL,
+				comment = rc.comment
+			};
+			flash.putAll(data);
+			
+			getPlugin("MessageBox").warn("Please enter all required fields");
 			setNextEvent(event="entry/#rc.entryID###postComments");
 		}
 		
-		oComment.setComment( rc.comment );
+		// populate comment
+		populateModel( oComment );
 		oComment.setPost( entryService.get(rc.entryID) );
 		
+		// save comment
 		commentService.save( oComment );
 		
 		getPlugin("MessageBox").info("Comment Added!");
