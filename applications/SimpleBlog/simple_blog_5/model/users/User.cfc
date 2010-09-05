@@ -16,14 +16,36 @@ component persistent="true" table="users"{
 	property name="entries" singularName="entry" type="array" fieldtype="one-to-many" 
 			  cfc="model.entries.Entry" fkcolumn="FK_userID" inverse="true" lazy="true" cascade="all-delete-orphan";
 	
+	// DEPENDENCIES via WireBOX
+	property name="dateUtil" inject="model" persistent="false";
+
 	/* ----------------------------------------- PUBLIC -----------------------------------------  */
 
+	/**
+	* Retrieve full name
+	*/
 	string function getName(){
 		return getFirstName() & " " & getLastName();
 	}
 	
+	/**
+	* Shorthand retrieve admin
+	*/
 	boolean function isAdmin(){
 		if( getUserType() eq "admin" ){ return true; }
 		return false;
+	}
+	
+	/**
+	* Get formatted lastLogin
+	*/
+	string function getDisplayLastLogin(){
+		var lastLogin = getLastLogin();
+		
+		if(  NOT isNull(lastLogin) ){
+			return dateUtil.formatDateTime( lastLogin );
+		}
+		
+		return "Never";
 	}
 }

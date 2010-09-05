@@ -6,7 +6,7 @@
 <!--- display any messages in the event --->
 #getPlugin("MessageBox").renderit()#
 
-<form name="loginForm" method="POST" action="#event.buildLink('admin/doLogin')#">
+<form name="loginForm" method="POST" action="#event.buildLink('security.doLogin')#">
 	<p>Username:<br/>
 	<input type="text" name="username">
 	<p>Password:<br/>

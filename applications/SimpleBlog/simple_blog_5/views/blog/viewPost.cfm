@@ -11,7 +11,7 @@
 	}
 	function removeComment(commentID,entryID){
 		if( confirm("Really delete?") ){
-			window.location='#event.buildLink(linkto="admin.removeComment")#/entryID/'+entryID+'/commentID/'+commentID;
+			window.location='#event.buildLink(linkto="admin.blog.removeComment")#/entryID/'+entryID+'/commentID/'+commentID;
 		}
 	}
 </script>
@@ -24,12 +24,12 @@
 	<!--- If Admin --->
 	<cfif rc.oUser.isAdmin()>
 	<!--- Remove Form --->
-	<form name="entryForm" id="entryForm" method="post" action="#event.buildLink('admin.removePost')#">
+	<form name="entryForm" id="entryForm" method="post" action="#event.buildLink('admin.blog.removePost')#">
 		<input type="hidden" name="entryID" id="entryID" value="#rc.oPost.getEntryID()#"/>
 	</form>
 	<!--- Remove Bar --->
 	<div style="float:right">
-		<input type="button" value="Edit Post" onclick="window.location='#event.buildLink(linkTo='admin.editPost',queryString="entryID=#rc.oPost.getEntryID()#")#'" />
+		<input type="button" value="Edit Post" onclick="window.location='#event.buildLink(linkTo='admin.blog.editor',queryString="entryID=#rc.oPost.getEntryID()#")#'" />
 		<input type="button" value="Remove Post" onclick="removePost('#rc.oPost.getEntryID()#')" />
 	</div>
 	</cfif>

@@ -1,5 +1,5 @@
 <cfoutput>
-<cfform action="#event.buildLink('admin.savePost')#" method="POST"	name="newPostForm">
+<cfform action="#event.buildLink('admin.blog.savePost')#" method="POST"	name="newPostForm">
 	<input type="hidden" name="entryID" id="entryID" value="#rc.oPost.getEntryID()#" />
 	<h1>Post Editor</h1>
 	
@@ -23,7 +23,7 @@
 	</select>
 
 	<p>
-		<a href="#event.buildLink('admin')#">Cancel</a> or
+		<a href="#event.buildLink(rc.xehBlogAdmin)#">Cancel</a> or
 		<input type="submit" value="Post It!">
 	</p>
 </cfform>

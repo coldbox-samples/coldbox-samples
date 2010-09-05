@@ -6,7 +6,8 @@ SimpleBlog
 by Henrik Joreteg
 Revised by Luis Majano
 
-This is a simple blog engine that has been built using 4 different techniques using ColdBox and Transfer.
+This is a simple blog engine that has been built using 5 different techniques using 
+ColdBox, Transfer and ColdFusion 9 ORM
 
 ********************************************************************************
 Installation
@@ -67,4 +68,6 @@ Here are some techniques used:
 	- Jquery Integration + Effects
 	- Service Layer Expanded
 	- Transfer Decorator Injections
-	
+
+5. A full fledged blog application using ColdFusion 9 ORM, ColdBox entity services, ColdBox entity injectors,
+	ColdBox caching and sooooo much more.

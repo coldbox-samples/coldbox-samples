@@ -20,34 +20,34 @@
 </cfsavecontent>
 <cfhtmlhead text="#js#">
 
-<h1>Welcome to SimpleBlog Admin</h1>
+<h1>Welcome to ColdBox SimpleBlog Admin</h1>
 <p>What would you like to do?
 <ul>
-	<li><a href="#event.buildLink('admin/newPost')#">New Post</a></li>
-	<li><a href="#event.buildLink('admin/doLogOut')#">Log off</a></li>
+	<li><a href="#event.buildLink(rc.xehBlogEditor)#">New Post</a></li>
+	<li><a href="#event.buildLink('blog')#">View All Posts</a></li>
 </ul>
 
 #getPlugin("MessageBox").renderit()#
 
 <h2>Latest 10 Entries</h2>
-<input type="button" onclick="window.location='#event.buildLink('admin.newPost')#'" value="New Post" />
-<form name="entryForm" id="entryForm" method="post" action="#event.buildLink('admin.removePost')#">
+<input type="button" onclick="window.location='#event.buildLink(rc.xehBlogEditor)#'" value="New Post" />
+<form name="entryForm" id="entryForm" method="post" action="#event.buildLink('admin.blog.removePost')#">
 <input type="hidden" name="entryID" id="entryID" value="" />
 
 <!--- Render latest posts --->
 <table name="entries" id="entries" class="tablelisting" width="98%">
 	<thead>
 		<tr>
-			<th>title</th>
-			<th width="200" class="center">post info</th>
-			<th width="125" class="center">CMDS</th>
+			<th>Title</th>
+			<th width="200" class="center">Post Info</th>
+			<th width="125" class="center">Actions</th>
 		</tr>
 	</thead>
 	
 	<tbody>
 		<cfloop array="#rc.posts#" index="post">
 		<tr>
-			<td><a href="#event.buildLink('admin.editPost')#/entryID/#post.getEntryID()#" title="Edit Post">#post.getTitle()#</a></td>
+			<td><a href="#event.buildLink(rc.xehBlogEditor)#/entryID/#post.getEntryID()#" title="Edit Post">#post.getTitle()#</a></td>
 			<td>
 				#post.getAuthor()#<br/>
 				#post.getDisplayTime()#
@@ -63,7 +63,7 @@
 </form>
 
 <h2>Latest 10 Comments</h2>
-<form name="commentForm" id="commentForm" method="post" action="#event.buildLink('admin.removeComment')#">
+<form name="commentForm" id="commentForm" method="post" action="#event.buildLink('admin.blog.removeComment')#">
 <input type="hidden" name="commentID" id="commentID" value="" />
 
 <!--- Render latest posts --->
@@ -71,8 +71,8 @@
 	<thead>
 		<tr>
 			<th>comment</th>
-			<th width="200" class="center">post info</th>
-			<th width="75" class="center">CMDS</th>
+			<th width="200" class="center">Post Info</th>
+			<th width="75" class="center">Actions</th>
 		</tr>
 	</thead>
 	

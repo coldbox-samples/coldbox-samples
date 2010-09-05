@@ -4,37 +4,15 @@
 component{
 
 	// Dependencies
-	property name="securityService" inject="model";
 	property name="entryService" 	inject="model";
 	property name="commentService" 	inject="model";
 	property name="userService"		inject="model";
 
-	// login form
-	function login(event){
-		event.setView("admin/login");
-	}
-	
-	// do login
-	function doLogin(event){
+	// pre handler
+	function preHandler(event,action){
 		var rc = event.getCollection();
-		
-		event.paramValue("username","");
-		event.paramValue("password","");
-		
-		if( securityService.isUserVerified(rc.username,rc.password) ){
-			setNextEvent("admin");
-		}
-		else{
-			getPlugin("MessageBox").setMessage("error","Login Failed: Please try again.");
-			setNextEvent("admin.login");
-		}
-		
-	}
-	
-	// logout
-	function doLogout(event){
-		securityService.deleteUserSession();
-		setNextEvent("blog");
+		rc.xehBlogAdmin 	= "admin.blog";
+		rc.xehBlogEditor 	= "admin.blog.editor";
 	}
 	
 	// index
@@ -43,28 +21,21 @@ component{
 		// Get only the latest 10 posts to display in the admin dashboard.
 		rc.posts 	= entryService.list(sortOrder="time desc",max=10,asQuery=false);
 		rc.comments = commentService.list(sortOrder="time desc",max=10,asQuery=false);
-		event.setView("admin/index");
+		event.setView("admin/blog/index");
 	}
 
-	//new post
-	function newPost(event){
+	// blog editor
+	function editor(event){
 		var rc = event.getCollection();
 		
-		rc.oPost  = entryService.new();
+		// get new or persisted post
+		rc.oPost  = entryService.get( event.getValue("entryID",0) );
+		// get all users for authors
 		rc.qUsers = userService.list(sortOrder="lastName asc");
 		
-		event.setView("admin/postEditor");
+		event.setView("admin/blog/postEditor");
 	}	
-	//edit post
-	function editPost(event){
-		var rc = event.getCollection();
-		
-		rc.oPost  = entryService.get(rc.entryID);
-		rc.qUsers = userService.list(sortOrder="lastName asc");
-		
-		event.setView("admin/postEditor");
-	}
-	
+
 	// savePost
 	function savePost(event){
 		var rc = event.getCollection();
@@ -75,7 +46,7 @@ component{
 		
 		getColdboxOCM("template").clearAllEvents(async=false);
     	getPlugin("MessageBox").setMessage("info","Entry saved!");
-		setNextEvent("admin");
+		setNextEvent(rc.xehBlogAdmin);
 	}
 	
 	// remove post
@@ -85,12 +56,12 @@ component{
     	
 		if( isNull(oPost) ){
 			getPlugin("MessageBox").setMessage("warning","Invalid entry!");
-			setNextEvent('admin');
+			setNextEvent(rc.xehBlogAdmin);
 		}
 		
 		entryService.delete( oPost );
 		getPlugin("MessageBox").setMessage("info","Entry Removed!");
-		setNextEvent('admin');
+		setNextEvent(rc.xehBlogAdmin);
 	}
 	
 	// remove comment
@@ -100,7 +71,7 @@ component{
     	
 		if( isNull(oComment) ){
 			getPlugin("MessageBox").setMessage("warning","Invalid comment!");
-			setNextEvent('admin');
+			setNextEvent(rc.xehBlogAdmin);
 		}
 		
 		commentService.delete( oComment );
@@ -111,7 +82,7 @@ component{
 			setNextEvent('entry/#rc.entryID###postComments');
 		}
 		// else relocate to admin
-		setNextEvent("admin");
+		setNextEvent(rc.xehBlogAdmin);
 	}
 	
 }

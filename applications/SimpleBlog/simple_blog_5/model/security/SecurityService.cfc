@@ -15,6 +15,15 @@ component singleton{
 	}
 	
 	/**
+	* Update a user's last login timestamp
+	*/
+	void function updateUserLoginTimestamp(){
+		var user = getUserSession();
+		user.setLastLogin( now() );
+		userService.save( user );
+	}
+	
+	/**
 	* User validator via security interceptor
 	*/
 	boolean function userValidator(struct rule,any messagebox, any controller){

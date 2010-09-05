@@ -1,5 +1,5 @@
 /**
-* My Administrator handler
+* I handle security credentials for the administrator panel
 */
 component{
 
@@ -8,7 +8,7 @@ component{
 
 	// login form
 	function login(event){
-		event.setView("admin/login");
+		event.setView("security/login");
 	}
 	
 	// do login
@@ -19,11 +19,12 @@ component{
 		event.paramValue("password","");
 		
 		if( securityService.isUserVerified(rc.username,rc.password) ){
-			setNextEvent("admin");
+			securityService.updateUserLoginTimestamp();
+			setNextEvent("admin.blog");
 		}
 		else{
 			getPlugin("MessageBox").setMessage("error","Login Failed: Please try again.");
-			setNextEvent("admin.login");
+			setNextEvent("security.login");
 		}
 		
 	}

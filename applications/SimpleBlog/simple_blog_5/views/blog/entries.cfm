@@ -15,7 +15,7 @@
 			<!--- If Admin --->
 			<cfif rc.oUser.isAdmin()>
 			<div style="float:right">
-				<input type="button" value="Edit Post" onclick="window.location='#event.buildLink(linkTo='admin.editPost',queryString="entryID=#post.getEntryID()#")#'" />
+				<input type="button" value="Edit Post" onclick="window.location='#event.buildLink(linkTo='admin.blog.editor',queryString="entryID=#post.getEntryID()#")#'" />
 			</div>
 			</cfif>
 			

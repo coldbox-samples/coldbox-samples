@@ -16,10 +16,10 @@ that can be found in an event.
 -->
 <rules>
     <rule>
-        <whitelist>admin\.doLogin,admin\.login,admin\.doLogOut,^main.*,^general.*</whitelist>
+        <whitelist>^security.*,^main.*</whitelist>
         <securelist>^admin</securelist>
         <roles>admin</roles>
         <permissions>read,write</permissions>
-        <redirect>admin/login</redirect>
+        <redirect>security/login</redirect>
     </rule>
 </rules>
