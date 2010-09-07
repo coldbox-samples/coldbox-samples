@@ -1,0 +1,2 @@
+<cfcomponent output="false">	<!--- Default Action --->	<cffunction name="index" returntype="void" output="false">		<cfargument name="event">		<cfset var rc = event.getCollection()>				<cfset rc.welcomeMessage = "Welcome to ColdBox!">					<cfset event.setView("general/home")>	</cffunction><!------------------------------------------- PRIVATE EVENTS ------------------------------------------>
+</cfcomponent>
