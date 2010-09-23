@@ -6,7 +6,7 @@ converted to use the undocumented serviceFactory (which it used to use but I did
 * Currently supports MySQL 5 (probably 4.1 but it has not been tested yet) and MSSQL 2000 (again probably 2005 but not tested)
 
 Installation:
-1) Set your administrator password inside the config/config.xml.cfm file
+1) Set your administrator password inside the config/ColdBox.cfc file
 2) That's it.
 
 The code is generated for you to copy and paste and do with what you will. The components will run fine as is, 

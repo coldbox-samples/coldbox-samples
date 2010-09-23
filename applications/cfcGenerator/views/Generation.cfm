@@ -14,7 +14,7 @@ vhistorydiv = "bean"; vhistorytab = "bean";
 </script>
 
 <!--- Display Components View --->
-#renderView("vwComponents")#
+#renderView("Components")#
 
 
 <!--- Display the Generated Tabs --->
