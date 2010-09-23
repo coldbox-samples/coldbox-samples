@@ -4,7 +4,7 @@ Copyright 2005-2007 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
 www.coldboxframework.com | www.luismajano.com | www.ortussolutions.com
 ********************************************************************************
 
-Author     :	Sana Ullah
+Author     :	Sana Ullah, Curt Gratz
 Date        :	Dec 03 2008
 Description :
 	This proxy is an inherited coldbox remote proxy used for enabling
@@ -23,7 +23,7 @@ Description :
 	   e.setHTTPMethod('post');
 	   e.setReturnFormat('plain');
 	// Call process method of ColdBoxProxy.cfc.
-	  e.process2({'event':'ehAjax.doHtmlEvent'});
+	  e.process2({'event':'Ajax.doHtmlEvent'});
     }
     var HtmlData = function(sData)
   	{

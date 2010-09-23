@@ -92,7 +92,7 @@ Description :
 		<cfargument name="username" type="string">
 		<cfargument name="password" type="string">
 		<!--- set event handler --->
-		<cfset arguments["event"] = "ehAjax.validateCredentials">
+		<cfset arguments["event"] = "Ajax.validateCredentials">
 		
 		<!--- Call the actual proxy --->
 		<!--- <cfset qry = super.process(argumentCollection=arguments)> --->
@@ -107,7 +107,7 @@ Description :
 	<cffunction name="dspTab2" output="false" access="remote" returnformat="plain" hint="Process a remote call and return data/objects back.">
 		<cfset var results = "" />
 		<!--- call even handler to get query data etc --->
-		<cfset arguments["event"] = "ehAjax.dspTab2">
+		<cfset arguments["event"] = "Ajax.dspTab2">
 
 		<!--- Call the actual proxy --->
 		<cfset results = super.process(argumentCollection=arguments)>

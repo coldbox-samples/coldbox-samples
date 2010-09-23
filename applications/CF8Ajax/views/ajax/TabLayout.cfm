@@ -4,8 +4,8 @@ Copyright 2005-2007 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
 www.coldboxframework.com | www.luismajano.com | www.ortussolutions.com
 ********************************************************************************
 
-Author     :	Sana Ullah
-Date        :	March 05 2008
+Author     :	Sana Ullah, Curt Gratz
+Date        :	Sept 23 2010
 Description : demo for using ajax tabs with event-model and proxy-model.
 ----------------------------------------------------------------------->
 <cflayout type="tab" tabheight="600">
@@ -14,7 +14,7 @@ Description : demo for using ajax tabs with event-model and proxy-model.
 		<h2>Some contents.....</h2>
 	</cflayoutarea>
 	
-	<cflayoutarea title="Tab 1" source="index.cfm?event=ehAjax.dspTab1" name="tab1">
+	<cflayoutarea title="Tab 1" source="index.cfm?event=Ajax.dspTab1" name="tab1">
 	
 	</cflayoutarea>
 	<!--- This binding is via local scope. --->

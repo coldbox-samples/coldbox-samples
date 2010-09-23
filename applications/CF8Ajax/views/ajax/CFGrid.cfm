@@ -4,8 +4,8 @@ Copyright 2005-2007 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
 www.coldboxframework.com | www.luismajano.com | www.ortussolutions.com
 ********************************************************************************
 
-Author     :	Sana Ullah
-Date        :	March 05 2008
+Author     :	Sana Ullah, Curt Gratz
+Date        :	Sept 23 2010
 Description :
 	This proxy is an inherited coldbox remote proxy used for enabling
 	coldbox as a model framework.
