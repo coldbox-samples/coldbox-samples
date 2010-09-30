@@ -1,17 +1,17 @@
 ﻿<!-----------------------------------------------------------------------
 Author 	 :	Ben Garrett
 Date     :	December 17, 2008
-Description : 			
+Description :
 This is a ColdBox event handler for our RSS examples.
-	
+
 ----------------------------------------------------------------------->
 <cfcomponent name="examples" extends="coldbox.system.EventHandler" output="false" autowire="true">
 
 	<!--- Dependencies --->
-	<cfproperty name="feeditems" type="Model" scope="instance" />
-	<cfproperty name="feedmeta" type="Model" scope="instance" />
+	<cfproperty name="feeditems" inject="model" scope="instance" />
+	<cfproperty name="feedmeta" inject="model" scope="instance" />
 
-	<!--- This init is mandatory, including the super.init(). ---> 
+	<!--- This init is mandatory, including the super.init(). --->
 	<cffunction name="init" access="public" returntype="examples" output="false">
 		<cfargument name="controller" type="any"/>
 		<cfset super.init(arguments.controller)/>
@@ -29,9 +29,9 @@ This is a ColdBox event handler for our RSS examples.
 <!------------------------------------------------ EXAMPLE FEEDS ------------------------------------------------>
 
 	<!-------------------------------------------
-	   Please do not edit or remove the comments 
-	   containing 'start' or 'end' as they are   
-	   needed by the samples.                    
+	   Please do not edit or remove the comments
+	   containing 'start' or 'end' as they are
+	   needed by the samples.
 	 ------------------------------------------->
 
   <!--- createFeedBeginner start --->
@@ -45,7 +45,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.feed = instance.feedmeta.beginner()/>
 		<!--- Obtain feed items --->
 		<cfset rc.feed.items = instance.feeditems.beginner()/>
-		<!--- The feed data is now ready to compile. Using the ColdBox feedGenerator plug-in we convert this data into a XML file. 
+		<!--- The feed data is now ready to compile. Using the ColdBox feedGenerator plug-in we convert this data into a XML file.
 		The file will be located in the ColdBox\samples\applications\feedGenerator\includes\xml\ directory.
 		If successful the variable rc.compileFeed will have the Boolean value true.
 		The createFeed method supports a number of arguments, though we are only going to use a couple.
@@ -54,10 +54,10 @@ This is a ColdBox event handler for our RSS examples.
 		 --->
 		<cfset rc.compileFeed = getPlugin('feedGenerator').createFeed(FeedStruct=rc.feed,OutputFile=rc.pathtofile)/>
 		<!--- Display the feed using the vwPostGenerate view located at /views/vwPostGenerate.cfm --->
-		<cfset Event.setView("vwPostGenerate")/> 
+		<cfset Event.setView("vwPostGenerate")/>
 	</cffunction>
   <!--- createFeedBeginner end --->
-	
+
   <!--- createFeedError start --->
 	<cffunction name="createFeedError" access="public" returntype="void" output="false" hint="">
 		<cfargument name="Event" type="any"/>
@@ -67,10 +67,10 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.feed.items = instance.feeditems.error()/>
 		<cfset rc.compileFeed = getPlugin('feedGenerator').createFeed(FeedStruct=rc.feed,OutputFile=rc.pathtofile)/>
 		<!--- Display the feed --->
-		<cfset Event.setView("vwPostGenerate")/> 
+		<cfset Event.setView("vwPostGenerate")/>
 	</cffunction>
   <!--- createFeedError end --->
-	
+
   <!--- createFeedPlayground start --->
 	<cffunction name="createFeedPlayground" access="public" returntype="void" output="false" hint="">
 		<cfargument name="Event" type="any"/>
@@ -80,7 +80,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.feed.items = instance.feeditems.playground()/>
 		<cfset rc.compileFeed = getPlugin('feedGenerator').createFeed(FeedStruct=rc.feed,OutputFile=rc.pathtofile)/>
 		<!--- Display the feed --->
-		<cfset Event.setView("vwPostGenerate")/> 
+		<cfset Event.setView("vwPostGenerate")/>
 	</cffunction>
   <!--- createFeedPlayground end --->
 
@@ -132,7 +132,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset Event.setView("vwPostGenerate")/>
 	</cffunction>
   <!--- createFeedCompleteArt end --->
- 
+
   <!--- createFeediTunes start --->
 	<cffunction name="createFeediTunes" access="public" returntype="void" output="false" hint="">
 		<cfargument name="Event" type="any"/>
@@ -142,10 +142,10 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.feed.items = instance.feeditems.itunes()/>
 		<cfset rc.compileFeed = getPlugin('feedGenerator').createFeed(FeedStruct=rc.feed,OutputFile=rc.pathtofile)/>
 		<!--- Display the feed --->
-		<cfset Event.setView("vwPostGenerate")/> 
+		<cfset Event.setView("vwPostGenerate")/>
 	</cffunction>
   <!--- createFeediTunes end --->
-  
+
   <!--- createFeedOpenSearch start --->
 	<cffunction name="createFeedOpenSearch" access="public" returntype="void" output="false" hint="">
 		<cfargument name="Event" type="any"/>
@@ -158,7 +158,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset Event.setView("vwPostGenerate")/>
 	</cffunction>
   <!--- createFeedOpenSearch end --->
-  
+
   <!--- createFeedDublinCore start --->
 	<cffunction name="createFeedDublinCore" access="public" returntype="void" output="false" hint="">
 		<cfargument name="Event" type="any"/>
@@ -168,10 +168,10 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.feed.items = instance.feeditems.dublincore()/>
 		<cfset rc.compileFeed = getPlugin('feedGenerator').createFeed(FeedStruct=rc.feed,OutputFile=rc.pathtofile)/>
 		<!--- Display the feed --->
-		<cfset Event.setView("vwPostGenerate")/> 
+		<cfset Event.setView("vwPostGenerate")/>
 	</cffunction>
   <!--- createFeedDublinCore end --->
-  
+
   <!--- createFeedSlash start --->
 	<cffunction name="createFeedSlash" access="public" returntype="void" output="false" hint="">
 		<cfargument name="Event" type="any"/>
@@ -181,10 +181,10 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.feed.items = instance.feeditems.slash()/>
 		<cfset rc.compileFeed = getPlugin('feedGenerator').createFeed(FeedStruct=rc.feed,OutputFile=rc.pathtofile)/>
 		<!--- Display the feed --->
-		<cfset Event.setView("vwPostGenerate")/> 
+		<cfset Event.setView("vwPostGenerate")/>
 	</cffunction>
   <!--- createFeedSlash end --->
-  
+
   <!--- createFeedComboEx start --->
 	<cffunction name="createFeedComboEx" access="public" returntype="void" output="false" hint="">
 		<cfargument name="Event" type="any"/>
@@ -194,10 +194,10 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.feed.items = instance.feeditems.comboex()/>
 		<cfset rc.compileFeed = getPlugin('feedGenerator').createFeed(FeedStruct=rc.feed,OutputFile=rc.pathtofile)/>
 		<!--- Display the feed --->
-		<cfset Event.setView("vwPostGenerate")/> 
+		<cfset Event.setView("vwPostGenerate")/>
 	</cffunction>
   <!--- createFeedComboEx end --->
-  
+
   <!--- createFeedInternational start --->
 	<cffunction name="createFeedInternational" access="public" returntype="void" output="false" hint="">
 		<cfargument name="Event" type="any"/>
@@ -207,10 +207,10 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.feed.items = instance.feeditems.international()/>
 		<cfset rc.compileFeed = getPlugin('feedGenerator').createFeed(FeedStruct=rc.feed,OutputFile=rc.pathtofile)/>
 		<!--- Display the feed --->
-		<cfset Event.setView("vwPostGenerate")/> 
+		<cfset Event.setView("vwPostGenerate")/>
 	</cffunction>
   <!--- createFeedInternational end --->
-  
+
   <!--- createFeedBandwidth start --->
 	<cffunction name="createFeedBandwidth" access="public" returntype="void" output="false" hint="">
 		<cfargument name="Event" type="any"/>
@@ -233,7 +233,7 @@ This is a ColdBox event handler for our RSS examples.
   <!--- createFeedBandwidth end --->
 
   <!--------------------------------------------- DUMP EVENTS --------------------------------------------->
-  
+
 	<cffunction name="dumpFeedBeginner" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -241,7 +241,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
 	</cffunction>
-  
+
 	<cffunction name="dumpDisplayFeedBeginner" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -249,7 +249,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
 	</cffunction>
-  
+
 	<cffunction name="dumpFeedError" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -257,7 +257,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
 	</cffunction>
-  
+
 	<cffunction name="dumpFeedPlayground" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -265,7 +265,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
 	</cffunction>
-  
+
 	<cffunction name="dumpFeedSimpleArt" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -273,7 +273,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
 	</cffunction>
-  
+
 	<cffunction name="dumpFeedCompleteArt" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -281,7 +281,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
 	</cffunction>
-  
+
 	<cffunction name="dumpFeediTunes" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -289,7 +289,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
 	</cffunction>
-  
+
 	<cffunction name="dumpFeedOpenSearch" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -297,7 +297,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
 	</cffunction>
-  
+
 	<cffunction name="dumpFeedDublinCore" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -305,7 +305,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
 	</cffunction>
-  
+
 	<cffunction name="dumpFeedSlash" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -321,7 +321,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
 	</cffunction>
-  
+
 	<cffunction name="dumpFeedInternational" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -329,25 +329,25 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
 	</cffunction>
-  
+
 	<cffunction name="dumpFeedBandwidth" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
 		<cfset rc.COMname = "Bandwidth"/>
 		<cfset rc.DumpCOM = dumpCode(rc.COMname)/>
 		<cfset Event.setView("vwDumpCOM")/>
-	</cffunction>  
-     
+	</cffunction>
+
   <!--------------------------------------------- DUMP LAYOUTS & VIEWS -------------------------------------------->
-      
+
 	<cffunction name="dumpLayoutAutoDiscovery" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
 		<cfset rc.LOName = "AutoDiscovery"/>
 		<cfset rc.DumpLO = dumpLayout('layouts\Layout.Main')/>
 		<cfset Event.setView("vwDumpLO")/>
-	</cffunction>  
-    
+	</cffunction>
+
 	<cffunction name="dumpLayoutBandwidth" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -355,7 +355,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpLO = dumpLayout('layouts\Layout.xml.etag')/>
 		<cfset Event.setView("vwDumpLO")/>
 	</cffunction>
-    
+
 	<cffunction name="dumpLayoutXML" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -363,17 +363,17 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpLO = dumpLayout('layouts\Layout.xml')/>
 		<cfset Event.setView("vwDumpLO")/>
 	</cffunction>
-      
+
 	<cffunction name="dumpvwPostGenerate" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
 		<cfset rc.LOName = "vwPostGenerate"/>
 		<cfset rc.DumpLO = dumpLayout('views\vwPostGenerate')/>
 		<cfset Event.setView("vwDumpLO")/>
-	</cffunction>  
-  
+	</cffunction>
+
   <!-------------------------------------------------- DUMP FEEDS ------------------------------------------------->
-  
+
 	<cffunction name="sourceFeedBeginner" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -381,7 +381,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpXML = dumpXML(rc.COMname)/>
 		<cfset Event.setView("vwDumpFeed")/>
 	</cffunction>
-  
+
 	<cffunction name="sourceFeedPlayground" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -389,7 +389,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpXML = dumpXML(rc.COMname)/>
 		<cfset Event.setView("vwDumpFeed")/>
 	</cffunction>
-  
+
 	<cffunction name="sourceFeedSimpleArt" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -397,7 +397,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpXML = dumpXML(rc.COMname)/>
 		<cfset Event.setView("vwDumpFeed")/>
 	</cffunction>
-  
+
 	<cffunction name="sourceFeedCompleteArt" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -405,7 +405,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpXML = dumpXML(rc.COMname)/>
 		<cfset Event.setView("vwDumpFeed")/>
 	</cffunction>
-  
+
 	<cffunction name="sourceFeediTunes" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -413,7 +413,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpXML = dumpXML(rc.COMname)/>
 		<cfset Event.setView("vwDumpFeed")/>
 	</cffunction>
-  
+
 	<cffunction name="sourceFeedOpenSearch" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -421,7 +421,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpXML = dumpXML(rc.COMname)/>
 		<cfset Event.setView("vwDumpFeed")/>
 	</cffunction>
-  
+
 	<cffunction name="sourceFeedDublinCore" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -437,7 +437,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfset rc.DumpXML = dumpXML(rc.COMname)/>
 		<cfset Event.setView("vwDumpFeed")/>
 	</cffunction>
-	
+
 	<cffunction name="sourceFeedComboEx" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -455,7 +455,7 @@ This is a ColdBox event handler for our RSS examples.
 	</cffunction>
 
   <!------------------------------------------------ DISPLAY FEEDS ------------------------------------------------>
-  
+
   <!--- createFeedDisplayBeginner start --->
 	<cffunction name="displayFeedBeginner" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
@@ -470,7 +470,7 @@ This is a ColdBox event handler for our RSS examples.
 		</cfif>
 	</cffunction>
   <!--- createFeedDisplayBeginner end --->
-  
+
 	<cffunction name="displayFeedPlayground" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -482,7 +482,7 @@ This is a ColdBox event handler for our RSS examples.
 			<cfset runEvent(event='examples.viewDisplayFeed',private=true)/>
 		</cfif>
 	</cffunction>
-  
+
 	<cffunction name="displayFeedSimpleArt" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -506,7 +506,7 @@ This is a ColdBox event handler for our RSS examples.
 			<cfset runEvent(event='examples.viewDisplayFeed',private=true)/>
 		</cfif>
 	</cffunction>
-   
+
 	<cffunction name="displayFeediTunes" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -518,7 +518,7 @@ This is a ColdBox event handler for our RSS examples.
 			<cfset runEvent(event='examples.viewDisplayFeed',private=true)/>
 		</cfif>
 	</cffunction>
-   
+
 	<cffunction name="displayFeedOpenSearch" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
@@ -673,7 +673,7 @@ This is a ColdBox event handler for our RSS examples.
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()/>
 		<!--- Display the feed --->
-		<cfset Event.setView("vwDisplayFeed")/> 
+		<cfset Event.setView("vwDisplayFeed")/>
 	</cffunction>
 
 	<cffunction name="viewMissingFeed" access="private" returntype="void" output="false">
