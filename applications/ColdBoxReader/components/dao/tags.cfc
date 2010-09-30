@@ -1,10 +1,10 @@
 <cfcomponent name="tags" extends="basedao">
-	
+
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="init" access="public" returntype="any" output="false">
 		<!--- ******************************************************************************** --->
-		<cfargument name="dsnBean" required="true" type="coldbox.system.beans.datasourceBean">
+		<cfargument name="dsnBean" required="true" inject="coldbox:datasource:coldboxreader">
 		<!--- ******************************************************************************** --->
 		<cfset super.init(arguments.dsnBean)>
 		<cfset setTablename("coldboxreader_feed_tags")>
@@ -15,9 +15,9 @@
 		<cfset setGroupFieldList("Tag")>
 		<cfreturn this />
 	</cffunction>
-	
+
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="create" access="public" returntype="void">
 		<!--- ******************************************************************************** --->
 		<cfargument name="argc" type="struct" required="yes">
@@ -33,9 +33,9 @@
 					<cfqueryparam cfsqltype="cf_sql_varchar" value="#arguments.argc.userID#">,
 					<cfqueryparam cfsqltype="cf_sql_timestamp" value="#now()#">
 				)
-		</cfquery>		
+		</cfquery>
 	</cffunction>
-	
+
 	<!--- ******************************************************************************** --->
 
 </cfcomponent>

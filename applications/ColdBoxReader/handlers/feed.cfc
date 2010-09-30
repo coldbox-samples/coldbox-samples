@@ -1,21 +1,21 @@
 <cfcomponent name="user" extends="coldbox.system.EventHandler" output="false" autowire="true">
-	
+
 	<!--- Dependency Injections --->
-	<cfproperty name="tagService"  type="ioc" scope="instance" />
-	<cfproperty name="feedService" type="ioc" scope="instance" />
-	
+	<cfproperty name="tagService"  inject="ioc" scope="instance" />
+	<cfproperty name="feedService" inject="ioc" scope="instance" />
+
 	<cffunction name="dspAddFeed" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var obj = "">
 		<cfset var rc = Event.getCollection()>
-		
+
 		<!--- EXIT HANDLERS: --->
 		<cfset rc.xehAddFeed = "feed.doAddFeed">
 		<cfset rc.xehNewFeed = "feed.dspAddFeed">
 
 		<!--- Feed Validated? --->
 		<cfset rc.feedValidated = false>
-		
+
 		<!--- Try to parse feed --->
 		<cfif Event.getValue("continue_button","") neq "">
 			<!--- Validate Feed --->
@@ -42,7 +42,7 @@
 	<cffunction name="dspViewFeed" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()>
-		
+
 		<!--- EXIT HANDLERS: --->
 		<cfset rc.xehfeeds = "general.dspReader">
 		<cfset rc.xehMyFeeds = "feed.dspMyFeeds">
@@ -50,7 +50,7 @@
 		<cfset rc.xehfeedInfo = "feed.dspFeedInfo">
 		<cfset rc.xehfeedTags = "feed.dspFeedTags">
 		<cfset rc.xehfeedComments = "feed.dspFeedComments">
-		
+
 		<!--- Get feed --->
 		<cfset rc.feed = getFeedService().readFeed(rc.feedID)>
 	</cffunction>
@@ -58,7 +58,7 @@
 	<cffunction name="dspFeedInfo" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var rc = Event.getCollection()>
-		
+
 		<cfset rc.qryData = getFeedService().getFeedInfo(rc.feedID)>
 	</cffunction>
 
@@ -66,7 +66,7 @@
 		<cfargument name="Event" type="any">
 		<cfset var obj = getTagService()>
 		<cfset var rc = Event.getCollection()>
-		
+
 		<!--- EXIT HANDLERS: --->
 		<cfset rc.xehSearchByTag = "feed.doSearchByTag">
 		<cfset rc.xehAddTag = "feed.doAddTags">
@@ -84,7 +84,7 @@
 		<cfargument name="Event" type="any">
 		<cfset var obj = getTagService()>
 		<cfset var rc = Event.getCollection()>
-		
+
 		<!--- EXIT HANDLERS: --->
 		<cfset rc.xehSearchTag = "feed.doSearchByTag">
 		<cfset rc.qryData = obj.getTags()>
@@ -131,15 +131,15 @@
 		<cfset var qryData = "">
 		<cfset var rc = Event.getCollection()>
 		<cfset var sessionstorage = getPlugin("SessionStorage")>
-		
+
 		<cftry>
-			
+
 			<cfset qryData = getFeedService().searchByTag(rc.tag)>
-			
+
 			<cfset sessionstorage.setVar("search_results", qryData)>
 			<cfset sessionstorage.setVar("search_tag", rc.tag)>
-			<cfset sessionstorage.setVar("search_term", "")>	
-				
+			<cfset sessionstorage.setVar("search_term", "")>
+
 			<cfset setNextEvent("feed.dspSearchResults")>
 
 			<cfcatch type="any">
@@ -147,7 +147,7 @@
 				<cfset getPlugin("MessageBox").setMessage("error", cfcatch.message & "<br>" & cfcatch.detail)>
 				<cfset setNextEvent()>
 			</cfcatch>
-		</cftry>		
+		</cftry>
 	</cffunction>
 
 	<cffunction name="doSearchByTerm" access="public" returntype="void" output="false">
@@ -175,7 +175,7 @@
 		<cfargument name="Event" type="any">
 		<cfset var sessionstorage = getPlugin("SessionStorage")>
 		<cfset var rc = Event.getCollection()>
-		
+
 		<!--- EXIT HANDLERS: --->
 		<cfset rc.xehfeed = "feed.dspViewFeed">
 		<cfset rc.xehTags = "feed.dspAllTags">
@@ -197,7 +197,7 @@
 			</cfcatch>
 		</cftry>
 	</cffunction>
-	
+
 	<cffunction name="dspMyFeeds" access="public" returntype="void" output="false">
 		<cfargument name="Event" type="any">
 		<cfset var obj = getFeedService()>
@@ -207,22 +207,22 @@
 		<cfset rc.xehShowTags = "feed.dspAllTags">
 		<cfset rc.xehShowInfo = "general.dspInfo">
 		<cfset rc.xehAccountActions = "user.dspAccountActions">
-		
+
 		<!--- Get Feeds --->
 		<cfset rc.qryFeeds = obj.getAllMyFeeds(rc.oUserBean.getuserID())>
 	</cffunction>
 
 
 <!------------------------------------------ DEPENDENCIES -------------------------------------->
-	
+
 	<!--- tag service --->
 	<cffunction name="gettagService" access="private" output="false" returntype="any" hint="Get tagService">
 		<cfreturn instance.tagService/>
 	</cffunction>
-	
+
 	<!--- feedService --->
 	<cffunction name="getfeedService" access="private" output="false" returntype="any" hint="Get feedService">
 		<cfreturn instance.feedService/>
-	</cffunction>	
-	
+	</cffunction>
+
 </cfcomponent>

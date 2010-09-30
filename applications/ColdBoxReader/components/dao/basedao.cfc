@@ -6,7 +6,7 @@
 
 	<cffunction name="init" access="public" returntype="any" output="false">
 		<!--- ******************************************************************************** --->
-		<cfargument name="dsnBean" required="true" type="coldbox.system.beans.datasourceBean">
+		<cfargument name="dsnBean" required="true" inject="coldbox:datasource:coldboxreader">
 		<!--- ******************************************************************************** --->
 		<cfset variables.instance = structnew()>
 		<cfset variables.instance.dsn = arguments.dsnBean.getName()>

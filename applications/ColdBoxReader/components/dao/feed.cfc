@@ -4,7 +4,7 @@
 
 	<cffunction name="init" access="public" returntype="any" output="false">
 		<!--- ******************************************************************************** --->
-		<cfargument name="dsnBean" required="true" type="coldbox.system.beans.datasourceBean">
+		<cfargument name="dsnBean" required="true" inject="coldbox:datasource:coldboxreader">
 		<!--- ******************************************************************************** --->
 		<cfset super.init(arguments.dsnBean)>
 		<cfset setTablename("coldboxreader_feed")>
@@ -14,9 +14,9 @@
 		<cfset setDefaultSort("")>
 		<cfreturn this />
 	</cffunction>
-	
+
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="getAll" access="public" returntype="query">
 		<!--- ******************************************************************************** --->
 		<cfargument name="userID" required="false" type="string" default="0">
@@ -35,7 +35,7 @@
 	</cffunction>
 
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="getFeedInfo" access="public" returntype="query">
 		<cfargument name="feedID" required="true" type="string">
 		<cfset var qry = "">
@@ -49,9 +49,9 @@
 	</cffunction>
 
 	<!--- ******************************************************************************** --->
-	
+
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="getFeedByUsersURL" access="public" returntype="query">
 		<cfargument name="feedURL" required="true" type="string">
 		<cfargument name="userID"  required="true" type="string">
@@ -66,7 +66,7 @@
 	</cffunction>
 
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="updateFeedStat" access="public" returntype="void">
 		<!--- ******************************************************************************** --->
 		<cfargument name="feedID" 			required="true" type="string">
@@ -83,7 +83,7 @@
 			  WHERE #instance.IDFieldName# = <cfqueryparam cfsqltype="cf_sql_varchar" value="#arguments.feedID#">
 		</cfquery>
 	</cffunction>
-	
+
 
 	<!--- ******************************************************************************** --->
 

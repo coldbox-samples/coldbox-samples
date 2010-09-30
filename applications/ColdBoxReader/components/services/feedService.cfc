@@ -16,7 +16,7 @@
 	</cffunction>
 
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="getAllFeeds" access="public" returntype="struct">
 		<cfset var results = structNew()>
 		<cfset var qry = instance.feedDAO.getAll()>
@@ -25,12 +25,12 @@
 			SELECT *
 				FROM qry
 				ORDER BY Views DESC
-		</cfquery>		
+		</cfquery>
 		<cfreturn results>
 	</cffunction>
-	
+
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="getAllMyFeeds" access="public" returntype="query">
 		<!--- ******************************************************************************** --->
 		<cfargument name="userID" 	type="string" required="yes">
@@ -41,19 +41,19 @@
 	</cffunction>
 
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="readFeed" access="public" returntype="struct">
 		<!--- ******************************************************************************** --->
 		<cfargument name="feedID" type="string" required="yes">
 		<!--- ******************************************************************************** --->
 		<cfset var qFeedInfo = "">
 		<cfset var stFeed = "">
-		
+
 		<!--- get details on requested feed --->
 		<cfset qFeedInfo = instance.feedDAO.getbyID(arguments.feedID)>
-		
+
 		<cfset stFeed = retrieveFeed(qFeedInfo.feedURL)>
-		
+
 		<cfreturn stFeed>
 	</cffunction>
 
@@ -65,13 +65,13 @@
 		<!--- ******************************************************************************** --->
 		<cfset var feed = "">
 
-		<cfset feed = instance.feedReader.readFeed(arguments.url)>
+		<cfset feed = instance.feedReader.readFeed(feedURL=arguments.url,itemsType="query") />
 
 		<cfreturn feed>
 	</cffunction>
 
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="getFeedInfo" access="public" returntype="query">
 		<!--- ******************************************************************************** --->
 		<cfargument name="feedID" type="string" required="yes">
@@ -82,7 +82,7 @@
 	</cffunction>
 
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="verifyFeed" access="public" returntype="boolean">
 		<!--- ******************************************************************************** --->
 		<cfargument name="feedURL" 	type="string" required="yes">
@@ -134,7 +134,7 @@
 	</cffunction>
 
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="searchByTag" access="public" returntype="query">
 		<!--- ******************************************************************************** --->
 		<cfargument name="tag" type="string" required="yes">
@@ -146,7 +146,7 @@
 
 	<!--- ******************************************************************************** --->
 
-	
+
 
 <!---------------------------------------- PRIVATE --------------------------------------------------->
 

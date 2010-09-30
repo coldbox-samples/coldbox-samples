@@ -1,10 +1,10 @@
 <cfcomponent name="users" extends="basedao" output="false">
 
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="init" access="public" returntype="any" output="false">
 		<!--- ******************************************************************************** --->
-		<cfargument name="dsnBean" required="true" type="coldbox.system.beans.datasourceBean">
+		<cfargument name="dsnBean" required="true" inject="coldbox:datasource:coldboxreader">
 		<!--- ******************************************************************************** --->
 		<cfset super.init(arguments.dsnBean)>
 		<cfset setTablename("coldboxreader_users")>
@@ -12,9 +12,9 @@
 		<cfset setFieldNameList("*")>
 		<cfreturn this />
 	</cffunction>
-	
+
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="getUserbyCredentials" access="public" returntype="query" output="false">
 		<!--- ******************************************************************************** --->
 		<cfargument name="userBean" type="any" required="yes">
@@ -27,7 +27,7 @@
 				WHERE UserName = <cfqueryparam cfsqltype="cf_sql_varchar" value="#arguments.userBean.getusername()#">
 					AND Password = <cfqueryparam cfsqltype="cf_sql_varchar" value="#hash(arguments.userBean.getPassword())#">
 		</cfquery>
-		
+
 		<cfif qry.recordcount>
 			<cfscript>
 			arguments.userBean.setEmail(qry.email);
@@ -38,9 +38,9 @@
 		</cfif>
 		<cfreturn qry>
 	</cffunction>
-	
+
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="getUserByUsername" access="public" returntype="query">
 		<!--- ******************************************************************************** --->
 		<cfargument name="userBean" type="any" required="yes">
@@ -61,7 +61,7 @@
 		</cfif>
 		<cfreturn qry>
 	</cffunction>
-	
+
 	<!--- ******************************************************************************** --->
 
 	<cffunction name="create" access="public" returntype="void" output="false">
@@ -69,12 +69,12 @@
 		<cfargument name="userBean" type="any" required="yes">
 		<!--- ******************************************************************************** --->
 		<cfset var qry = "">
-	
+
 		<cfscript>
 		arguments.userBean.setCreatedOn(now());
 		arguments.userBean.setLastLogin(now());
 		</cfscript>
-			
+
 		<cfquery name="qry" datasource="#instance.dsn#" username="#instance.username#" password="#instance.password#">
 			INSERT INTO #instance.TableName# (UserID, UserName, Password, Email, CreatedOn, LastLogin)
 				VALUES (
@@ -89,30 +89,30 @@
 	</cffunction>
 
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="update" access="public" returnType="void" output="false"
 				hint="Updates a user information with ID">
 		<cfargument name="userBean" type="any" required="yes">
-				
+
 		<cfif len(trim(arguments.userBean.getpassword())) eq 0>
 			<cfquery datasource="#instance.dsn#" username="#instance.username#" password="#instance.password#">
 				update	coldboxreader_users
 				set		Email = <cfqueryparam value="#arguments.userBean.getEmail()#" cfsqltype="cf_sql_varchar" maxlength="100">
 				where	UserID = <cfqueryparam value="#arguments.userBean.getUserID()#" cfsqltype="CF_SQL_VARCHAR" maxlength="35">
-			</cfquery>	
-		<cfelse>		
+			</cfquery>
+		<cfelse>
 			<cfquery datasource="#instance.dsn#" username="#instance.username#" password="#instance.password#">
 				update	coldboxreader_users
 				set		Password =<cfqueryparam value="#HASH(arguments.userBean.getPassword())#" cfsqltype="CF_SQL_VARCHAR" maxlength="100">,
 						Email = <cfqueryparam value="#arguments.userBean.getEmail()#" cfsqltype="cf_sql_varchar" maxlength="100">
 				where	UserID = <cfqueryparam value="#arguments.userBean.getUserID()#" cfsqltype="CF_SQL_VARCHAR" maxlength="35">
 			</cfquery>
-		</cfif>	
-		
+		</cfif>
+
 	</cffunction>
-	
+
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="updateLastLogin" access="public" returntype="void" output="false">
 		<!--- ******************************************************************************** --->
 		<cfargument name="userBean" type="any" required="yes">
@@ -126,20 +126,20 @@
 	</cffunction>
 
 	<!--- ******************************************************************************** --->
-	
+
 	<cffunction name="generateNewPass" access="public" returnType="string" output="false"
 				hint="Generates a new password for a user id.">
 		<cfargument name="UserID" type="string" required="true">
 		<cfset var passCFC = CreateObject("component","password")>
 		<cfset var newPass =  passCFC.get_password(14)>
 		<cfset var userInfo = "">
-								
+
 		<cfquery datasource="#instance.dsn#" username="#instance.username#" password="#instance.password#">
 			update	coldboxreader_users
 			set		Password =<cfqueryparam value="#HASH(newPass)#" cfsqltype="CF_SQL_VARCHAR" maxlength="100">
 			where	UserID = <cfqueryparam value="#arguments.UserID#" cfsqltype="CF_SQL_VARCHAR" maxlength="35">
-		</cfquery>	
+		</cfquery>
 		<cfreturn newPass>
 	</cffunction>
-	
+
 </cfcomponent>
