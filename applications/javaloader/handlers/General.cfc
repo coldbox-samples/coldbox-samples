@@ -1,13 +1,13 @@
 <!-----------------------------------------------------------------------
 Author 	 :	Luis Majano
 Date     :	September 25, 2005
-Description : 			
-		
+Description :
+
 Modification History:
 Sep/25/2005 - Luis Majano
 	-Created the template.
 ----------------------------------------------------------------------->
-<cfcomponent name="ehGeneral" extends="coldbox.system.EventHandler" output="false">
+<cfcomponent name="General" extends="coldbox.system.EventHandler" output="false">
 
 	<!--- ************************************************************* --->
 	<cffunction name="onAppStart" access="public" returntype="void" output="false">
@@ -22,7 +22,7 @@ Sep/25/2005 - Luis Majano
 		//Load the hello world class
 		Event.setvalue("HelloWorldObj", getPlugin("JavaLoader").create("HelloWorld").init());
 		getPlugin("Logger").tracer("MyLoader just finished loading the HelloWorld Class object.");
-		Event.setView("vwHello");
+		Event.setView("Hello");
 	</cfscript>
 	</cffunction>
 	<!--- ************************************************************* --->
