@@ -73,12 +73,12 @@ Optional Methods
 			UDFLibraryFile			= "includes/udf.cfm"
 		};
 
-		//IOC Integration
+		//IOC Integration via wirebox to have everything work the same, cool hugh?
 		ioc = {
-			framework 		= "lightwire",
+			framework 		= "wirebox",
 			reload 	  	  	= false,
 			objectCaching 	= true,
-			definitionFile  = "#appMapwithDots#.config.BeanConfig"
+			definitionFile  = "#appMapwithDots#.config.WireBox"
 		};
 
 		// custom settings

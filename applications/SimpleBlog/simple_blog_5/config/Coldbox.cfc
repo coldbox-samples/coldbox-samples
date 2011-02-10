@@ -147,9 +147,9 @@ Optional Methods
 			}
 		];
 		
-		//Model Integration
-		models = {
-			objectCaching = true
+		//Model Integration view WireBox
+		wirebox = {
+			enabled = true
 		};
 		
 		//Datasources
@@ -172,7 +172,7 @@ Optional Methods
 		coldbox.debugMode = false;
 		coldbox.eventcaching = true;
 		
-		models.objectCaching = false;
+		wirebox.singletonReload = true;
 	}
 	
 </cfscript>

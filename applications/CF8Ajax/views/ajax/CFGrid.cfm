@@ -20,8 +20,7 @@ cfform is mendatory for using ajax stuff
 	        font="Tahoma" 
 			fontsize="12"
 			pageSize="10"
-			width="100%"	
-    		preservePageOnSort="yes"		
+			preservePageOnSort="yes"		
 	        bind="cfc:#rc.locColdBoxProxy#.getAllArtist({cfgridpage},{cfgridpagesize},{cfgridsortcolumn},{cfgridsortdirection})" >
 		    <cfgridcolumn name="ARTISTID"	display="true" header="ARTIST ID"/>
 			<cfgridcolumn name="ARTNAME"	display="true" header="Name"/>
