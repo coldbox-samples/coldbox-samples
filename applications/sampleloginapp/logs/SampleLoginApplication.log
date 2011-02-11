@@ -2,3 +2,6 @@
 "WARN","coldboxfile","08/08/2009","11:18:32","Sample Login Application","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/sampleloginapp/config/ModelMappings.cfm"
 "INFO","COLDBOXFILE","02/09/2011","17:10:40","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: default has been initialized successfully for operation"
 "INFO","COLDBOXFILE","02/09/2011","17:10:40","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: TEMPLATE has been initialized successfully for operation"
+"INFO","COLDBOXFILE","02/11/2011","11:27:24","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: default has been initialized successfully for operation"
+"INFO","COLDBOXFILE","02/11/2011","11:27:24","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: TEMPLATE has been initialized successfully for operation"
+"INFO","COLDBOXFILE","02/11/2011","11:27:29","Sample Login Application","The user Administrator has now logged in."

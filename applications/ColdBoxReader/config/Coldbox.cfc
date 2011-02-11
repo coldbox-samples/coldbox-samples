@@ -50,7 +50,7 @@ Optional Methods
 
 			//Development Settings
 			debugMode				= false,
-			debugPassword			= "coldbox",
+			debugPassword			= "",
 			reinitPassword			= "",
 			handlersIndexAutoReload = false,
 			configAutoReload		= false,
@@ -74,8 +74,10 @@ Optional Methods
 
 		// custom settings
 		settings = {
-			Version="2.1.0",
+			Version="2.2",
 			ModelBasePath="#appMapwithDots#.components",
+			ownerEmail = "info@coldbox.org",
+			// messagebox
 			messagebox_style_override=true,
 			//FeedReader Settings
 			feedReader_useCache=true,
@@ -86,10 +88,8 @@ Optional Methods
 
 		//IOC Integration
 		ioc = {
-			framework 		= "lightwire",
-			reload 	  	  	= false,
-			objectCaching 	= true,
-			definitionFile  = "config/services.xml.cfm"
+			framework 		= "wirebox",
+			definitionFile  = "config/WireBox"
 		};
 
 		//LogBox DSL

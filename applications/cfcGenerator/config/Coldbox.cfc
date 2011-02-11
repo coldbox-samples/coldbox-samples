@@ -68,7 +68,7 @@ Optional Methods
 		// custom settings
 		settings = {
 			//whether to encrypt the values or not
-			adminPass = "changetoyouradminpass",
+			adminPass = "coldfusion",
 			xslBasePath = "./model/xsl/"
 		};
 

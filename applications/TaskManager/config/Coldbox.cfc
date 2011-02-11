@@ -79,6 +79,8 @@ Optional Methods
 			flashURLPersistScope	= "session"	
 		};
 	
+		//Wirebox
+		wirebox = {enabled=true};
 		
 		//LogBox
 		logBox = {
