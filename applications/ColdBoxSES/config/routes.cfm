@@ -125,7 +125,7 @@ NOTE: The interceptor will create a new setting called: sesBaseURL with this val
 -------------------------------------------- --->
 
 <!--- CUSTOM ROUTES GO HERE (they will be checked in order) --->
-<cfset addRoute(	pattern="/:year-numeric/:month-numeric?/:day-numeric?/:entry",
+<cfset addRoute(	pattern="/:year-numeric/:month-numeric?/:day-numeric?",
 					handler="SES",
 					action="testcase1" )>
 
