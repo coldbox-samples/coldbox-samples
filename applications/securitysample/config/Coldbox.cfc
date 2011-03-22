@@ -41,6 +41,9 @@ Optional Methods
 
 		//converts the coldbox app mapping to a dot class path for instantiations, not part of a regular config
 		var appMapwithDots = reReplace(appMapping,"(/|\\)",".","all");
+		if (len(appMapwithDots)) {
+			appMapwithDots = appMapwithDots & ".";
+		}
 
 		// coldbox directives
 		coldbox = {
@@ -76,7 +79,7 @@ Optional Methods
 			framework 		= "lightwire",
 			reload 	  	  	= true,
 			objectCaching 	= false,
-			definitionFile  = "#appMapwithDots#.config.LightWire"
+			definitionFile  = "#appMapwithDots#config.LightWire"
 		};
 
 		// custom settings
@@ -142,7 +145,7 @@ Optional Methods
 			 properties={}
 			},
 			//SSL
-			{class="#appMapwithDots#.interceptors.ssl",
+			{class="#appMapwithDots#interceptors.ssl",
 			 properties={isSSLCheck=false,sslEventList="*"}
 			},
 			//Security

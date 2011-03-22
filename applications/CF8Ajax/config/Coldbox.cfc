@@ -41,6 +41,9 @@ Optional Methods
 
 		//converts the coldbox app mapping to a dot class path for instantiations, not part of a regular config
 		var appMapwithDots = reReplace(appMapping,"(/|\\)",".","all");
+		if (len(appMapwithDots)) {
+			appMapwithDots = appMapwithDots & ".";
+		}
 
 		// coldbox directives
 		coldbox = {
@@ -78,7 +81,7 @@ Optional Methods
 			framework 		= "wirebox",
 			reload 	  	  	= false,
 			objectCaching 	= true,
-			definitionFile  = "#appMapwithDots#.config.WireBox"
+			definitionFile  = "#appMapwithDots#config.WireBox"
 		};
 
 		// custom settings

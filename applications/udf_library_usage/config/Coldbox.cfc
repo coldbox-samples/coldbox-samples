@@ -40,6 +40,9 @@ function configure(){
 
 	//converts the coldbox app mapping to a dot class path for instantiations, not part of a regular config
 	var appMapwithDots = reReplace(appMapping,"(/|\\)",".","all");
+	if (len(appMapwithDots)) {
+		appMapwithDots = appMapwithDots & ".";
+	}
 
 	// coldbox directives
 	coldbox = {
