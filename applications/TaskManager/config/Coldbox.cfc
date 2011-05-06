@@ -11,7 +11,6 @@ structures to create for configuration
 - debugger
 - mailSettings
 - i18n
-- bugTracers
 - webservices
 - datasources
 - layoutSettings

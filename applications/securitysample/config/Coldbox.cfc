@@ -12,7 +12,6 @@ structures/arrays to create for configuration
 - debugger (struct)
 - mailSettings (struct)
 - i18n (struct)
-- bugTracers (struct)
 - webservices (struct)
 - datasources (struct)
 - layoutSettings (struct)

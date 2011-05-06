@@ -12,7 +12,6 @@ structures/arrays to create for configuration
 - debugger (struct)
 - mailSettings (struct)
 - i18n (struct)
-- bugTracers (struct)
 - webservices (struct)
 - datasources (struct)
 - layoutSettings (struct)
@@ -91,13 +90,6 @@ Optional Methods
 			root = { levelmax="INFO", appenders="*" },
 			// Implicit Level Categories
 			info = [ "coldbox.system" ]
-		};
-
-		//bug tracers
-		bugTracers = {
-			enabled = false,
-			bugEmails = "info@coldboxframework.com",
-			mailFrom = "info@coldboxframework.com"
 		};
 
 		//Datasources
