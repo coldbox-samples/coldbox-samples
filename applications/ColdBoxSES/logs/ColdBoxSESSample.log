@@ -1,4 +1,0 @@
-"Severity","Appender","Date","Time","Category","Message"
-"WARN","coldboxfile","08/08/2009","10:44:37","ColdBox_SES_Sample","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/ColdBoxSES/config/ModelMappings.cfm"
-"INFO","coldboxfile","04/18/2010","21:45:00","coldbox.system.plugins.BeanFactory","No bean factory model mappings configuration file found, continuing operation."
-"DEBUG","coldboxfile","04/18/2010","21:45:03","coldbox.system.interceptors.SES","No SES routes matched on routed string: /"

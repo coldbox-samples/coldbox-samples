@@ -1,4 +1,0 @@
-"Severity","Appender","Date","Time","Category","Message"
-"WARN","coldboxfile","08/08/2009","11:25:16","Sample UDF Library Usage","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/udf_library_usage/config/ModelMappings.cfm"
-"INFO","COLDBOXFILE","02/09/2011","17:09:44","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: default has been initialized successfully for operation"
-"INFO","COLDBOXFILE","02/09/2011","17:09:45","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: TEMPLATE has been initialized successfully for operation"

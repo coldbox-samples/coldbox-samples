@@ -14,15 +14,13 @@
 			debugPassword			= "",
 			reinitPassword			= "",
 			handlersIndexAutoReload = false,
-			configAutoReload		= false,
 			
 			//Implicit Events
 			defaultEvent			= "Samples.index",
 				
 			//Application Aspects
 			handlerCaching 			= true,
-			eventCaching			= true,
-			flashURLPersistScope	= "session"	
+			eventCaching			= true
 		};
 	
 		// custom settings
@@ -62,6 +60,18 @@
 			defaultResourceBundle = "includes/i18n/main",
 			defaultLocale = "en_US",
 			localeStorage = "cookie"
+		};
+		
+		//LogBox DSL
+		logBox = {
+			// Define Appenders
+			appenders = {
+				coldboxTracer = { class="coldbox.system.logging.appenders.ColdboxTracerAppender" }
+			},
+			// Root Logger
+			root = { levelmax="INFO", appenders="*" },
+			// Implicit Level Categories
+			info = [ "coldbox.system" ] 
 		};
 		
 	}
