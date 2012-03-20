@@ -7,3 +7,8 @@
 "INFO","COLDBOXFILE","02/11/2011","11:27:29","Sample Login Application","The user Administrator has now logged in."
 "INFO","COLDBOXFILE","03/31/2011","16:11:49","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: default has been initialized successfully for operation"
 "INFO","COLDBOXFILE","03/31/2011","16:11:49","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: TEMPLATE has been initialized successfully for operation"
+"INFO","COLDBOXFILE","03/20/2012","16:55:47","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: default has been initialized successfully for operation"
+"INFO","COLDBOXFILE","03/20/2012","16:55:47","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: TEMPLATE has been initialized successfully for operation"
+"WARN","COLDBOXFILE","03/20/2012","16:55:49","Sample Login Application","Invalid logon information detected. IP used: 127.0.0.1"
+"WARN","COLDBOXFILE","03/20/2012","16:55:53","Sample Login Application","Invalid logon information detected. IP used: 127.0.0.1"
+"INFO","COLDBOXFILE","03/20/2012","16:55:58","Sample Login Application","The user Administrator has now logged in."

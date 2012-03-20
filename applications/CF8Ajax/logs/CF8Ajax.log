@@ -35,3 +35,7 @@
 "INFO","COLDBOXFILE","02/09/2011","16:28:00","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: TEMPLATE has been shutdown."
 "INFO","COLDBOXFILE","02/09/2011","16:28:00","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: default has been shutdown."
 "INFO","COLDBOXFILE","02/09/2011","16:28:00","coldbox.system.cache.CacheFactory","Shutdown of cache factory: 1811521081 completed."
+"INFO","COLDBOXFILE","03/20/2012","16:57:11","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: default has been initialized successfully for operation"
+"INFO","COLDBOXFILE","03/20/2012","16:57:11","coldbox.system.cache.providers.CacheBoxColdBoxProvider","CacheBox Cache: TEMPLATE has been initialized successfully for operation"
+"INFO","COLDBOXFILE","03/20/2012","16:57:11","coldbox.system.plugins.IOC","IOC integration detected, beginning configuration of IOC Factory"
+"INFO","COLDBOXFILE","03/20/2012","16:57:11","coldbox.system.plugins.IOC","IoC factory: wirebox:coldbox.samples.applications.CF8Ajax.config.WireBox loaded and configured for operation"

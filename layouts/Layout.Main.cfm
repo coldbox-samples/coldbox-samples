@@ -7,18 +7,18 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="Your website description goes here" />
 	<meta name="keywords" content="your,keywords,goes,here" />
-	
+
 	<base href="#getSetting("htmlBaseURL")#" />
-	
+
 	<link rel="stylesheet" href="includes/styles/andreas08.css" type="text/css" media="screen,projection" />
 	<link rel="stylesheet" href="includes/javascript/Thickbox/ThickBox.css" type="text/css" media="screen,projection" />
 	<link rel="stylesheet" href="includes/javascript/tabs/tabs.css" type="text/css" media="screen,projection" />
-	
+
 	<!--- JQUERY CODE --->
 	<script language="javascript" src="includes/javascript/jquery-latest.pack.js"></script>
 	<script language="javascript" src="includes/javascript/Thickbox/thickbox.js"></script>
 	<script language="javascript" src="includes/javascript/tabs/jquery.tabs.pack.js"></script>
-	
+
 	<script language="javascript">
 	$(document).ready(function() {
 	      $('##mytabs').tabs({fxFade: true, fxSpeed: 'fast'});
@@ -38,7 +38,6 @@
 			<li class="selected"><a href="index.cfm">#getResource("sampleshome")#</a></li>
 			<li><a href="http://www.coldbox.org"  target="_blank">ColdBox Site</a></li>
 			<li><a href="http://www.ortussolutions.com"  target="_blank">Ortus Solutions</a></li>
-			<li><a href="http://www.luismajano.com"  target="_blank">Luis Majano</a></li>
 		</ul>
 
 		<div align="right">
@@ -74,8 +73,6 @@
 		  <li><a href="#getSetting("trackerURL")#" target="_blank">ColdBox Bug Tracker</a></li>
 		</ul>
 		<br>
-
-		<p align="center"><a href="#getSetting("ColdboxURL")#"><img src="includes/images/poweredby.png" border=0></a></p>
 
 	</div>
 
