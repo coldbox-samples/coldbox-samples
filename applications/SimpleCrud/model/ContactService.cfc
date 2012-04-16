@@ -1,4 +1,4 @@
-<cfcomponent output='false' singleton="true">
+<cfcomponent output='false' singleton>
 
 	<!--- Dependencies --->
 	<cfproperty name="dsn" inject="coldbox:datasource:mydsn">
