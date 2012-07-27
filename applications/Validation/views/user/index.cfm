@@ -2,7 +2,7 @@
 
 <cfoutput>
 
-	#getPlugin('messagebox').renderit()#
+	#getPlugin('MessageBox').renderit()#
 
 	<form method="post" action="#event.buildLink('user/save')#">
 		<div class="clearfix">

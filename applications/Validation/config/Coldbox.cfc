@@ -99,10 +99,20 @@ function configure(){
 		 {class="coldbox.system.interceptors.SES"}
 	];
 
+	// validation
+	validation = {
+		sharedConstraints = {
+			userForm = {
+				username = {required=true, size="3..20"},
+				password = {required=true, size="6..20"}
+			}
+		}
+	};
+
 }
 
 function development(){
-	wirebox.singletonReload = true;
+	//wirebox.singletonReload = true;
 }
 
 </cfscript>
