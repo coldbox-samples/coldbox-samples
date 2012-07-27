@@ -1,6 +1,5 @@
 ﻿component persistent="true" {
 
-
 	property name="id" column="category_id" fieldtype="id" generator="native";
 
 	property name="name";
@@ -13,6 +12,6 @@
 	this.constraints = {
 		// with custom message
 		name = {required=true, requiredMessage="The category name is required dude!"},
-		sort={required=true,type="numeric"}
+		sort= {required=true, type="numeric", range="1..5"}
 	};
 }
