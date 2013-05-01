@@ -49,11 +49,9 @@ Optional Methods
 			debugPassword			= "coldbox",
 			reinitPassword			= "",
 			handlersIndexAutoReload = false,
-			configAutoReload		= false,
 
 			//Implicit Events
-			defaultEvent			= "general.dspHome",
-			applicationStartHandler = "general.onAppStart",
+			defaultEvent			= "",
 
 			//Error/Exception Handling
 			exceptionHandler		= "",
@@ -61,10 +59,9 @@ Optional Methods
 			customErrorTemplate		= "",
 
 			//Application Aspects
-			handlerCaching 			= true,
+			handlerCaching 			= false,
 			eventCaching			= false,
-			proxyReturnCollection 	= false,
-			flashURLPersistScope	= "session"
+			proxyReturnCollection 	= false
 		};
 
 		//LogBox DSL
@@ -88,7 +85,7 @@ Optional Methods
 		//i18n & Localization
 		i18n = {
 			defaultLocale = "th_TH",
-			localeStorage = "session",
+			localeStorage = "cookie",
 			unknownTranslation = "**NOT FOUND**"
 		};
 	}
