@@ -42,7 +42,7 @@
 
 		<div align="right">
 		#getResource("changelanguage")#
-		<select name="locale" onChange="window.location='#event.buildLink('samples.doChangeLocale')#/locale/' + this.value">
+		<select name="locale" onChange="window.location='#event.buildLink('main.doChangeLocale')#/locale/' + this.value">
 		   	<option value="en_US" <cfif getfwLocale() eq "en_US">selected="selected"</cfif>>English</option>
 		   	<option value="es_SV" <cfif getfwLocale() eq "es_SV">selected="selected"</cfif>>Spanish</option>
 		</select>

@@ -2,7 +2,7 @@
 
 	<cffunction name="index" access="public" returntype="void" output="false">
 		<cfargument name="event" type="any">
-		<cfset event.setView("Samples/index")>
+		<cfset event.setView("main/index")>
 	</cffunction>
 
 	<cffunction name="doChangeLocale" access="public" returntype="void" output="false">
@@ -11,7 +11,7 @@
 		<!--- Change User Locale --->
 		<cfset setfwLocale(event.getValue("locale"))>
 
-		<cfset setNextevent('samples')>
+		<cfset setNextevent('main')>
 	</cffunction>
 
 </cfcomponent>

@@ -10,17 +10,14 @@
 			appName 				= "ColdBox Samples Browser",
 			
 			//Development Settings
-			debugMode				= true,
+			debugMode				= false,
 			debugPassword			= "",
 			reinitPassword			= "",
 			handlersIndexAutoReload = false,
 			
-			//Implicit Events
-			defaultEvent			= "Samples.index",
-				
 			//Application Aspects
-			handlerCaching 			= true,
-			eventCaching			= true
+			handlerCaching 			= false,
+			eventCaching			= false
 		};
 	
 		// custom settings
@@ -37,17 +34,8 @@
 			SecurityApp = "applications/securitysample"
 		};
 		
-		//Layout Settings
-		layoutSettings = {
-			defaultLayout = "Layout.Main.cfm"
-		};
-		
 		//Register interceptors as an array, we need order
 		interceptors = [
-			//Autowire
-			{class="coldbox.system.interceptors.Autowire",
-			 properties={}
-			},
 			//SES
 			{class="coldbox.system.interceptors.SES",
 			 properties={}

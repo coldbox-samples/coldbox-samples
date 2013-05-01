@@ -1,9 +1,4 @@
 <cfscript>
-	// General Properties
-	setEnabled(true);
-	setUniqueURLS(false);
-	//setAutoReload(false);
-	
 	// Base URL
 	if( len(getSetting('AppMapping') ) lte 1){
 		setBaseURL("http://#cgi.HTTP_HOST#/index.cfm");
