@@ -30,6 +30,22 @@ Description :
 	<!--- COLDBOX APPLICATION KEY OVERRIDE --->
 	<cfset COLDBOX_APP_KEY       = "">
 	
+	// Mappings        
+    //this.mappings["/"] = COLDBOX_APP_ROOT_PATH;        
+    	        
+    // ORM Settings        
+    this.ormEnabled 	  = true;        
+    this.datasource		  = "coolblog";        
+    this.ormSettings	  = {        
+    	cfclocation = "",        
+    	dialect 	= "DB2",        
+    	dbcreate	= "none",    
+    	logSQL 		= true,        
+    	flushAtRequestEnd = false,        
+    	autoManageSession = false,    
+    	eventHandling 	  =  true	    
+    };
+	
 	<!--- on Application Start --->
 	<cffunction name="onApplicationStart" returnType="boolean" output="false">
 		<cfscript>

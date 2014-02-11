@@ -1,10 +1,10 @@
 <cfcomponent output="false">
-
+	
 	<cffunction name="index" access="public" returntype="void" output="false">
 		<cfargument name="event" type="any">
 		<cfset event.setView("main/index")>
 	</cffunction>
-
+	
 	<cffunction name="doChangeLocale" access="public" returntype="void" output="false">
 		<cfargument name="event" type="any">
 
