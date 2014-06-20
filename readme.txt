@@ -5,7 +5,7 @@ applications I have created and some of them are re-writes of FAMOUS open source
 that I credit below.  
 
 If you have ported an app to ColdBox or have an application you would like to share 
-with the ColdBox community.  Please email me at info@coldboxframework.com with your application
+with the ColdBox community.  Please email me at info@coldbox.com with your application
 so I can include it in the downloads section and the main release.
 *******************************************************
 Installation
