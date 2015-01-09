@@ -30,7 +30,8 @@
 			blogURL = "http://blog.coldbox.org",
 			coldboxAPIURl = "http://coldbox.org/api",
 			trackerURL = "https://ortussolutions.atlassian.net/browse/COLDBOX",
-			coldboxReaderApp = "applications/ColdBoxReader"
+			coldboxReaderApp = "applications/ColdBoxReader",
+			SimpleCrudWithRESTapp = "applications/SimpleCrudWithREST"
 		};
 		
 		//Layout Settings

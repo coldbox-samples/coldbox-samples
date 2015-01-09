@@ -12,7 +12,7 @@
     <cffunction name="list" output="false" access="public" returntype="query" hint="Return the contacts">
     	<cfset var q = "">
 		
-		<cfquery name="q" datasource="#dsn.getName()#">
+		<cfquery name="q" datasource="#dsn.name#">
 		SELECT * 
 		    FROM contacts
 		ORDER BY name asc
@@ -29,7 +29,7 @@
     	
 		<cfset var q = "">
 		
-		<cfquery name="q" datasource="#dsn.getName()#">
+		<cfquery name="q" datasource="#dsn.name#">
 		INSERT INTO contacts(name,email)
 		     VALUES (<cfqueryparam cfsqltype="cf_sql_varchar" value="#arguments.name#">,
 			 		 <cfqueryparam cfsqltype="cf_sql_varchar" value="#arguments.email#">)
@@ -43,7 +43,7 @@
     	
     	<cfset var q = "">
 		
-		<cfquery name="q" datasource="#dsn.getName()#">
+		<cfquery name="q" datasource="#dsn.name#">
 		DELETE 
 		  FROM contacts
 		 WHERE id = <cfqueryparam cfsqltype="cf_sql_numeric" value="#arguments.id#">

@@ -1,57 +1,40 @@
-<cfcomponent output="false" hint="Manage contacts">
+component {
 
-	<!--- Inject Dependencies --->
-	<cfproperty name="ContactService" inject="model">
+	// DI
+	property name='ContactService' inject='ContactService';
+	property name='MessageBox' inject='MessageBox@cbMessageBox';
 
-<!------------------------------------------- PUBLIC EVENTS ------------------------------------------>
-	
-	<cffunction name="index" output="false" hint="index">
-		<cfargument name="event">
-		<cfset list(arguments.event)>
-	</cffunction>
+	function index() {
+		list( argumentCollection=arguments );
+	}
 
-	<cffunction name="list" output="false" hint="list">
-		<cfargument name="event">
-		<cfset var rc = event.getCollection()>
+	function list() {		
+		prc.qContacts = contactService.list();
+		event.setView('Contacts/list');
+	}	function add() {		
+		event.setView('Contacts/add');
+	}	function createContact() {		
+		event.paramValue( 'name', '' );
+		event.paramValue( 'email', '' );
 		
-		<cfset rc.qContacts = contactService.list()>
+		// Verify contact info
+		if( !len( rc.name ) || NOT len( rc.email ) ) {
+			MessageBox.warn( 'Please enter a value for email and/or name' );
+			setNextEvent( 'contacts.add' );
+		}
 		
-		<cfset event.setView("Contacts/list")>
-	</cffunction>	<cffunction name="add" output="false" hint="add">
-		<cfargument name="event">
-		<cfset var rc = event.getCollection()>
+		// Create Contact
+		contactService.create( rc.name, rc.email );
 		
-		<cfset event.setView("Contacts/add")>
-	</cffunction>	<cffunction name="createContact" output="false" hint="createContact">
-		<cfargument name="event">
-		<cfset var rc = event.getCollection()>
+		MessageBox.info( 'Contact Created!' );
+		setNextEvent( 'contacts.list' );
+	}	function delete() {
+		event.paramValue( 'id', '' );
 		
-		<cfset event.paramValue("name","")>
-		<cfset event.paramValue("email","")>
+		// Remove Contact
+		contactService.remove( rc.id );
 		
-		<!--- Verify contact info --->
-		<cfif NOT len(rc.name) OR NOT len(rc.email)>
-			<cfset getPlugin("MessageBox").warn("Please enter a value for email and/or name")>
-			<cfset setNextEvent("contacts.add")>
-		</cfif>
-		
-		<!--- Create Contact --->
-		<cfset contactService.create(rc.name,rc.email)>
-		
-		<cfset getPlugin("MessageBox").info("Contact Created!")>
-		<cfset setNextEvent("contacts.list")>
-	</cffunction>	<cffunction name="delete" output="false" hint="delete">
-		<cfargument name="event">
-		<cfset var rc = event.getCollection()>
-		
-		<cfset event.paramValue("id","")>
-		
-		<!--- Remove Contact --->
-		<cfset contactService.remove( rc.id )>
-		
-		<cfset getPlugin("MessageBox").info("Contact Removed!")>
-		<cfset setNextEvent("contacts.list")>
-	</cffunction>
-<!------------------------------------------- PRIVATE EVENTS ------------------------------------------>
-
-</cfcomponent>
+		MessageBox.info('Contact Removed!');
+		setNextEvent( 'contacts.list' );
+	}
+}

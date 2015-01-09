@@ -126,14 +126,14 @@
 				  <a href="applications/SimpleBlog/install/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="Readme.txt">Install.txt</a><br />
 				</p>
 				
-				<!--- Ajax Reader --->
-				<h3>Ajax ColdBoxReader</h3>
-				<p> #getresource("by")# Oscar Arevalo<br />#getresource("coldboxreadermessage")#<bR>
+				<!--- Simple CRUD with REST --->
+				<h3>Simple CRUD with REST</h3>
+				<p> #getresource("by")# Luis Majano	<br />
 				#getresource("needssetup")#
 				<br />
-				  <a href="#getSetting("ColdboxReaderApp")#/install/install.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="Install.txt">Install.txt</a><br />
-				  <a href="#getSetting("ColdboxReaderApp")#/install?TB_iframe=true&height=550&width=800" class="thickbox" title="Install Folder">#getresource("openinstall")#</a><br />
-				  <a href="#getSetting("ColdboxReaderApp")#/index.cfm" target="_blank">#getresource("opensample")#</a><br />
+				  <a href="#getSetting("SimpleCrudWithRESTapp")#/install/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="readme.txt">readme.txt</a><br />
+				  <a href="#getSetting("SimpleCrudWithRESTapp")#/install?TB_iframe=true&height=550&width=800" class="thickbox" title="Install Folder">#getresource("openinstall")#</a><br />
+				  <a href="#getSetting("SimpleCrudWithRESTapp")#/index.cfm" target="_blank">#getresource("opensample")#</a><br />
 				</p>
 								
 				</div>

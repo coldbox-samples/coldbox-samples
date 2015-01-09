@@ -36,6 +36,7 @@ VALUES
 	(1,'Luis Majano','lmajano@gmail.com'),
 	(2,'Bill Klingon','klingon@klingon.com'),
 	(3,'Alan Alien','alan@Alien.com'),
+	(4,'Brad Wood','brad@bradwood.com'),
 	(5,'Gene Oracle Guru','gene@oracle.com');
 
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
