@@ -1,0 +1,12 @@
+{
+    "dependencies":{
+        "cbi18n":"1.0.0",
+        "cborm":"1.0.0",
+        "cbfeeds":"1.0.1"
+    },
+    "installPaths":{
+        "cbi18n":"modules\\cbi18n",
+        "cborm":"modules\\cborm",
+        "cbfeeds":"modules\\cbfeeds"
+    }
+}

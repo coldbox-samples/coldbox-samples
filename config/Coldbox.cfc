@@ -31,7 +31,8 @@
 			coldboxAPIURl = "http://coldbox.org/api",
 			trackerURL = "https://ortussolutions.atlassian.net/browse/COLDBOX",
 			coldboxReaderApp = "applications/ColdBoxReader",
-			SimpleCrudWithRESTapp = "applications/SimpleCrudWithREST"
+			simpleCrudWithRESTapp = "applications/SimpleCrudWithREST",
+			taskManagerapp = "applications/taskManager"
 		};
 		
 		//Layout Settings

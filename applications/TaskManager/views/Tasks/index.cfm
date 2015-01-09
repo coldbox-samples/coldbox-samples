@@ -26,8 +26,8 @@ function status(completed,taskID){$
 
 <br/><br/>
 
-<a href="#event.buildLink('tasks.list.active')#"><cfif rc.status eq "active">> </cfif>Active Tasks (<a href="#event.buildLink('tasks/feed')#">RSS</a>)</a> |
-<a href="#event.buildLink('tasks.list.completed')#"><cfif rc.status eq "completed">> </cfif>Completed Tasks (<a href="#event.buildLink('tasks/feed/status/completed')#">RSS</a>)</a>
+<cfif rc.status eq "active">&gt; </cfif><a href="#event.buildLink('tasks.list.active')#">Active Tasks</a> (<a href="#event.buildLink('tasks/feed')#">RSS</a>) |
+<cfif rc.status eq "completed">&gt; </cfif><a href="#event.buildLink('tasks.list.completed')#">Completed Tasks</a> (<a href="#event.buildLink('tasks/feed/status/completed')#">RSS</a>)
 
 <table width="90%">
 	<tr>

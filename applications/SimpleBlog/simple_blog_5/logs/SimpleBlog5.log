@@ -1,3 +1,0 @@
-"Severity","Appender","Date","Time","Category","Message"
-"INFO","FILES","12/25/2014","02:30:28","coldbox.system.ioc.Injector","Shutdown of Injector: 266626945 requested and started."
-"INFO","FILES","12/25/2014","02:30:28","coldbox.system.ioc.Injector","Shutdown of injector: 266626945 completed."

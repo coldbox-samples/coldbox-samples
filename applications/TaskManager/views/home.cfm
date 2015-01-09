@@ -13,44 +13,37 @@
     <tr>
         <td valign="top">
             <h3>API REST</h3>
+			<p>Here are some REST URLs for getting your Task data.</p>
 			<p>
 				<ul>
-					<li><a href="#event.buildLink('api/xml/tasks')#">Active Tasks = /api/xml/tasks</a></li>
-					<li><a href="#event.buildLink('api/xml/tasks/completed')#">Completed Tasks =  /api/xml/tasks/completed</a></li>
+					<li><a href="#event.buildLink('api/xml/tasks')#">Active Tasks as XML = /api/xml/tasks</a></li>
+					<li><a href="#event.buildLink('api/json/tasks')#">Active Tasks as JSON = /api/json/tasks</a></li>
+					<li><a href="#event.buildLink('api/xml/tasks/completed')#">Completed Tasks as XML =  /api/xml/tasks/completed</a></li>
+					<li><a href="#event.buildLink('api/json/tasks/completed')#">Completed Tasks as JSON =  /api/json/tasks/completed</a></li>
 				</ul>
 			</p>
-			<h3>Registered Event Handlers</h3>
-			<p>You can click on the following event handlers to execute their default action.</p>
+			<h3>The Task Manager App</h3>
+			<p>Click here to manage your tasks and generate RSS feeds for them.</p>
 			<ul>
-				<cfloop list="#getSetting("RegisteredHandlers")#" index="handler">
-				<li><a href="#event.buildLink(handler)#">#handler#</a></li>
-				</cfloop>
+				<li><a href="#event.buildLink( 'tasks' )#">Task Manager</a></li>
 			</ul>
             <br />
            <h4>ColdBox URL Actions</h4>
 			<p>ColdBox can use some very important URL actions to interact with your application. You can try them out below:</p>
-				<ol>
+				<ul>
                     <li>
 						<a href="index.cfm?fwreinit=true">Reinitialize the framework</a> (fwreinit=1)
 					</li>
-					<li>
-						<a href="index.cfm?debugmode=false">Remove Debug Mode</a> (debugmode=false)
-					</li>
-					<li>
-						<a href="index.cfm?debugmode=true">Enable Debug Mode</a> (debugmode=true)
-					</li>
-				</ol>
-				<sub>* <a href="http://ortus.svnrepository.com/coldbox/trac.cgi/wiki/cbURLActions">URL Actions Guide</a></sub>
+				</ul>
+				<sub>* <a href="http://wiki.coldbox.org/wiki/URLActions.cfm">URL Actions Guide</a></sub>
+            <br />
 			<h4>Customizing your Application</h4>
             <p>
                 You can now start editing your application and building great ColdBox enabled apps. Important files & locations:
             </p>   
 			 <ol>
                     <li>
-                        <b>/config/coldbox.xml.cfm</b>: Your application configuration file
-                    </li>
-                    <li>
-                        <b>/config/environments.xml.cfm</b>: Your per-tier settings
+                        <b>/config/coldbox.cfc</b>: Your application configuration file
                     </li>
 					 <li>
                         <b>/config/routes.cfm</b>: Your SES routing table
@@ -71,13 +64,10 @@
                         <b>/logs</b>: The ColdBox Logs directory
                     </li>
 					<li>
-                        <b>/model</b>: The meat of your app, your business logic objects
+                        <b>/models</b>: The meat of your app, your business logic objects
                     </li>
 					<li>
-                        <b>/plugins</b>: Where you place custom plugins built by you!
-                    </li>
-					<li>
-                        <b>/test</b>: Your unit testing folder (Just DO IT!!)
+                        <b>/tests</b>: Your unit testing folder (Just DO IT!!)
                     </li>
 					<li>
                         <b>/views</b>: Where you create all your views and viewlets
@@ -85,61 +75,46 @@
                 </ol>
         </td>
 		<td valign="top" id="sidebar">
-        <h3>Docs Search</h3>
 	    <ul class="links">
-			<li>
-				<form id="search" method="get" action="http://ortus.svnrepository.com/coldbox/trac.cgi/search">
-					<div>
-					<input id="proj-search" type="text" value="" accesskey="f" size="15" name="q"/>
-					<input type="submit" value="Search"/>
-					<input type="hidden" value="on" name="wiki"/>
-					<input type="hidden" value="off" name="changeset"/>
-					<input type="hidden" value="on" name="ticket"/>
-					</div>
-				</form>
-	        </li>
 	        <li>
 	            <h3>Community Links</h3>
 	            <ul class="links">
 	                <li>
-	                    <a href="http://www.coldboxframework.com">ColdBox Site</a>
+	                    <a href="http://www.coldbox.org">ColdBox Site</a>
 	                </li>
 	                <li>
-	                    <a href="http://blog.coldboxframework.com">Blog</a>
+	                    <a href="http://blog.coldbox.org">Blog</a>
 	                </li>
 	                <li>
-	                    <a href="http://forums.coldboxframework.com/">Forums</a>
-	                </li>
-	                <li>
-	                    <a href="http://ortus.svnrepository.com/coldbox/">Bug Tracker/Wiki</a>
+	                    <a href="https://ortussolutions.atlassian.net/browse/COLDBOX">Bug Tracker/Wiki</a>
 	                </li>
 					<li>
-	                    <a href="http://groups.google.com/group/coldbox">Mailing List</a>
+	                    <a href="https://groups.google.com/forum/?hl=en##!forum/coldbox">Mailing List</a>
 	                </li>
 					<li>
-						<a href="http://www.coldboxframework.com/index.cfm/download/main">Downloads</a>
+						<a href="http://www.coldbox.org/download">Downloads</a>
 					</li>
 					<li>
-						<a href="http://www.coldboxframework.com/api/">ColdBox API</a>
+						<a href="http://www.coldbox.org/api">ColdBox API</a>
 					</li>
 					<li>
-						<a href="http://ortus.svnrepository.com/coldbox/trac.cgi/wiki/cbCodeDepot">Code Depot</a>
+						<a href="https://github.com/coldbox/coldbox-platform">Code</a>
 					</li>
 					<li>
-						<a href="http://www.coldboxframework.com/index.cfm/download/videos">ColdBox Videos</a>
+						<a href="http://www.coldbox.org/media">ColdBox Videos</a>
 					</li>
 					<li>
-						<a href="http://www.coldboxframework.com/index.cfm/support/overview">Community Support</a>
+						<a href="http://www.coldbox.org/training">Community Support</a>
 					</li>
 					<li>
-						<a href="http://www.coldboxframework.com/index.cfm/support/training">Training & Courses</a>
+						<a href="http://www.coldbox.org/training/onsite">Training & Courses</a>
 					</li>
 	            </ul>
 	        </li>
 			</ul>
 		
 		<div style="margin:auto;text-align:center">
-			<img src="http://www.coldboxframework.com/includes/images/logos/poweredby.gif" alt="ColdBox" />
+			<img src="http://www.coldbox.org/includes/images/logos/poweredby.gif" alt="ColdBox" />
 		</div>
     </td>
     </tr>

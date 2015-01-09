@@ -1,12 +1,13 @@
 /*
 * A tasks handler
 */
-component extends="coldbox.system.EventHandler" output="false"{
+component {
 
 	property name="taskService" inject="entityService:Task";
+	property name="FeedGenerator" inject="FeedGenerator@cbfeeds";
+	
 
-	void function index(event) output=false{
-		var rc = event.getCollection();
+	function index() {
 		var isComplete = false;
 
 		event.paramValue("status","active");
@@ -15,17 +16,13 @@ component extends="coldbox.system.EventHandler" output="false"{
 		rc.tasks = taskService.findAllWhere({isCompleted=isComplete});
 
 		event.setView("Tasks/index");
-	}	void function remove(event) output=false{
-		var rc = event.getCollection();
-
+	}	function remove() {
 		taskService.deleteByID(event.getValue("taskID",""));
 
 		flash.put("message","Task removed sucessfully!");
 
 		setNextEvent('tasks');
-	}	void function editor(event) output=false{
-		var rc = event.getCollection();
-
+	}	function editor() {
 		if( event.valueExists("taskID") ){
 			rc.task = taskService.get(rc.taskID);
 		}
@@ -34,9 +31,7 @@ component extends="coldbox.system.EventHandler" output="false"{
 		}
 
 		event.setView("Tasks/editor");
-	}	void function save(event) output=false{
-		var rc = event.getCollection();
-
+	}	function save() {
 		if( len(event.getTrimValue("taskID")) ){
 			rc.task = taskService.get(rc.taskID);
 		}
@@ -49,9 +44,7 @@ component extends="coldbox.system.EventHandler" output="false"{
 		flash.put("message","Task saved sucessfully!");
 
 		setNextEvent('tasks');
-	}	void function changeStatus(event) output=false{
-		var rc = event.getCollection();
-
+	}	function changeStatus() {
 		try{
 			rc.task = taskService.get(event.getValue("taskID",""));
 			rc.task.setIsCompleted(rc.completed);
@@ -64,10 +57,8 @@ component extends="coldbox.system.EventHandler" output="false"{
 		event.renderData(data=rc.data,type="json");
 	}
 
-	void function feed(event) output=false cache="true" cacheTimeout="10"{
+	function feed()  cache="true" cacheTimeout="10"{
 		var isComplete = false;
-		var rc = event.getCollection();
-
 		event.paramValue("status","active");
 		if( rc.status eq "completed"){ isComplete = true; }
 
@@ -80,7 +71,7 @@ component extends="coldbox.system.EventHandler" output="false"{
 				   pubdate=now()};
 
 		rc.map = {description="notes",title="subject",pubdate="createDate"};
-		rc.feedXML = getPlugin("FeedGenerator").createFeed(rc.feed,rc.map);
+		rc.feedXML = FeedGenerator.createFeed(rc.feed,rc.map);
 
 		event.renderData(data=rc.feedXML,contentType="text/xml");
 	}

@@ -14,7 +14,7 @@ Description :
 	So if you have refactored your framework, make sure it extends coldbox.
  
 */
-component extends="coldbox.system.Coldbox" output="false"{
+component extends="coldbox.system.Bootstrap" output="false"{
 	// Application properties
 	this.name = "TaskManager" & hash(getCurrentTemplatePath());
 	this.sessionManagement = true;
@@ -27,17 +27,19 @@ component extends="coldbox.system.Coldbox" output="false"{
 	COLDBOX_CONFIG_FILE = "";
 	COLDBOX_APP_KEY = "";
 	
-	this.mappings["/TaskManager"] = COLDBOX_APP_ROOT_PATH;
-	
+	root = GetDirectoryFromPath( GetBaseTemplatePath() );
+	this.mappings["/models"] = root & "models";
+	this.mappings["/cborm"] = root & "modules\cborm";
+		
 	// ORM Setup
 	this.ormEnabled = true;
 	this.datasource = "taskmanager";
 	this.ormSettings = {
+		cfclocation=expandPath("/models"),
 		dbcreate = "update",
-		dialect = "MySQLwithInnoDB",
 		logSQL = true,
 		eventhandling = true,
-		eventhandler = "model.ORMEventHandler",
+		eventHandler = "cborm.models.EventHandler",
 		flushAtRequestEnd = false
 	};
 	
