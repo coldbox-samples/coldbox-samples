@@ -1,0 +1,10 @@
+{
+    "dependencies":{
+        "cbfeeds":"1.0.0",
+        "cbi18n":"1.0.0"
+    },
+    "installPaths":{
+        "cbfeeds":"modules\\cbfeeds",
+        "cbi18n":"modules\\cbi18n"
+    }
+}

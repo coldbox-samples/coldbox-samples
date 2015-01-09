@@ -1,2 +1,0 @@
-"Severity","Appender","Date","Time","Category","Message"
-"WARN","coldboxfile","08/08/2009","10:50:07","simple_blog2","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/SimpleBlog/simple_blog_2/config/ModelMappings.cfm"

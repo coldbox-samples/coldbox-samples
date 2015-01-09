@@ -1,0 +1,89 @@
+{
+    "name":"",
+    "version":"1.0.0.0000",
+    "author":"",
+    "location":"",
+    "directory":"",
+    "createPackageDirectory":true,
+    "packageDirectory":"",
+    "homepage":"",
+    "documentation":"",
+    "repository":{
+        "type":"",
+        "url":""
+    },
+    "bugs":"",
+    "slug":"",
+    "shortDescription":"",
+    "description":"",
+    "instructions":"",
+    "changelog":"",
+    "type":"",
+    "keywords":[
+        
+    ],
+    "private":false,
+    "engines":[
+        {
+            "type":"railo",
+            "version":">=4.1.x"
+        },
+        {
+            "type":"adobe",
+            "version":">=10.0.0"
+        }
+    ],
+    "defaultEngine":"",
+    "defaultPort":0,
+    "projectURL":"",
+    "license":[
+        {
+            "type":"",
+            "url":""
+        }
+    ],
+    "contributors":[
+        
+    ],
+    "dependencies":{
+        "cbdebugger":"1.0.0"
+    },
+    "devDependencies":{
+        
+    },
+    "installPaths":{
+        "cbdebugger":"modules\\cbdebugger"
+    },
+    "ignore":[
+        
+    ],
+    "testbox":{
+        "runner":[
+            {
+                "default":""
+            }
+        ],
+        "labels":[
+            
+        ],
+        "reporter":"",
+        "reporterResults":"",
+        "bundles":[
+            ""
+        ],
+        "directory":{
+            "mapping":"",
+            "recurse":true
+        },
+        "watchers":[
+            
+        ],
+        "notify":{
+            "emails":[
+                
+            ],
+            "growl":"",
+            "url":""
+        }
+    }
+}

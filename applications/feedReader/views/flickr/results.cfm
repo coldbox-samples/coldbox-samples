@@ -1,12 +1,12 @@
 <cfoutput>
 <div class="pageStats">
-Page 1 of 1 - There were a total of #ArrayLen(rc.flickrdata.items)# results
+Page 1 of 1 - There were a total of #arrayLen( rc.flickrdata.items )# results
 </div>
 <div class="feedImg">
 <a href="#rc.flickrdata.websiteurl#"><img src="#rc.flickrdata.image.icon#" alt="#rc.flickrdata.title# logo" class="logo" /></a>
 <h2>#rc.flickrdata.title# results</h2>
 <div class="keywords divider">Flickr Feed URL: <a href="#rc.getFlickrURL#">#rc.getFlickrURL#</a><br />
-Last Search Result Revision: #getPlugin("i18n").datetimeLocaleFormat(rc.flickrdata.dateupdated,'long')#
+Last Search Result Revision: #getInstance("i18n@cbi18n").datetimeLocaleFormat( rc.flickrdata.dateupdated, 'long' )#
 </div>
 </cfoutput>
 <cfloop from="1" to="#ArrayLen(rc.flickrdata.items)#" index="rc.i">

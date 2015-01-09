@@ -1,0 +1,16 @@
+{
+    "dependencies":{
+        "cborm":"1.0.0",
+        "cbsecurity":"1.0.1",
+        "cbstorages":"1.0.0",
+        "cbfeeds":"1.0.0",
+        "cbmessagebox":"1.0.0"
+    },
+    "installPaths":{
+        "cborm":"modules\\cborm",
+        "cbsecurity":"modules\\cbsecurity",
+        "cbstorages":"modules\\cbstorages",
+        "cbfeeds":"modules\\cbfeeds",
+        "cbmessagebox":"modules\\cbmessagebox"
+    }
+}

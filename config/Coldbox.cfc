@@ -1,5 +1,4 @@
-<cfcomponent output="false">
-<cfscript>
+ component {
 
 	// Configure ColdBox Application
 	function configure(){
@@ -14,32 +13,34 @@
 			debugPassword			= "",
 			reinitPassword			= "",
 			handlersIndexAutoReload = false,
+			customErrorTemplate		= '/coldbox/system/includes/BugReport.cfm',
 			
+			//Implicit Events
+			defaultEvent			= "Samples.index",
+				
 			//Application Aspects
 			handlerCaching 			= false,
 			eventCaching			= false
 		};
 	
 		// custom settings
-		settings = {
+		settings = {      
 			amazonURL = "http://www.amazon.com/o/registry/7DPYG3RZG3AF",
 			coldboxURL = "http://coldbox.org",
 			blogURL = "http://blog.coldbox.org",
 			coldboxAPIURl = "http://coldbox.org/api",
-			trackerURL = "http://coldbox.assembla.com",
-			coldboxReaderApp = "applications/ColdBoxReader",
-			cfcGeneratorApp = "applications/cfcGenerator",
-			TransferApp = "applications/TransferSample",
-			TransferApp2 = "applications/TransferSample2",
-			SecurityApp = "applications/securitysample"
+			trackerURL = "https://ortussolutions.atlassian.net/browse/COLDBOX",
+			coldboxReaderApp = "applications/ColdBoxReader"
+		};
+		
+		//Layout Settings
+		layoutSettings = {
+			defaultLayout = "Layout.Main.cfm"
 		};
 		
 		//Register interceptors as an array, we need order
 		interceptors = [
-			//SES
-			{class="coldbox.system.interceptors.SES",
-			 properties={}
-			}
+			{ class="coldbox.system.interceptors.SES" }
 		];
 		
 		
@@ -50,19 +51,5 @@
 			localeStorage = "cookie"
 		};
 		
-		//LogBox DSL
-		logBox = {
-			// Define Appenders
-			appenders = {
-				coldboxTracer = { class="coldbox.system.logging.appenders.ColdboxTracerAppender" }
-			},
-			// Root Logger
-			root = { levelmax="INFO", appenders="*" },
-			// Implicit Level Categories
-			info = [ "coldbox.system" ] 
-		};
-		
 	}
-
-</cfscript>
-</cfcomponent>
+}

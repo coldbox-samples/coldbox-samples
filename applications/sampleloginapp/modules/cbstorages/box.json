@@ -1,0 +1,21 @@
+{
+	"name" 		: "CBStorages",
+	"version"	: "1.0.0",
+	"author" 	: "Luis Majano <lmajano@ortussolutions.com",
+	"slug"		: "cbstorages",
+	"type"		: "modules",
+	"homepage"	: "http://www.coldbox.org",
+	"documentation"		: "http://wiki.coldbox.org",
+	"repository"		: { "type" : "git", "url" : "https://github.com/ColdBox/cbox-storages" },
+	"shortDescription"	: "A collection of model objects to facade and help with native ColdFusion extensions",
+	"license"			: [ 
+		{ "type" : "Apache2", "url" : "http://www.apache.org/licenses/LICENSE-2.0.html" } 
+	],
+	"contributors"		: [
+		"Brad Wood <bdw429s@gmail.com>", "Curt Gratz <gratz@computerknowhow.com>"
+	],
+	"engines"	: [
+		{ "type" : "railo", "version" : ">4.1" },
+		{ "type" : "adobe", "version" : ">9.02" }
+	]
+}

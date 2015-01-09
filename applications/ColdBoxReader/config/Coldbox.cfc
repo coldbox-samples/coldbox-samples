@@ -12,6 +12,7 @@ structures/arrays to create for configuration
 - debugger (struct)
 - mailSettings (struct)
 - i18n (struct)
+- bugTracers (struct)
 - webservices (struct)
 - datasources (struct)
 - layoutSettings (struct)
@@ -40,9 +41,6 @@ Optional Methods
 
 		//converts the coldbox app mapping to a dot class path for instantiations, not part of a regular config
 		var appMapwithDots = reReplace(appMapping,"(/|\\)",".","all");
-		if (len(appMapwithDots)) {
-			appMapwithDots = appMapwithDots & ".";
-		}
 
 		// coldbox directives
 		coldbox = {
@@ -77,7 +75,7 @@ Optional Methods
 		// custom settings
 		settings = {
 			Version="2.2",
-			ModelBasePath="#appMapwithDots#components",
+			ModelBasePath="#appMapwithDots#.components",
 			ownerEmail = "info@coldbox.org",
 			// messagebox
 			messagebox_style_override=true,

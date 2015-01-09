@@ -1,0 +1,43 @@
+{
+    "name":"ColdBox ORM Extensions",
+    "version":"1.0.0",
+    "author":"Luis Majano <lmajano@ortussolutions.com",
+    "slug":"cborm",
+    "type":"modules",
+    "homepage":"http://www.coldbox.org",
+    "documentation":"http://wiki.coldbox.org",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/ColdBox/cbox-cborm"
+    },
+    "shortDescription":"Enhances the ColdFusion ORM with tons of utilities.",
+    "license":[
+        {
+            "type":"Apache2",
+            "url":"http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    ],
+    "contributors":[
+        "Brad Wood <bdw429s@gmail.com>",
+        "Curt Gratz <gratz@computerknowhow.com>",
+        "Joel Watson <existdissolve@gmail.com>"
+    ],
+    "engines":[
+        {
+            "type":"railo",
+            "version":">4.1"
+        },
+        {
+            "type":"adobe",
+            "version":">9.02"
+        }
+    ],
+    "dependencies":{
+        "cbvalidation":"1.0.0",
+        "cbi18n":"1.0.0"
+    },
+    "installPaths":{
+        "cbvalidation":"modules\\cbvalidation",
+        "cbi18n":"modules\\cbi18n"
+    }
+}

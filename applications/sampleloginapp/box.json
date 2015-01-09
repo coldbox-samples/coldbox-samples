@@ -1,0 +1,10 @@
+{
+    "dependencies":{
+        "cbstorages":"1.0.0",
+        "cbmessagebox":"1.0.0"
+    },
+    "installPaths":{
+        "cbstorages":"modules\\cbstorages",
+        "cbmessagebox":"modules\\cbmessagebox"
+    }
+}

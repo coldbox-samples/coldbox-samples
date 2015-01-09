@@ -1,0 +1,8 @@
+{
+    "dependencies":{
+        "cbmessagebox":"1.0.0"
+    },
+    "installPaths":{
+        "cbmessagebox":"modules\\cbmessagebox"
+    }
+}

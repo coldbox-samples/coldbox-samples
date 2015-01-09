@@ -1,0 +1,12 @@
+{
+    "dependencies":{
+        "cbcommons":"1.0.0",
+        "cbstorages":"1.0.0",
+        "cbfeeds":"1.0.0"
+    },
+    "installPaths":{
+        "cbcommons":"modules\\cbcommons",
+        "cbstorages":"modules\\cbstorages",
+        "cbfeeds":"modules\\cbfeeds"
+    }
+}

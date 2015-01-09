@@ -1,82 +1,60 @@
-<!-----------------------------------------------------------------------
-Author 	 :	Ben Garrett
-Date     :	February 13, 2009
-Description : 			
-	This is a ColdBox event handler for the feedReader based YouTube browser.
+component {
+	property name="feedReader" inject="FeedReader@cbfeeds";
+	property name="Utilities" inject="Utilities";
+
+	// Default Action
+	function index() {
+		// Default values when there is no form submission
+		event.paramValue( "search_query", '' );
+		event.paramValue( "max_results", getSetting( "YouTubeDefaultMaxResults" ) );
+		event.paramValue( "start_index", getSetting( "YouTubeDefaultStartIndex" ) );
+		event.paramValue( "total_results", 0 );
+		
+		// Set the View To Display, after Logic
+		event.setView( "youtube/empty" );
+	}
 	
------------------------------------------------------------------------>
-<cfcomponent name="youtube" extends="coldbox.system.EventHandler" output="false">
+	// Search Form Submission
+	function search() {
+		// Set search form defaults
+		if( event.getValue( "submit", "" ) == "Submit" ) {
+			event.setValue( "page",1 );
+		}
+		if( IsNumeric( Event.getValue( "page", "" ) ) ) {
+			event.setValue( "start_index", event.getValue('page') );
+		} else {
+			event.setValue( "start_index", event.getValue( "start_index", getSetting( "YouTubeDefaultStartIndex" ) ) );
+		}
+		event.setValue( "search_query", event.getValue( "search_query", "" ) );
+		event.setValue( "max_results", event.getValue( "max_results", getSetting( "YouTubeDefaultMaxResults" ) ) );
+		// Page navigation modifications
+		if( Event.getValue( "submit", "" ) == 'Next' ) {
+			event.setValue( "start_index", ( rc.start_index + event.getValue( "max_results" ) ) );
+		}
+		if( event.getValue( "submit", "" ) == 'Previous' ) {
+			event.setValue( "start_index", ( rc.start_index - event.getValue( "max_results" ) ) );
+		}
+		// Obtain Google Data API version 2 feed
+		rc.getYoutubeURL = '#getSetting( "YouTubeURL" )#?q=#rc.search_query#&start-index=#rc.start_index#&max-results=#rc.max_results#&v=2';
+		rc.ytdata = feedReader.readFeed( Feedurl=rc.getYoutubeURL );
+		// Adjust variables values with feed data
+		rc.total_pages = Ceiling( rc.ytdata.opensearch.totalresults/rc.ytdata.opensearch.itemsperpage );
+		rc.total_results = rc.ytdata.opensearch.totalresults;
+		rc.page = Ceiling(rc.start_index / rc.max_results);
+		// Search result statistics for display
+		rc.dspCurPage = numSep(rc.page);
+		rc.dspTotPage = numSep(rc.total_pages);
+		rc.dspResPage = numSep(rc.total_results);
+		//  Organise data
+		Event.setView("youtube/results");
+	}
 
-<!------------------------------------------- CONSTRUCTOR ------------------------------------------>
+	private function numSuff( required numeric number ) {
+		return Utilities.ordinalAbbr( arguments.number );
+	}
 
-	<cffunction name="init" access="public" returntype="youtube" output="false">
-		<cfargument name="controller" type="any">
-		<cfset super.init(arguments.controller)>
-		<cfreturn this>
-	</cffunction>
-
-<!------------------------------------------- PUBLIC EVENTS ------------------------------------------>
-
-	<!--- Default Action --->
-	<cffunction name="index" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
-		<cfset var rc = event.getCollection()>
-		<!--- Default values when there is no form submission --->
-		<cfset Event.setValue("search_query", Event.getValue("search_query", ''))>
-		<cfset Event.setValue("max_results", Event.getValue("max_results", getSetting("YouTubeDefaultMaxResults")))>
-		<cfset Event.setValue("start_index", Event.getValue("start_index", getSetting("YouTubeDefaultStartIndex")))>
-		<cfset Event.setValue("total_results", Event.getValue("total_results", 0))>
-		<!--- Set the View To Display, after Logic --->
-		<cfset Event.setView("youtube/empty")>
-	</cffunction>
+	private function numSep( required numeric number ) {
+		return Utilities.oneKGrouping( arguments.number );
+	}
 	
-	<!--- Search Form Submission --->
-	<cffunction name="search" access="public" returntype="void" output="false">
-		<cfargument name="Event" type="any">
-		<cfset var rc = event.getCollection()>
-		<!--- Set search form defaults --->
-		<cfif Event.getValue("submit", "") is "Submit">
-			<cfset Event.setValue("page",1)>
-		</cfif>
-		<cfif IsNumeric(Event.getValue("page", ""))>
-			<cfset Event.setValue("start_index", Event.getValue('page'))>
-		<cfelse>
-			<cfset Event.setValue("start_index", Event.getValue("start_index", getSetting("YouTubeDefaultStartIndex")))>
-		</cfif>
-		<cfset Event.setValue("search_query", Event.getValue("search_query", ""))>
-		<cfset Event.setValue("max_results", Event.getValue("max_results", getSetting("YouTubeDefaultMaxResults")))>
-		<!--- Page navigation modifications --->
-		<cfif Event.getValue("submit", "") is 'Next'>
-			<cfset Event.setValue("start_index", (rc.start_index+Event.getValue("max_results")))>
-		</cfif>
-		<cfif Event.getValue("submit", "") is 'Previous'>
-			<cfset Event.setValue("start_index", (rc.start_index-Event.getValue("max_results")))>
-		</cfif>
-		<!--- Obtain Google Data API version 2 feed --->
-		<cfset rc.getYoutubeURL = '#getSetting("YouTubeURL")#?q=#rc.search_query#&start-index=#rc.start_index#&max-results=#rc.max_results#&v=2'/>
-		<cfset rc.ytdata = getPlugin("FeedReader").readFeed(Feedurl=rc.getYoutubeURL)>
-		<!--- Adjust variables values with feed data --->
-		<cfset rc.total_pages = Ceiling(rc.ytdata.opensearch.totalresults/rc.ytdata.opensearch.itemsperpage)/>
-		<cfset rc.total_results = rc.ytdata.opensearch.totalresults/>
-		<cfset rc.page = Ceiling(rc.start_index / rc.max_results)/>
-		<!--- Search result statistics for display --->
-		<cfset rc.dspCurPage = numSep(rc.page)/>
-		<cfset rc.dspTotPage = numSep(rc.total_pages)/>
-		<cfset rc.dspResPage = numSep(rc.total_results)/>
-		<!--- Organise data --->
-		<cfset Event.setView("youtube/results")>
-	</cffunction>
-
-<!------------------------------------------- PRIVATE EVENTS ------------------------------------------>
-
-	<cffunction name="numSuff" access="private" returntype="string" output="false">
-		<cfargument name="number" type="numeric" required="yes">
-		<cfreturn getPlugin(plugin="Utilities",customPlugin=true).ordinalAbbr(arguments.number)/>
-	</cffunction>
-
-	<cffunction name="numSep" access="private" returntype="string" output="false">
-		<cfargument name="number" type="numeric" required="yes">
-		<cfreturn getPlugin(plugin="Utilities",customPlugin=true).oneKGrouping(arguments.number)/>
-	</cffunction>
-	
-</cfcomponent>
+}

@@ -1,287 +1,0 @@
-"Severity","Appender","Date","Time","Category","Message"
-"WARN","coldboxfile","08/08/2009","11:11:58","Java Loader Example","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/javaloader/config/ModelMappings.cfm"
-"ERROR","coldboxfile","08/08/2009","11:11:58","Java Loader Example","Application Execution Exception ExtraInfo:CFErrorType=expressionCFMessage=key [cbox-javaloader-783F2F273356D2087BBA39494B5D7629] doesn't exist in struct (keys:AC603836-094D-3CAD-9BC441EF13B60E25.1.1,railo,A0608BEC-0AEB-B46A-0E1E1EC5F3CE7C9C.0.6,java,os,coldfusion,separator,cbox-javaloader-6DE812DD4C157BF283DE1813CEF18B62)CFStackTrace=key [cbox-javaloader-783F2F273356D2087BBA39494B5D7629] doesn't exist in struct (keys:AC603836-094D-3CAD-9BC441EF13B60E25.1.1,railo,A0608BEC-0AEB-B46A-0E1E1EC5F3CE7C9C.0.6,java,os,coldfusion,separator,cbox-javaloader-6DE812DD4C157BF283DE1813CEF18B62)
-	at railo.runtime.type.StructImpl.invalidKey(StructImpl.java:154):154
-	at railo.runtime.type.StructImpl.get(StructImpl.java:61):61
-	at railo.runtime.type.util.StructSupport.get(StructSupport.java:100):100
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc:145):145
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc:87):87
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:617):617
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.samples.applications.javaloader.handlers.ehgeneral_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/handlers/ehGeneral.cfc:23):23
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.callWithNamedValues(UDFImpl.java:277):277
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:386):386
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.callWithNamedValues(ComponentImpl.java:1501):1501
-	at railo.runtime.tag.Invoke.doComponent(Invoke.java:242):242
-	at railo.runtime.tag.Invoke.doEndTag(Invoke.java:194):194
-	at coldbox.system.controller_cfc$cf.udfCall5(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc:506):506
-	at coldbox.system.controller_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.callWithNamedValues(UDFImpl.java:277):277
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:386):386
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.callWithNamedValues(ComponentImpl.java:1505):1505
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithNamedValues(VariableUtilImpl.java:651):651
-	at railo.runtime.PageContextImpl.getFunctionWithNamedValues(PageContextImpl.java:1274):1274
-	at coldbox.system.Coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:186):186
-	at coldbox.system.Coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.samples.applications.javaloader.application_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/Application.cfc:51):51
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
-	at railo.runtime.listener.ModernAppListener.call(ModernAppListener.java:282):282
-	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:102):102
-	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:23):23
-	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:1679):1679
-	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:248):248
-	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:32):32
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91):91
-	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103):103
-	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:175):175
-	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:240):240
-	at com.caucho.server.hmux.HmuxRequest.handleRequest(HmuxRequest.java:424):424
-	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:481):481
-	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:685):685
-	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:607):607
-	at java.lang.Thread.run(Thread.java:613):613
-CFTagContext=ID: ??; LINE: 145; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc ID: ??; LINE: 87; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc ID: ??; LINE: 23; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/handlers/ehGeneral.cfc ID: ??; LINE: 506; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc ID: ??; LINE: 186; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc ID: ??; LINE: 51; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/Application.cfc"
-"WARN","coldboxfile","08/08/2009","11:12:33","Java Loader Example","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/javaloader/config/ModelMappings.cfm"
-"ERROR","coldboxfile","08/08/2009","11:12:33","Java Loader Example","Application Execution Exception ExtraInfo:CFErrorType=expressionCFMessage=key [cbox-javaloader-783F2F273356D2087BBA39494B5D7629] doesn't exist in struct (keys:AC603836-094D-3CAD-9BC441EF13B60E25.1.1,railo,A0608BEC-0AEB-B46A-0E1E1EC5F3CE7C9C.0.6,java,os,coldfusion,separator,cbox-javaloader-6DE812DD4C157BF283DE1813CEF18B62)CFStackTrace=key [cbox-javaloader-783F2F273356D2087BBA39494B5D7629] doesn't exist in struct (keys:AC603836-094D-3CAD-9BC441EF13B60E25.1.1,railo,A0608BEC-0AEB-B46A-0E1E1EC5F3CE7C9C.0.6,java,os,coldfusion,separator,cbox-javaloader-6DE812DD4C157BF283DE1813CEF18B62)
-	at railo.runtime.type.StructImpl.invalidKey(StructImpl.java:154):154
-	at railo.runtime.type.StructImpl.get(StructImpl.java:61):61
-	at railo.runtime.type.util.StructSupport.get(StructSupport.java:100):100
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc:145):145
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc:87):87
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:617):617
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.samples.applications.javaloader.handlers.ehgeneral_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/handlers/ehGeneral.cfc:23):23
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.callWithNamedValues(UDFImpl.java:277):277
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:386):386
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.callWithNamedValues(ComponentImpl.java:1501):1501
-	at railo.runtime.tag.Invoke.doComponent(Invoke.java:242):242
-	at railo.runtime.tag.Invoke.doEndTag(Invoke.java:194):194
-	at coldbox.system.controller_cfc$cf.udfCall5(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc:506):506
-	at coldbox.system.controller_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.callWithNamedValues(UDFImpl.java:277):277
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:386):386
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.callWithNamedValues(ComponentImpl.java:1505):1505
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithNamedValues(VariableUtilImpl.java:651):651
-	at railo.runtime.PageContextImpl.getFunctionWithNamedValues(PageContextImpl.java:1274):1274
-	at coldbox.system.Coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:186):186
-	at coldbox.system.Coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.samples.applications.javaloader.application_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/Application.cfc:51):51
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
-	at railo.runtime.listener.ModernAppListener.call(ModernAppListener.java:282):282
-	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:102):102
-	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:23):23
-	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:1679):1679
-	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:248):248
-	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:32):32
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91):91
-	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103):103
-	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:175):175
-	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:240):240
-	at com.caucho.server.hmux.HmuxRequest.handleRequest(HmuxRequest.java:424):424
-	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:481):481
-	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:685):685
-	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:607):607
-	at java.lang.Thread.run(Thread.java:613):613
-CFTagContext=ID: ??; LINE: 145; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc ID: ??; LINE: 87; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc ID: ??; LINE: 23; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/handlers/ehGeneral.cfc ID: ??; LINE: 506; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc ID: ??; LINE: 186; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc ID: ??; LINE: 51; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/Application.cfc"
-"WARN","coldboxfile","08/08/2009","11:13:54","Java Loader Example","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/javaloader/config/ModelMappings.cfm"
-"WARN","coldboxfile","08/08/2009","11:13:54","Java Loader Example","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/javaloader/config/ModelMappings.cfm"
-"ERROR","coldboxfile","08/08/2009","11:13:54","Java Loader Example","Application Execution Exception ExtraInfo:CFErrorType=expressionCFMessage=key [cbox-javaloader-783F2F273356D2087BBA39494B5D7629] doesn't exist in struct (keys:railo,java,os,coldfusion,separator)CFStackTrace=key [cbox-javaloader-783F2F273356D2087BBA39494B5D7629] doesn't exist in struct (keys:railo,java,os,coldfusion,separator)
-	at railo.runtime.type.StructImpl.invalidKey(StructImpl.java:154):154
-	at railo.runtime.type.StructImpl.get(StructImpl.java:61):61
-	at railo.runtime.type.util.StructSupport.get(StructSupport.java:100):100
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc:145):145
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc:87):87
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:617):617
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.samples.applications.javaloader.handlers.ehgeneral_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/handlers/ehGeneral.cfc:23):23
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.callWithNamedValues(UDFImpl.java:277):277
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:386):386
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.callWithNamedValues(ComponentImpl.java:1501):1501
-	at railo.runtime.tag.Invoke.doComponent(Invoke.java:242):242
-	at railo.runtime.tag.Invoke.doEndTag(Invoke.java:194):194
-	at coldbox.system.controller_cfc$cf.udfCall5(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc:506):506
-	at coldbox.system.controller_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.callWithNamedValues(UDFImpl.java:277):277
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:386):386
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.callWithNamedValues(ComponentImpl.java:1505):1505
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithNamedValues(VariableUtilImpl.java:651):651
-	at railo.runtime.PageContextImpl.getFunctionWithNamedValues(PageContextImpl.java:1274):1274
-	at coldbox.system.Coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:186):186
-	at coldbox.system.Coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.samples.applications.javaloader.application_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/Application.cfc:51):51
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
-	at railo.runtime.listener.ModernAppListener.call(ModernAppListener.java:282):282
-	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:102):102
-	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:23):23
-	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:1679):1679
-	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:248):248
-	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:32):32
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91):91
-	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103):103
-	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:175):175
-	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:240):240
-	at com.caucho.server.hmux.HmuxRequest.handleRequest(HmuxRequest.java:424):424
-	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:481):481
-	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:685):685
-	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:607):607
-	at java.lang.Thread.run(Thread.java:613):613
-CFTagContext=ID: ??; LINE: 145; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc ID: ??; LINE: 87; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc ID: ??; LINE: 23; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/handlers/ehGeneral.cfc ID: ??; LINE: 506; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc ID: ??; LINE: 186; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc ID: ??; LINE: 51; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/Application.cfc"
-"WARN","coldboxfile","08/08/2009","11:15:06","Java Loader Example","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/javaloader/config/ModelMappings.cfm"
-"ERROR","coldboxfile","08/08/2009","11:15:06","Java Loader Example","Application Execution Exception ExtraInfo:CFErrorType=expressionCFMessage=key [cbox-javaloader-783F2F273356D2087BBA39494B5D7629] doesn't exist in struct (keys:railo,java,os,coldfusion,separator)CFStackTrace=key [cbox-javaloader-783F2F273356D2087BBA39494B5D7629] doesn't exist in struct (keys:railo,java,os,coldfusion,separator)
-	at railo.runtime.type.StructImpl.invalidKey(StructImpl.java:154):154
-	at railo.runtime.type.StructImpl.get(StructImpl.java:61):61
-	at railo.runtime.type.util.StructSupport.get(StructSupport.java:100):100
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc:145):145
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc:87):87
-	at coldbox.system.plugins.javaloader_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:617):617
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.samples.applications.javaloader.handlers.ehgeneral_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/handlers/ehGeneral.cfc:23):23
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.callWithNamedValues(UDFImpl.java:277):277
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:386):386
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.callWithNamedValues(ComponentImpl.java:1501):1501
-	at railo.runtime.tag.Invoke.doComponent(Invoke.java:242):242
-	at railo.runtime.tag.Invoke.doEndTag(Invoke.java:194):194
-	at coldbox.system.controller_cfc$cf.udfCall5(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc:506):506
-	at coldbox.system.controller_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.callWithNamedValues(UDFImpl.java:277):277
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:386):386
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.callWithNamedValues(ComponentImpl.java:1505):1505
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithNamedValues(VariableUtilImpl.java:651):651
-	at railo.runtime.PageContextImpl.getFunctionWithNamedValues(PageContextImpl.java:1274):1274
-	at coldbox.system.Coldbox_cfc$cf.udfCall1(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc:186):186
-	at coldbox.system.Coldbox_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc):-1
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.util.VariableUtilImpl.callFunctionWithoutNamedValues(VariableUtilImpl.java:622):622
-	at railo.runtime.PageContextImpl.getFunction(PageContextImpl.java:1259):1259
-	at coldbox.samples.applications.javaloader.application_cfc$cf.udfCall(/Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/Application.cfc:51):51
-	at railo.runtime.type.UDFImpl.implementation(UDFImpl.java:166):166
-	at railo.runtime.type.UDFImpl._call(UDFImpl.java:319):319
-	at railo.runtime.type.UDFImpl.call(UDFImpl.java:284):284
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:385):385
-	at railo.runtime.ComponentImpl._call(ComponentImpl.java:332):332
-	at railo.runtime.ComponentImpl.call(ComponentImpl.java:1486):1486
-	at railo.runtime.listener.ModernAppListener.call(ModernAppListener.java:282):282
-	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:102):102
-	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:23):23
-	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:1679):1679
-	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:248):248
-	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:32):32
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91):91
-	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103):103
-	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:175):175
-	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:240):240
-	at com.caucho.server.hmux.HmuxRequest.handleRequest(HmuxRequest.java:424):424
-	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:481):481
-	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:685):685
-	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:607):607
-	at java.lang.Thread.run(Thread.java:613):613
-CFTagContext=ID: ??; LINE: 145; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc ID: ??; LINE: 87; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/plugins/JavaLoader.cfc ID: ??; LINE: 23; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/handlers/ehGeneral.cfc ID: ??; LINE: 506; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Controller.cfc ID: ??; LINE: 186; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/core/coldbox/system/Coldbox.cfc ID: ??; LINE: 51; TEMPLATE: /Users/lmajano/Documents/MyDevelopment/cboxdev/samples/coldbox/samples/applications/javaloader/Application.cfc"
-"WARN","coldboxfile","08/08/2009","11:17:07","Java Loader Example","The BeanFactory definition file cannot be located -> /coldbox/samples/applications/javaloader/config/ModelMappings.cfm"

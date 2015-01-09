@@ -1,0 +1,21 @@
+{
+	"name" 		: "JavaLoader",
+	"version"	: "1.0.0",
+	"author" 	: "Luis Majano <lmajano@ortussolutions.com",
+	"slug"		: "cbjavaloader",
+	"type"		: "modules",
+	"homepage"	: "http://www.coldbox.org",
+	"documentation"		: "http://wiki.coldbox.org",
+	"repository"		: { "type" : "git", "url" : "https://github.com/ColdBox/cbox-javaloader" },
+	"shortDescription"	: "A module to class load, compile and do much more with Java",
+	"license"			: [ 
+		{ "type" : "Apache2", "url" : "http://www.apache.org/licenses/LICENSE-2.0.html" } 
+	],
+	"contributors"		: [
+		"Brad Wood <bdw429s@gmail.com>", "Curt Gratz <gratz@computerknowhow.com>"
+	],
+	"engines"	: [
+		{ "type" : "railo", "version" : ">4.1" },
+		{ "type" : "adobe", "version" : ">9.02" }
+	]
+}

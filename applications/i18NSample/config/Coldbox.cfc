@@ -51,12 +51,13 @@ Optional Methods
 			handlersIndexAutoReload = false,
 
 			//Implicit Events
-			defaultEvent			= "",
+			defaultEvent			= "general.dspHome",
+			applicationStartHandler = "general.onAppStart",
 
 			//Error/Exception Handling
 			exceptionHandler		= "",
 			onInvalidEvent			= "",
-			customErrorTemplate		= "",
+			customErrorTemplate		= "/coldbox/system/includes/BugReport.cfm",
 
 			//Application Aspects
 			handlerCaching 			= false,
@@ -64,21 +65,9 @@ Optional Methods
 			proxyReturnCollection 	= false
 		};
 
-		//LogBox DSL
-		logBox = {
-			// Define Appenders
-			appenders = {
-				coldboxTracer = { class="coldbox.system.logging.appenders.ColdboxTracerAppender" }
-			},
-			// Root Logger
-			root = { levelmax="INFO", appenders="*" },
-			// Implicit Level Categories
-			info = [ "coldbox.system" ]
-		};
-
-		//Layout Settings
+ 		//Layout Settings
 		layoutSettings = {
-			defaultLayout = "Layout.Main.cfm",
+			defaultLayout = "Main.cfm",
 			defaultView   = ""
 		};
 

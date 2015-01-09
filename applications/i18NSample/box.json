@@ -1,0 +1,8 @@
+{
+    "dependencies":{
+        "cbi18n":"1.0.0"
+    },
+    "installPaths":{
+        "cbi18n":"modules\\cbi18n"
+    }
+}
