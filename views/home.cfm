@@ -1,5 +1,5 @@
 <cfoutput>
-
+	
 <div id="content">
  	<h2>#getResource("welcometitle")#</h2>
 	<p>#getResource("welcomemessage")#</p>
@@ -118,33 +118,42 @@
 			<div id="section-2" >
 				<div class="boxscrolling">
 				
-				<!--- Simple Blog --->
-				<h3>Simple Blog</h3>
-				<p> #getresource("by")# Henrik Joreteg & Luis Majano<bR>
-				#getresource("needssetup")#
-				<br />
-				  <a href="applications/SimpleBlog/install/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="Readme.txt">Install.txt</a><br />
-				</p>
-				
-				<!--- Simple CRUD with REST --->
-				<h3>Simple CRUD with REST</h3>
-				<p> #getresource("by")# Luis Majano	<br />
-				#getresource("needssetup")#
-				<br />
-				  <a href="#getSetting("SimpleCrudWithRESTapp")#/install/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="readme.txt">readme.txt</a><br />
-				  <a href="#getSetting("SimpleCrudWithRESTapp")#/install?TB_iframe=true&height=550&width=800" class="thickbox" title="Install Folder">#getresource("openinstall")#</a><br />
-				  <a href="#getSetting("SimpleCrudWithRESTapp")#/index.cfm" target="_blank">#getresource("opensample")#</a><br />
-				</p>
-				
-				<!--- Task Manager (ORM) --->
-				<h3>Task Manager (ORM)</h3>
-				<p> #getresource("by")# Luis Majano	<br />
-				#getresource("needssetup")#
-				<br />
-				  <a href="#getSetting("taskManagerapp")#/install/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="readme.txt">readme.txt</a><br />
-				  <a href="#getSetting("taskManagerapp")#/index.cfm" target="_blank">#getresource("opensample")#</a><br />
-				</p>
-								
+					<!--- ORM Example --->
+					<h3>ORM Criteria Builder Example</h3>
+					<p> #getresource("by")# Luis Majano	<br />
+					#getresource("needssetup")#
+					<br />
+					  <a href="#getSetting("ormExampleApp")#/install/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="readme.txt">readme.txt</a><br />
+					  <a href="#getSetting("ormExampleApp")#/index.cfm" target="_blank">#getresource("opensample")#</a><br />
+					</p>
+					
+					<!--- Simple Blog --->
+					<h3>Simple Blog</h3>
+					<p> #getresource("by")# Henrik Joreteg & Luis Majano<bR>
+					#getresource("needssetup")#
+					<br />
+					  <a href="applications/SimpleBlog/install/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="Readme.txt">Install.txt</a><br />
+					</p>
+					
+					<!--- Simple CRUD with REST --->
+					<h3>Simple CRUD with REST</h3>
+					<p> #getresource("by")# Luis Majano	<br />
+					#getresource("needssetup")#
+					<br />
+					  <a href="#getSetting("SimpleCrudWithRESTapp")#/install/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="readme.txt">readme.txt</a><br />
+					  <a href="#getSetting("SimpleCrudWithRESTapp")#/install?TB_iframe=true&height=550&width=800" class="thickbox" title="Install Folder">#getresource("openinstall")#</a><br />
+					  <a href="#getSetting("SimpleCrudWithRESTapp")#/index.cfm" target="_blank">#getresource("opensample")#</a><br />
+					</p>
+					
+					<!--- Task Manager (ORM) --->
+					<h3>Task Manager (ORM)</h3>
+					<p> #getresource("by")# Luis Majano	<br />
+					#getresource("needssetup")#
+					<br />
+					  <a href="#getSetting("taskManagerapp")#/install/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="readme.txt">readme.txt</a><br />
+					  <a href="#getSetting("taskManagerapp")#/index.cfm" target="_blank">#getresource("opensample")#</a><br />
+					</p>
+												
 				</div>
 			</div>
 		</div>

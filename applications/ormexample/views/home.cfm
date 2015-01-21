@@ -2,8 +2,7 @@
 <h3>Intro</h3>
 <p>In order to do complex queries using the full range of functions such as AND, OR, LIKE or IN, we looked towards the hibernate <i>criteriaQuery</i> and the <i>org.hibernate.criterion.Restrictions</i> class.</p>
 <p>These classes make it easy to build an array of restrictions for our criteria. Once built, we can also pass the same array of restrictions to a count method to obtain the full count of records that would be returned even when paging is being used. This is done though the use of the Hibernate <i>org.hibernate.criterion.Projections</i> class.</p>
-<p>Finally, the <i>coldbox.system.orm.hibernate.criterion.Restrictions</i> was created in the model as a wrapper for the native Hibernate <i>org.hibernate.criterion.Restrictions</i> class. This simplifies the creation of the criteria as can be seen in the examples.</p>
-<p>The examples all use the default cfbookclub datasource defined in the CF Administrator.</p>
+<p>Finally, Restrictions were created as a wrapper for the native Hibernate <i>org.hibernate.criterion.Restrictions</i> class. This simplifies the creation of the criteria as can be seen in the examples.</p><p>The examples all use the default cfbookclub datasource defined in the CF Administrator.</p>
 <h3>BaseORMService & VirtualEntityService</h3>
 <p>The following two methods make usage of the hibernate criteria queries. If you are
 using the VirtualEntityService you do not need to pass in the entity name</p>

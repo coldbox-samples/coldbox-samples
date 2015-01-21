@@ -1,9 +1,8 @@
 ﻿<h3>Dependencies</h3>
-<p>The following dependencies are injected into the handler for these samples.</p>
+<p>The following dependency is injected into the handler for these samples.</p>
 <p>
  <code>
  <pre>
- property name="restrictions" inject="model:Restrictions";
  property name="authorService" inject="entityService:Author";
  </pre>
  </code>
@@ -15,11 +14,13 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.eq("firstName","Emily"));
- ArrayAppend(criteria, Restrictions.eq("firstName","Paul"));
- ArrayAppend(criteria, Restrictions.eq("firstName","Amy"));
- prc.example1 = authorService.criteriaQuery([Restrictions.disjunction(criteria)]);
+ var c = authorService.newCriteria();
+ prc.example1 = c.or(
+	c.restrictions.eq("firstName","Emily"),
+	c.restrictions.eq("firstName","Paul"),
+	c.restrictions.eq("firstName","Amy")
+ )
+ .list( asQuery=true );
  </pre>
  </code>
 </p>

@@ -1,9 +1,8 @@
 ﻿<h3>Dependencies</h3>
-<p>The following dependencies are injected into the handler for these samples.</p>
+<p>The following dependency is injected into the handler for these samples.</p>
 <p>
  <code>
  <pre>
- property name="restrictions" inject="model:Restrictions";
  property name="authorService" inject="entityService:Author";
  </pre>
  </code>
@@ -15,9 +14,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.eq("firstName","Michael"));
- prc.example1 = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example1 = c.eq( "firstName", "Michael" )
+	.list( asQuery=true );
  </pre>
  </code>
 </p>
@@ -30,9 +29,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.ne("firstName","Michael"));
- prc.example2 = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example2 = c.ne( "firstName", "Michael" )
+	.list( asQuery=true );
  </pre>
  </code>
 </p>
@@ -45,9 +44,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.in("firstName",["Ian","Emily","Paul"]));
- prc.example3a = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example3a = c.in( "firstName", ["Ian","Emily","Paul"] )
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>
@@ -59,9 +58,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.in("id",JavaCast("java.lang.Integer[]",[2,5,9])));
- prc.example3a = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example3b = c.in( "id", JavaCast("java.lang.Integer[]",[2,5,9]) )
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>
@@ -74,9 +73,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.like("lastName","M%"));
- prc.example4 = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example4 = c.like("lastName","M%")
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>
@@ -89,9 +88,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.ilike("lastName","s%"));
- prc.example5 = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example5 = c.ilike("lastName","s%")
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>
@@ -104,9 +103,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.isEmpty("books"));
- prc.example6 = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example6 = c.isEmpty("books")
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>
@@ -119,9 +118,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.isNotEmpty("books"));
- prc.example7 = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example7 = c.isNotEmpty("books")
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>
@@ -134,9 +133,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.isNull("bio"));
- prc.example8 = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example8 = c.isNull("bio")
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>
@@ -149,9 +148,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.isNotNull("bio"));
- prc.example9 = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example9 = c.isNotNull("bio")
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>
@@ -164,9 +163,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.between("lastName","A","M"));
- prc.example10a = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example10a = c.between( "lastName", "A", "M" )
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>
@@ -178,9 +177,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.between("id",JavaCast("int",3),JavaCast("int",7)));
- prc.example10b = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example10b = c.between( "id", JavaCast( "int", 3 ), JavaCast( "int", 7 ) )
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>
@@ -193,9 +192,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.gt("id",JavaCast("int",8)));
- prc.example11 = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example11 = c.gt( "id", JavaCast( "int", 8 ) )
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>
@@ -208,9 +207,9 @@
 <p>
  <code>
  <pre>
- var criteria = ArrayNew(1);
- ArrayAppend(criteria, Restrictions.ge("id",JavaCast("int",13)));
- prc.example12 = authorService.criteriaQuery(criteria);
+ var c = authorService.newCriteria();
+ prc.example12 = c.ge( "id", JavaCast( "int", 13 ) )
+	.list( asQuery=true );
  </pre> 
  </code>
 </p>

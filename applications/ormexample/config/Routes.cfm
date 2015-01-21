@@ -1,6 +1,6 @@
 <cfscript>
 	// General Properties
-	setEnabled(false);
+	setEnabled(true);
 	setUniqueURLS(false);	
 	//setAutoReload(false);
 	
@@ -11,9 +11,6 @@
 	else{
 		setBaseURL("http://#cgi.HTTP_HOST#/#getSetting('AppMapping')#/index.cfm");
 	}
-	
-	// Add Module Routing Here
-	addModuleRoutes(pattern="/forgebox",module="forgebox");
 	
 	// Your Application Routes
 	addRoute(pattern=":handler/:action?");

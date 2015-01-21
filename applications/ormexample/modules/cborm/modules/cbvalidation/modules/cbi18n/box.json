@@ -1,0 +1,21 @@
+{
+	"name" 		: "ColdBox i18n",
+	"version"	: "1.0.0",
+	"author" 	: "Luis Majano <lmajano@ortussolutions.com",
+	"slug"		: "cbi18n",
+	"type"		: "modules",
+	"homepage"	: "http://www.coldbox.org",
+	"documentation"		: "http://wiki.coldbox.org/wiki/I18n.cfm",
+	"repository"		: { "type" : "git", "url" : "https://github.com/ColdBox/cbox-i18n" },
+	"shortDescription"	: "This module will enhance your ColdBox applications with i18n capabilities, resource bundles and localization.",
+	"license"			: [ 
+		{ "type" : "Apache2", "url" : "http://www.apache.org/licenses/LICENSE-2.0.html" } 
+	],
+	"contributors"		: [
+		"Brad Wood <bdw429s@gmail.com>", "Curt Gratz <gratz@computerknowhow.com>"
+	],
+	"engines"	: [
+		{ "type" : "railo", "version" : ">4.1" },
+		{ "type" : "adobe", "version" : ">9.02" }
+	]
+}

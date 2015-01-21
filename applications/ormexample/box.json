@@ -1,0 +1,8 @@
+{
+    "dependencies":{
+        "cborm":"1.0.0"
+    },
+    "installPaths":{
+        "cborm":"modules\\cborm"
+    }
+}
