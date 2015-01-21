@@ -33,7 +33,8 @@
 			coldboxReaderApp = "applications/ColdBoxReader",
 			simpleCrudWithRESTapp = "applications/SimpleCrudWithREST",
 			taskManagerapp = "applications/taskManager",
-			ormExampleApp = "applications/ormexample"
+			ormExampleApp = "applications/ormexample",
+			validationApp = "applications/Validation"
 		};
 		
 		//Layout Settings

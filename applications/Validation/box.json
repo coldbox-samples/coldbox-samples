@@ -1,0 +1,14 @@
+{
+    "dependencies":{
+        "cbvalidation":"1.0.0",
+        "cborm":"1.0.0",
+        "cbmessagebox":"1.0.0",
+        "cbi18n":"1.0.0"
+    },
+    "installPaths":{
+        "cbvalidation":"modules\\cbvalidation",
+        "cborm":"modules\\cborm",
+        "cbmessagebox":"modules\\cbmessagebox",
+        "cbi18n":"modules\\cbi18n"
+    }
+}

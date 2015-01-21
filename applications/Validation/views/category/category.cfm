@@ -4,7 +4,7 @@
 
 <cfoutput>
 	
-	#getPlugin('MessageBox').renderit()#
+	#getInstance('MessageBox@cbMessageBox').renderit()#
 	
 	<form method="post" action="#event.buildLink('category/save')#">
 		<input type="hidden" name="category_id" value="#url.category_id#">

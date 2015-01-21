@@ -1,7 +1,7 @@
 /**
  * Validation Sample
  */
-component extends="coldbox.system.Coldbox" {
+component extends="coldbox.system.Bootstrap" {
 
 	// Application properties
 	this.name = "Validation Sample" & hash(getCurrentTemplatePath());
@@ -17,18 +17,21 @@ component extends="coldbox.system.Coldbox" {
 
 	// fix for nested orm apps in Mac OS
 	this.mappings["/validationSample"] = COLDBOX_APP_ROOT_PATH;
+	root = GetDirectoryFromPath( GetBaseTemplatePath() );
+	this.mappings["/models"] = root & "models\";
+	this.mappings["/cborm"] = root & "modules\cborm";
 
 	// ORM SETTINGS
 	this.ormEnabled = true;
 	this.datasource = "validationSample";
 	this.ormSettings = {
-		dbcreate = "dropcreate",
-		cfclocation = "model",
+		dbcreate = "update",
+		cfclocation="models",
 		flushAtRequestEnd = false,
 		autoManageSession	= false,
 		logsql = true,
 		eventHandling = true,
-		eventHandler = "coldbox.system.orm.hibernate.WBEventHandler"
+		eventHandler = "cborm.models.EventHandler"
 	};
 
 	public boolean function onApplicationStart() output=false {

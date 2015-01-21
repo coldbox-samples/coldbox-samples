@@ -2,7 +2,7 @@
 
 <cfoutput>
 	
-	#getPlugin('MessageBox').renderit()#
+	#getInstance('MessageBox@cbMessageBox').renderit()#
 	
 	<table class="zebra-striped">
 		<thead>

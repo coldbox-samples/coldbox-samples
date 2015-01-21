@@ -1,0 +1,1149 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ResourceService</title>
+	<meta name="keywords" content="cbi18n.concurrent.Callable interface">
+	<!-- common assets -->
+	
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../highlighter/styles/shCoreDefault.css">
+	<script src="../highlighter/scripts/shCore.js"></script>
+	<script src="../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>CBi18n v1.0.0</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					
+					<li><a href="../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+				
+
+				
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+
+			  	
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-file"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../index.html?cbi18n/ResourceService.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: cbi18n"><span class="label label-success">cbi18n</span></a>
+</div>
+
+<h2>
+
+Class
+
+ ResourceService</h2>
+
+
+
+
+
+
+
+
+	
+		
+	
+	
+
+	
+		
+		
+			
+		
+	
+	
+
+
+<!-- Inheritance Tree-->
+<pre>railo-context.Component
+        <img src="../resources/inherit.gif" alt="extended by ">cbi18n.ResourceService
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+		
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				singleton 
+				
+			</li>
+			&nbsp;
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				output 
+				
+				: false		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				synchronized 
+				
+				: false		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				accessors 
+				
+				: false		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				persistent 
+				
+				: false		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+		
+		
+	</div>
+</div>
+
+
+	
+	
+
+
+
+
+
+
+
+<div id="class-hint">
+	<p>Reads and parses java resource bundles with a nice integration for replacement and MVC usage</p>
+</div>
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="property_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="5">
+			<strong>Property Summary</strong>
+		</th>
+	</tr>
+	<tr class="info">
+		<th align="left">
+			<strong>type</strong>
+		</th>
+		<th align="left">
+			<strong>property</strong>
+		</th>
+		<th align="left">
+			<strong>default</strong>
+		</th>
+		<th align="left">
+			<strong>serializable</strong>
+		</th>
+		<th align="left">
+			<strong>required</strong>
+		</th>
+	</tr>
+
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#log()">log</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+				
+			
+				
+			
+				
+			
+				
+				<li class="label label-default label-annotations">inject = logbox:logger:{this}</li>
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	</tr>
+</table>
+
+
+
+	
+	
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="ResourceService.html#init()">init</A></strong>([any controller], [any i18n])
+				<br>
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Constructor.
+				
+			</td>
+		</tr>
+	</table>
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#formatRBString()">formatRBString</A></strong>(string rbString, any substituteValues)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;performs messageFormat like operation on compound rb string.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>struct</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#getBundles()">getBundles</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reference to loaded bundles.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#getDefaultLocale()">getDefaultLocale</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reference to the default application locale.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#getDefaultResourceBundle()">getDefaultResourceBundle</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reference to the default application resource bundle location.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#getLoadedBundles()">getLoadedBundles</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a list of all loaded bundles.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#getRBKeys()">getRBKeys</A></strong>(any rbFile, [any rbLocale=''])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an array of keys from a specific resource bundle.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#getRBString()">getRBString</A></strong>(any rbFile, any rbKey, [any rbLocale='en_US'], [any default])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a given key from a specific resource bundle file and locale.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#getResource()">getResource</A></strong>(any resource, [any default], [any locale='[runtime expression]'], [any values], [any bundle='default'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a resource from a specific loaded bundle and locale.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>struct</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#getResourceBundle()">getResourceBundle</A></strong>(any rbFile, [any rbLocale='en_US'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reads,parses and returns a resource bundle in struct format.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#getUnknownTranslation()">getUnknownTranslation</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reference to the default application unknown translation string.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#loadBundle()">loadBundle</A></strong>(string rbFile, [string rbLocale='en_US'], [boolean force='false'], [string rbAlias='default'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tries to load a resource bundle into ColdBox memory if not loaded already.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#messageFormat()">messageFormat</A></strong>(string thisPattern, any args, [any thisLocale=''])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;performs messageFormat on compound rb string.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="ResourceService.html#verifyPattern()">verifyPattern</A></strong>(string pattern)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Performs verification on MessageFormat pattern.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	
+
+	
+
+	&nbsp;
+	<a name="methods_inherited_from_class_railo-context.Component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>railo-context.Component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+				
+				
+				
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>([any controller], [any i18n])</kbd>
+
+	<br><br>
+
+	
+	<p>Constructor</p>
+	
+
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>controller</code></dd>
+		
+			<dd><code>i18n</code></dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+	<a name="property_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Property Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	
+		
+		<a name="log()"><!-- --></a>
+		<h3>log</h3>
+
+		<kbd>
+			property any 
+			<strong>log</strong>
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			
+		
+			
+			<dd><code>required</code> - false</dd>
+			
+		
+			
+		
+			
+			<dd><code>inject</code> - logbox:logger:{this}</dd>
+			
+		
+			
+		
+			
+		
+			
+			<dd><code>serializable</code> - true</dd>
+			
+		
+		</dl>
+
+		<hr>
+	
+
+
+
+
+
+
+
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	
+	<a name="formatRBString()"><!-- --></a>
+	<h3>formatRBString</h3>
+	
+	<kbd>public string <strong>formatRBString</strong>(string rbString, any substituteValues)</kbd>
+	
+	<br><br>
+
+	
+		<p>performs messageFormat like operation on compound rb string. So if you have a string with {1} it will replace it. You can also have multiple and send in an array to do replacements.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>rbString</code></dd>
+		
+		<dd><code>substituteValues</code> - Array, Struct or single value to format.</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getBundles()"><!-- --></a>
+	<h3>getBundles</h3>
+	
+	<kbd>public struct <strong>getBundles</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Reference to loaded bundles</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getDefaultLocale()"><!-- --></a>
+	<h3>getDefaultLocale</h3>
+	
+	<kbd>public string <strong>getDefaultLocale</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Reference to the default application locale</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getDefaultResourceBundle()"><!-- --></a>
+	<h3>getDefaultResourceBundle</h3>
+	
+	<kbd>public string <strong>getDefaultResourceBundle</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Reference to the default application resource bundle location</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getLoadedBundles()"><!-- --></a>
+	<h3>getLoadedBundles</h3>
+	
+	<kbd>public array <strong>getLoadedBundles</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a list of all loaded bundles</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getRBKeys()"><!-- --></a>
+	<h3>getRBKeys</h3>
+	
+	<kbd>public array <strong>getRBKeys</strong>(any rbFile, [any rbLocale=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns an array of keys from a specific resource bundle</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>rbFile</code> - This must be the path + filename UP to but NOT including the locale. We auto-add the local and .properties to the end.</dd>
+		
+		<dd><code>rbLocale</code> - The locale to use, if not passed, defaults to default locale.</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getRBString()"><!-- --></a>
+	<h3>getRBString</h3>
+	
+	<kbd>public any <strong>getRBString</strong>(any rbFile, any rbKey, [any rbLocale='en_US'], [any default])</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns a given key from a specific resource bundle file and locale. NOT FROM MEMORY</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>rbFile</code> - This must be the path + filename UP to but NOT including the locale. We auto-add the local and .properties to the end.</dd>
+		
+		<dd><code>rbKey</code> - The key to retrieve</dd>
+		
+		<dd><code>rbLocale</code> - The locale of the bundle. Default is en_US</dd>
+		
+		<dd><code>default</code> - A default value to send back if resource not found</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getResource()"><!-- --></a>
+	<h3>getResource</h3>
+	
+	<kbd>public any <strong>getResource</strong>(any resource, [any default], [any locale='[runtime expression]'], [any values], [any bundle='default'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a resource from a specific loaded bundle and locale</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>resource</code> - The resource (key) to retrieve from the main loaded bundle.</dd>
+		
+		<dd><code>default</code> - A default value to send back if the resource (key) not found</dd>
+		
+		<dd><code>locale</code> - Pass in which locale to take the resource from. By default it uses the user's current set locale</dd>
+		
+		<dd><code>values</code> - An array, struct or simple string of value replacements to use on the resource string</dd>
+		
+		<dd><code>bundle</code> - The bundle alias to use to get the resource from when using multiple resource bundles. By default the bundle name used is 'default'</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getResourceBundle()"><!-- --></a>
+	<h3>getResourceBundle</h3>
+	
+	<kbd>public struct <strong>getResourceBundle</strong>(any rbFile, [any rbLocale='en_US'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Reads,parses and returns a resource bundle in struct format</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>rbFile</code> - This must be the path + filename UP to but NOT including the locale. We auto-add the local and .properties to the end.</dd>
+		
+		<dd><code>rbLocale</code> - The locale of the resource bundle</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getUnknownTranslation()"><!-- --></a>
+	<h3>getUnknownTranslation</h3>
+	
+	<kbd>public string <strong>getUnknownTranslation</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Reference to the default application unknown translation string</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="loadBundle()"><!-- --></a>
+	<h3>loadBundle</h3>
+	
+	<kbd>public any <strong>loadBundle</strong>(string rbFile, [string rbLocale='en_US'], [boolean force='false'], [string rbAlias='default'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Tries to load a resource bundle into ColdBox memory if not loaded already</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>rbFile</code> - This must be the path + filename UP to but NOT including the locale. We auto-add .properties to the end alongside the locale</dd>
+		
+		<dd><code>rbLocale</code> - The locale of the bundle to load</dd>
+		
+		<dd><code>force</code> - Forces the loading of the bundle even if its in memory</dd>
+		
+		<dd><code>rbAlias</code> - The unique alias name used to store this resource bundle in memory. The default name is the name of the rbFile passed if not passed.</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="messageFormat()"><!-- --></a>
+	<h3>messageFormat</h3>
+	
+	<kbd>public string <strong>messageFormat</strong>(string thisPattern, any args, [any thisLocale=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>performs messageFormat on compound rb string</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisPattern</code> - pattern to use in formatting</dd>
+		
+		<dd><code>args</code> - substitution values, simple or array</dd>
+		
+		<dd><code>thisLocale</code> - locale to use in formatting, defaults to en_US</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="verifyPattern()"><!-- --></a>
+	<h3>verifyPattern</h3>
+	
+	<kbd>public boolean <strong>verifyPattern</strong>(string pattern)</kbd>
+	
+	<br><br>
+
+	
+		<p>Performs verification on MessageFormat pattern</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>pattern</code> - format pattern to test</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+
+
+
+</body>
+</html>
+

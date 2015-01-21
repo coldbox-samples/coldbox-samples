@@ -4,7 +4,7 @@
 
 <cfoutput>
 	
-	#getPlugin('MessageBox').renderit()#
+	#getInstance('MessageBox@cbMessageBox').renderit()#
 	
 	<form method="post" action="#event.buildLink('product/save')#">
 		<input type="hidden" name="product_id" value="#url.product_id#">

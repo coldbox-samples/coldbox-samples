@@ -51,7 +51,7 @@ Description :
 		};
 		
 		// Map Bindings below
-		mapDirectory( getAppMapping() & ".model" );
+		mapDirectory( "/models" );
 		
 	}	
 </cfscript>

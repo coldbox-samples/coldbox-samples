@@ -118,6 +118,15 @@
 			<div id="section-2" >
 				<div class="boxscrolling">
 				
+					<!--- Validation --->
+					<h3>Validation</h3>
+					<p> #getresource("by")# Luis Majano	<br />
+					#getresource("needssetup")#
+					<br />
+					  <a href="#getSetting("validationApp")#/install/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="readme.txt">readme.txt</a><br />
+					  <a href="#getSetting("validationApp")#/index.cfm" target="_blank">#getresource("opensample")#</a><br />
+					</p>
+				
 					<!--- ORM Example --->
 					<h3>ORM Criteria Builder Example</h3>
 					<p> #getresource("by")# Luis Majano	<br />

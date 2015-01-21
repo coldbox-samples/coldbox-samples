@@ -2,13 +2,13 @@
 
 <cfoutput>
 
-	#getPlugin('MessageBox').renderit()#
+	#getInstance('MessageBox@cbMessageBox').renderit()#
 
 	<form method="post" action="#event.buildLink('user/save')#">
 		<div class="clearfix">
 			<label for="name">Username (Required, Length: 6-20)</label>
 			<div class="input">
-				#html.passwordField(name="username", value=event.getValue("username",""), size="30")#
+				#html.textField(name="username", value=event.getValue("username",""), size="30")#
 			</div>
 		</div>
 		<div class="clearfix">

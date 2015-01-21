@@ -1,7 +1,7 @@
 <cfoutput>
 
 	<h3>Product Sales</h3>
-	<cfchart format="flash" scalefrom="0" scaleto="2000" chartwidth="880">
+	<cfchart format="png" scalefrom="0" scaleto="2000" chartwidth="880">
 		<cfchartseries type="bar" serieslabel="Product Sales By Month" seriescolor="##6699CC">
 			<cfchartdata item="January" value="1000">
 			<cfchartdata item="February" value="800">

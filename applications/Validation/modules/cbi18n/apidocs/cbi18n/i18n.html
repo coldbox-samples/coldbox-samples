@@ -1,0 +1,3505 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>i18n</title>
+	<meta name="keywords" content="cbi18n.concurrent.Callable interface">
+	<!-- common assets -->
+	
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../highlighter/styles/shCoreDefault.css">
+	<script src="../highlighter/scripts/shCore.js"></script>
+	<script src="../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>CBi18n v1.0.0</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					
+					<li><a href="../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+				
+
+				
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+
+			  	
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-file"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../index.html?cbi18n/i18n.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: cbi18n"><span class="label label-success">cbi18n</span></a>
+</div>
+
+<h2>
+
+Class
+
+ i18n</h2>
+
+
+
+
+
+
+
+
+	
+		
+	
+	
+
+	
+		
+		
+			
+		
+	
+	
+
+
+<!-- Inheritance Tree-->
+<pre>railo-context.Component
+        <img src="../resources/inherit.gif" alt="extended by ">cbi18n.i18n
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+		
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				singleton 
+				
+			</li>
+			&nbsp;
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				output 
+				
+				: false		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				synchronized 
+				
+				: false		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				accessors 
+				
+				: false		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				persistent 
+				
+				: false		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+		
+		
+	</div>
+</div>
+
+
+	
+	
+
+
+
+
+
+
+
+<div id="class-hint">
+	<p>Internationalization and localization support for ColdBox</p>
+</div>
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="property_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="5">
+			<strong>Property Summary</strong>
+		</th>
+	</tr>
+	<tr class="info">
+		<th align="left">
+			<strong>type</strong>
+		</th>
+		<th align="left">
+			<strong>property</strong>
+		</th>
+		<th align="left">
+			<strong>default</strong>
+		</th>
+		<th align="left">
+			<strong>serializable</strong>
+		</th>
+		<th align="left">
+			<strong>required</strong>
+		</th>
+	</tr>
+
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#controller()">controller</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+				
+			
+				
+			
+				
+			
+				
+				<li class="label label-default label-annotations">inject = coldbox</li>
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#resourceService()">resourceService</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+				
+			
+				
+			
+				
+			
+				
+				<li class="label label-default label-annotations">inject = resourceService@cbi18n</li>
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	</tr>
+</table>
+
+
+
+	
+	
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="i18n.html#init()">init</A></strong>()
+				<br>
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Constructor.
+				
+			</td>
+		</tr>
+	</table>
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#buildLocale()">buildLocale</A></strong>([string thisLocale='en_US'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;creates valid core java locale from java style locale ID.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#configure()">configure</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reads,parses,saves the locale and resource bundles defined in the config.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#dateLocaleFormat()">dateLocaleFormat</A></strong>(date date, [string style='LONG'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;locale version of dateFormat.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#datetimeLocaleFormat()">datetimeLocaleFormat</A></strong>(date date, [string dateStyle='SHORT'], [string timeStyle='SHORT'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;locale date/time format.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#formatDateTime()">formatDateTime</A></strong>(numeric thisOffset, string thisPattern, [any tz='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formats a date/time to given pattern.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>cbi18n.datetime</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#fromEpoch()">fromEpoch</A></strong>(numeric thisOffset)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;converts java epoch offset to datetime.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getAvailableTZ()">getAvailableTZ</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns an array of timezones available on this server.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getCurrencySymbol()">getCurrencySymbol</A></strong>([boolean localized='true'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns currency symbol for this locale.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getDateTimePattern()">getDateTimePattern</A></strong>([numeric thisDateFormat='1'], [numeric thisTimeFormat='3'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns locale date/time pattern.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getDay()">getDay</A></strong>(numeric thisOffset, [any tz='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns day from epoch offset.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>struct</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getDecimalSymbols()">getDecimalSymbols</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns strucure holding decimal format symbols for this locale.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getDefaultLocale()">getDefaultLocale</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the default locale string.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getDefaultResourceBundle()">getDefaultResourceBundle</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the default resource bundle path.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getDST()">getDST</A></strong>([any thisTZ='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns DST savings in hours.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getFWCountry()">getFWCountry</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns a human readable country name for the chosen application locale.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getFWCountryCode()">getFWCountryCode</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns 2-letter ISO country name for the chosen application locale.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getFWISO3CountryCode()">getFWISO3CountryCode</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns 3-letter ISO country name for the chosen application locale.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getFWISO3LanguageCode()">getFWISO3LanguageCode</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ISO 3 code for the locale's language.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getFWLanguage()">getFWLanguage</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a human readable name for the locale's language.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getFWLanguageCode()">getFWLanguageCode</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the two digit code for the locale's language.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getfwLocale()">getfwLocale</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the user's locale.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getFWLocaleDisplay()">getFWLocaleDisplay</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a name for the locale that is appropriate for display to the user.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getHour()">getHour</A></strong>(numeric thisOffset, [any tz='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns hour of day, 24 hr format, from epoch offset.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getISOcountries()">getISOcountries</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns array of 2 letter ISO countries.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getISOlanguages()">getISOlanguages</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns array of 2 letter ISO languages.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getLocaleNames()">getLocaleNames</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns list of locale names, UNICODE direction char (LRE/RLE) added as required.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>query</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getLocaleQuery()">getLocaleQuery</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns a sorted query of locales (locale,country,language,dspName,localname.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getLocales()">getLocales</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns array of locales.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getLocaleStorage()">getLocaleStorage</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the locale storage string.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getLocalizedDays()">getLocalizedDays</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facade to getShortWeedDays.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getLocalizedMonth()">getLocalizedMonth</A></strong>(numeric month)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns localized month.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getLocalizedYear()">getLocalizedYear</A></strong>(numeric thisYear)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns localized year, probably only useful for BE calendars like in thailand, etc.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getMinute()">getMinute</A></strong>(numeric thisOffset, [any tz='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns minute from epoch offset.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getMonth()">getMonth</A></strong>(numeric thisOffset, [any tz='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns month from epoch offset.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getRawOffset()">getRawOffset</A></strong>([any tZ='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns rawoffset in hours.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>struct</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getRBundles()">getRBundles</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a reference to the loaded language keys.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getSecond()">getSecond</A></strong>(numeric thisOffset, [any tz='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns second from epoch offset.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getServerTZ()">getServerTZ</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns server TZ.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getShortWeekDays()">getShortWeekDays</A></strong>([boolean calendarOrder='true'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns short day names for this calendar.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getTZByOffset()">getTZByOffset</A></strong>(numeric thisOffset)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns a list of timezones available on this server for a given raw offset.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getTZDisplayName()">getTZDisplayName</A></strong>([any thisTZ='[runtime expression]'], [string dspType=''])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the display name of the timezone requested in either long, short, or default style.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getTZOffset()">getTZOffset</A></strong>(numeric thisOffset, [any thisTZ='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns offset in hours.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>query</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getTZQuery()">getTZQuery</A></strong>(boolean returnUnique='true')
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns a sorted query of timezones, optionally filters for only unique display names (fields:id,offset,dspName,longname,shortname,usesDST).
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#getYear()">getYear</A></strong>(numeric thisOffset, [any tz='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns year from epoch offset.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#i18nDateAdd()">i18nDateAdd</A></strong>(numeric thisOffset, string thisDatePart, numeric dateUnits, [any thisTZ='[runtime expression]'])
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#i18nDateDiff()">i18nDateDiff</A></strong>(numeric thisOffset, numeric thatOffset, string thisDatePart, [any thisTZ='[runtime expression]'])
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#i18nDateFormat()">i18nDateFormat</A></strong>(numeric thisOffset, [numeric thisDateFormat='1'], [any tz='[runtime expression]'])
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#i18nDateParse()">i18nDateParse</A></strong>(string thisDate)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parses localized date string to datetime object or returns blank if it can't parse.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#i18nDateTimeFormat()">i18nDateTimeFormat</A></strong>(numeric thisOffset, [numeric thisDateFormat='1'], [numeric thisTimeFormat='1'], [any tz='[runtime expression]'])
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#i18nDateTimeParse()">i18nDateTimeParse</A></strong>(string thisDate)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parses localized datetime string to datetime object or returns blank if it can't parse.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#i18nTimeFormat()">i18nTimeFormat</A></strong>(numeric thisOffset, [numeric thisTimeFormat='1'], [any tz='[runtime expression]'])
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#inDST()">inDST</A></strong>(numeric thisOffset, [any tzToTest='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;determines if a given date in a given timezone is in DST.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#isBidi()">isBidi</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;determines if given locale is BIDI.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#isValidLocale()">isValidLocale</A></strong>(string thisLocale)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validate a locale.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#setDefaultLocale()">setDefaultLocale</A></strong>(any defaultLocale)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the default locale.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#setDefaultResourceBundle()">setDefaultResourceBundle</A></strong>(any defaultResourceBundle)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the default resource bundle.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#setfwLocale()">setfwLocale</A></strong>([string locale=''], [boolean dontloadRBFlag='false'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the default locale to use in the framework for a specific user.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#setLocaleStorage()">setLocaleStorage</A></strong>(any localeStorage)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the locale storage.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#timeLocaleFormat()">timeLocaleFormat</A></strong>(date date, [string style='SHORT'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;locale version of timeFormat.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#toEpoch()">toEpoch</A></strong>(date thisDate)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;converts datetime to java epoch offset.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#usesDST()">usesDST</A></strong>([any tz='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;determines if a given timezone uses DST.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="i18n.html#weekStarts()">weekStarts</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines the first DOW.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	
+
+	
+
+	&nbsp;
+	<a name="methods_inherited_from_class_railo-context.Component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>railo-context.Component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+				
+				
+				
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>()</kbd>
+
+	<br><br>
+
+	
+	<p>Constructor</p>
+	
+
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+	<a name="property_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Property Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	
+		
+		<a name="controller()"><!-- --></a>
+		<h3>controller</h3>
+
+		<kbd>
+			property any 
+			<strong>controller</strong>
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			
+		
+			
+			<dd><code>required</code> - false</dd>
+			
+		
+			
+		
+			
+			<dd><code>inject</code> - coldbox</dd>
+			
+		
+			
+		
+			
+		
+			
+			<dd><code>serializable</code> - true</dd>
+			
+		
+		</dl>
+
+		<hr>
+	
+		
+		<a name="resourceService()"><!-- --></a>
+		<h3>resourceService</h3>
+
+		<kbd>
+			property any 
+			<strong>resourceService</strong>
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			
+		
+			
+			<dd><code>required</code> - false</dd>
+			
+		
+			
+		
+			
+			<dd><code>inject</code> - resourceService@cbi18n</dd>
+			
+		
+			
+		
+			
+		
+			
+			<dd><code>serializable</code> - true</dd>
+			
+		
+		</dl>
+
+		<hr>
+	
+
+
+
+
+
+
+
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	
+	<a name="buildLocale()"><!-- --></a>
+	<h3>buildLocale</h3>
+	
+	<kbd>private any <strong>buildLocale</strong>([string thisLocale='en_US'])</kbd>
+	
+	<br><br>
+
+	
+		<p>creates valid core java locale from java style locale ID</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisLocale</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="configure()"><!-- --></a>
+	<h3>configure</h3>
+	
+	<kbd>public void <strong>configure</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Reads,parses,saves the locale and resource bundles defined in the config. Called only internally by the framework. Use at your own risk</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="dateLocaleFormat()"><!-- --></a>
+	<h3>dateLocaleFormat</h3>
+	
+	<kbd>public any <strong>dateLocaleFormat</strong>(date date, [string style='LONG'])</kbd>
+	
+	<br><br>
+
+	
+		<p>locale version of dateFormat. Needs object instantiation. That is your job not mine.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>date</code></dd>
+		
+		<dd><code>style</code> - FULL=0, LONG=1, MEDIUM=2, SHORT=3</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="datetimeLocaleFormat()"><!-- --></a>
+	<h3>datetimeLocaleFormat</h3>
+	
+	<kbd>public any <strong>datetimeLocaleFormat</strong>(date date, [string dateStyle='SHORT'], [string timeStyle='SHORT'])</kbd>
+	
+	<br><br>
+
+	
+		<p>locale date/time format. Needs object instantiation. That is your job not mine.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>date</code></dd>
+		
+		<dd><code>dateStyle</code> - FULL=0, LONG=1, MEDIUM=2, SHORT=3</dd>
+		
+		<dd><code>timeStyle</code> - FULL=0, LONG=1, MEDIUM=2, SHORT=3</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="formatDateTime()"><!-- --></a>
+	<h3>formatDateTime</h3>
+	
+	<kbd>public string <strong>formatDateTime</strong>(numeric thisOffset, string thisPattern, [any tz='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>formats a date/time to given pattern</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code></dd>
+		
+		<dd><code>thisPattern</code></dd>
+		
+		<dd><code>tz</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="fromEpoch()"><!-- --></a>
+	<h3>fromEpoch</h3>
+	
+	<kbd>public cbi18n.datetime <strong>fromEpoch</strong>(numeric thisOffset)</kbd>
+	
+	<br><br>
+
+	
+		<p>converts java epoch offset to datetime</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code> - java epoch offset to convert to datetime</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getAvailableTZ()"><!-- --></a>
+	<h3>getAvailableTZ</h3>
+	
+	<kbd>public array <strong>getAvailableTZ</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>returns an array of timezones available on this server</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getCurrencySymbol()"><!-- --></a>
+	<h3>getCurrencySymbol</h3>
+	
+	<kbd>public string <strong>getCurrencySymbol</strong>([boolean localized='true'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns currency symbol for this locale</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>localized</code> - return international (USD, THB, etc.) or localized ($,etc.) symbol</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getDateTimePattern()"><!-- --></a>
+	<h3>getDateTimePattern</h3>
+	
+	<kbd>public string <strong>getDateTimePattern</strong>([numeric thisDateFormat='1'], [numeric thisTimeFormat='3'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns locale date/time pattern</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisDateFormat</code> - FULL=0, LONG=1, MEDIUM=2, SHORT=3</dd>
+		
+		<dd><code>thisTimeFormat</code> - FULL=0, LONG=1, MEDIUM=2, SHORT=3</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getDay()"><!-- --></a>
+	<h3>getDay</h3>
+	
+	<kbd>public numeric <strong>getDay</strong>(numeric thisOffset, [any tz='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns day from epoch offset</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code> - java epoch offset</dd>
+		
+		<dd><code>tz</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getDecimalSymbols()"><!-- --></a>
+	<h3>getDecimalSymbols</h3>
+	
+	<kbd>public struct <strong>getDecimalSymbols</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>returns strucure holding decimal format symbols for this locale</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getDefaultLocale()"><!-- --></a>
+	<h3>getDefaultLocale</h3>
+	
+	<kbd>public any <strong>getDefaultLocale</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the default locale string</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getDefaultResourceBundle()"><!-- --></a>
+	<h3>getDefaultResourceBundle</h3>
+	
+	<kbd>public any <strong>getDefaultResourceBundle</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the default resource bundle path</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getDST()"><!-- --></a>
+	<h3>getDST</h3>
+	
+	<kbd>public numeric <strong>getDST</strong>([any thisTZ='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns DST savings in hours</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisTZ</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getFWCountry()"><!-- --></a>
+	<h3>getFWCountry</h3>
+	
+	<kbd>public string <strong>getFWCountry</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>returns a human readable country name for the chosen application locale. Eg: United States</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getFWCountryCode()"><!-- --></a>
+	<h3>getFWCountryCode</h3>
+	
+	<kbd>public string <strong>getFWCountryCode</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>returns 2-letter ISO country name for the chosen application locale. Eg: us</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getFWISO3CountryCode()"><!-- --></a>
+	<h3>getFWISO3CountryCode</h3>
+	
+	<kbd>public string <strong>getFWISO3CountryCode</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>returns 3-letter ISO country name for the chosen application locale. Eg: USA</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getFWISO3LanguageCode()"><!-- --></a>
+	<h3>getFWISO3LanguageCode</h3>
+	
+	<kbd>public string <strong>getFWISO3LanguageCode</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns the ISO 3 code for the locale's language. Eg: eng</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getFWLanguage()"><!-- --></a>
+	<h3>getFWLanguage</h3>
+	
+	<kbd>public string <strong>getFWLanguage</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns a human readable name for the locale's language. Eg: English</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getFWLanguageCode()"><!-- --></a>
+	<h3>getFWLanguageCode</h3>
+	
+	<kbd>public string <strong>getFWLanguageCode</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns the two digit code for the locale's language. Eg: en</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getfwLocale()"><!-- --></a>
+	<h3>getfwLocale</h3>
+	
+	<kbd>public any <strong>getfwLocale</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the user's locale</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getFWLocaleDisplay()"><!-- --></a>
+	<h3>getFWLocaleDisplay</h3>
+	
+	<kbd>public string <strong>getFWLocaleDisplay</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns a name for the locale that is appropriate for display to the user. Eg: English (United States)</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getHour()"><!-- --></a>
+	<h3>getHour</h3>
+	
+	<kbd>public numeric <strong>getHour</strong>(numeric thisOffset, [any tz='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns hour of day, 24 hr format, from epoch offset</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code> - java epoch offset</dd>
+		
+		<dd><code>tz</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getISOcountries()"><!-- --></a>
+	<h3>getISOcountries</h3>
+	
+	<kbd>public array <strong>getISOcountries</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>returns array of 2 letter ISO countries</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getISOlanguages()"><!-- --></a>
+	<h3>getISOlanguages</h3>
+	
+	<kbd>public array <strong>getISOlanguages</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>returns array of 2 letter ISO languages</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getLocaleNames()"><!-- --></a>
+	<h3>getLocaleNames</h3>
+	
+	<kbd>public string <strong>getLocaleNames</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>returns list of locale names, UNICODE direction char (LRE/RLE) added as required</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getLocaleQuery()"><!-- --></a>
+	<h3>getLocaleQuery</h3>
+	
+	<kbd>public query <strong>getLocaleQuery</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>returns a sorted query of locales (locale,country,language,dspName,localname. 'localname' will contain the locale's name in its native characters). Suitable for use in creating select lists.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getLocales()"><!-- --></a>
+	<h3>getLocales</h3>
+	
+	<kbd>public array <strong>getLocales</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>returns array of locales</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getLocaleStorage()"><!-- --></a>
+	<h3>getLocaleStorage</h3>
+	
+	<kbd>public any <strong>getLocaleStorage</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the locale storage string</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getLocalizedDays()"><!-- --></a>
+	<h3>getLocalizedDays</h3>
+	
+	<kbd>public any <strong>getLocalizedDays</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Facade to getShortWeedDays. For compatability</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getLocalizedMonth()"><!-- --></a>
+	<h3>getLocalizedMonth</h3>
+	
+	<kbd>public string <strong>getLocalizedMonth</strong>(numeric month)</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns localized month.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>month</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getLocalizedYear()"><!-- --></a>
+	<h3>getLocalizedYear</h3>
+	
+	<kbd>public string <strong>getLocalizedYear</strong>(numeric thisYear)</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns localized year, probably only useful for BE calendars like in thailand, etc.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisYear</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getMinute()"><!-- --></a>
+	<h3>getMinute</h3>
+	
+	<kbd>public numeric <strong>getMinute</strong>(numeric thisOffset, [any tz='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns minute from epoch offset</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code> - java epoch offset</dd>
+		
+		<dd><code>tz</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getMonth()"><!-- --></a>
+	<h3>getMonth</h3>
+	
+	<kbd>public numeric <strong>getMonth</strong>(numeric thisOffset, [any tz='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns month from epoch offset</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code> - java epoch offset</dd>
+		
+		<dd><code>tz</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getRawOffset()"><!-- --></a>
+	<h3>getRawOffset</h3>
+	
+	<kbd>public numeric <strong>getRawOffset</strong>([any tZ='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns rawoffset in hours</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>tZ</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getRBundles()"><!-- --></a>
+	<h3>getRBundles</h3>
+	
+	<kbd>public struct <strong>getRBundles</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a reference to the loaded language keys</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getSecond()"><!-- --></a>
+	<h3>getSecond</h3>
+	
+	<kbd>public numeric <strong>getSecond</strong>(numeric thisOffset, [any tz='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns second from epoch offset</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code> - java epoch offset</dd>
+		
+		<dd><code>tz</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getServerTZ()"><!-- --></a>
+	<h3>getServerTZ</h3>
+	
+	<kbd>public any <strong>getServerTZ</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>returns server TZ</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getShortWeekDays()"><!-- --></a>
+	<h3>getShortWeekDays</h3>
+	
+	<kbd>public array <strong>getShortWeekDays</strong>([boolean calendarOrder='true'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns short day names for this calendar</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>calendarOrder</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getTZByOffset()"><!-- --></a>
+	<h3>getTZByOffset</h3>
+	
+	<kbd>public array <strong>getTZByOffset</strong>(numeric thisOffset)</kbd>
+	
+	<br><br>
+
+	
+		<p>returns a list of timezones available on this server for a given raw offset</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getTZDisplayName()"><!-- --></a>
+	<h3>getTZDisplayName</h3>
+	
+	<kbd>public string <strong>getTZDisplayName</strong>([any thisTZ='[runtime expression]'], [string dspType=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns the display name of the timezone requested in either long, short, or default style</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisTZ</code></dd>
+		
+		<dd><code>dspType</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getTZOffset()"><!-- --></a>
+	<h3>getTZOffset</h3>
+	
+	<kbd>public any <strong>getTZOffset</strong>(numeric thisOffset, [any thisTZ='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns offset in hours</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code></dd>
+		
+		<dd><code>thisTZ</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getTZQuery()"><!-- --></a>
+	<h3>getTZQuery</h3>
+	
+	<kbd>public query <strong>getTZQuery</strong>(boolean returnUnique='true')</kbd>
+	
+	<br><br>
+
+	
+		<p>returns a sorted query of timezones, optionally filters for only unique display names (fields:id,offset,dspName,longname,shortname,usesDST). Suitable for use in creating select lists.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>returnUnique</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getYear()"><!-- --></a>
+	<h3>getYear</h3>
+	
+	<kbd>public numeric <strong>getYear</strong>(numeric thisOffset, [any tz='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns year from epoch offset</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code> - java epoch offset</dd>
+		
+		<dd><code>tz</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="i18nDateAdd()"><!-- --></a>
+	<h3>i18nDateAdd</h3>
+	
+	<kbd>public numeric <strong>i18nDateAdd</strong>(numeric thisOffset, string thisDatePart, numeric dateUnits, [any thisTZ='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code></dd>
+		
+		<dd><code>thisDatePart</code></dd>
+		
+		<dd><code>dateUnits</code></dd>
+		
+		<dd><code>thisTZ</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="i18nDateDiff()"><!-- --></a>
+	<h3>i18nDateDiff</h3>
+	
+	<kbd>public numeric <strong>i18nDateDiff</strong>(numeric thisOffset, numeric thatOffset, string thisDatePart, [any thisTZ='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code></dd>
+		
+		<dd><code>thatOffset</code></dd>
+		
+		<dd><code>thisDatePart</code></dd>
+		
+		<dd><code>thisTZ</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="i18nDateFormat()"><!-- --></a>
+	<h3>i18nDateFormat</h3>
+	
+	<kbd>public string <strong>i18nDateFormat</strong>(numeric thisOffset, [numeric thisDateFormat='1'], [any tz='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code> - java epoch offset</dd>
+		
+		<dd><code>thisDateFormat</code> - FULL=0, LONG=1, MEDIUM=2, SHORT=3</dd>
+		
+		<dd><code>tz</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="i18nDateParse()"><!-- --></a>
+	<h3>i18nDateParse</h3>
+	
+	<kbd>public numeric <strong>i18nDateParse</strong>(string thisDate)</kbd>
+	
+	<br><br>
+
+	
+		<p>parses localized date string to datetime object or returns blank if it can't parse</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisDate</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="i18nDateTimeFormat()"><!-- --></a>
+	<h3>i18nDateTimeFormat</h3>
+	
+	<kbd>public string <strong>i18nDateTimeFormat</strong>(numeric thisOffset, [numeric thisDateFormat='1'], [numeric thisTimeFormat='1'], [any tz='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code> - java epoch offset</dd>
+		
+		<dd><code>thisDateFormat</code> - FULL=0, LONG=1, MEDIUM=2, SHORT=3</dd>
+		
+		<dd><code>thisTimeFormat</code> - FULL=0, LONG=1, MEDIUM=2, SHORT=3</dd>
+		
+		<dd><code>tz</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="i18nDateTimeParse()"><!-- --></a>
+	<h3>i18nDateTimeParse</h3>
+	
+	<kbd>public numeric <strong>i18nDateTimeParse</strong>(string thisDate)</kbd>
+	
+	<br><br>
+
+	
+		<p>parses localized datetime string to datetime object or returns blank if it can't parse</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisDate</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="i18nTimeFormat()"><!-- --></a>
+	<h3>i18nTimeFormat</h3>
+	
+	<kbd>public string <strong>i18nTimeFormat</strong>(numeric thisOffset, [numeric thisTimeFormat='1'], [any tz='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code> - java epoch offset</dd>
+		
+		<dd><code>thisTimeFormat</code> - FULL=0, LONG=1, MEDIUM=2, SHORT=3</dd>
+		
+		<dd><code>tz</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="inDST()"><!-- --></a>
+	<h3>inDST</h3>
+	
+	<kbd>public boolean <strong>inDST</strong>(numeric thisOffset, [any tzToTest='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>determines if a given date in a given timezone is in DST</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisOffset</code></dd>
+		
+		<dd><code>tzToTest</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="isBidi()"><!-- --></a>
+	<h3>isBidi</h3>
+	
+	<kbd>public boolean <strong>isBidi</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>determines if given locale is BIDI</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="isValidLocale()"><!-- --></a>
+	<h3>isValidLocale</h3>
+	
+	<kbd>public boolean <strong>isValidLocale</strong>(string thisLocale)</kbd>
+	
+	<br><br>
+
+	
+		<p>Validate a locale</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisLocale</code> - Locale to validate</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setDefaultLocale()"><!-- --></a>
+	<h3>setDefaultLocale</h3>
+	
+	<kbd>public any <strong>setDefaultLocale</strong>(any defaultLocale)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set the default locale</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>defaultLocale</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setDefaultResourceBundle()"><!-- --></a>
+	<h3>setDefaultResourceBundle</h3>
+	
+	<kbd>public any <strong>setDefaultResourceBundle</strong>(any defaultResourceBundle)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set the default resource bundle</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>defaultResourceBundle</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setfwLocale()"><!-- --></a>
+	<h3>setfwLocale</h3>
+	
+	<kbd>public any <strong>setfwLocale</strong>([string locale=''], [boolean dontloadRBFlag='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Set the default locale to use in the framework for a specific user.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>locale</code> - The locale to change and set. Must be Java Style: en_US. If none passed, then we default to default locale from configuration settings</dd>
+		
+		<dd><code>dontloadRBFlag</code> - Flag to load the resource bundle for the specified locale (If not already loaded) or just change the framework's locale.</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setLocaleStorage()"><!-- --></a>
+	<h3>setLocaleStorage</h3>
+	
+	<kbd>public any <strong>setLocaleStorage</strong>(any localeStorage)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set the locale storage</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>localeStorage</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="timeLocaleFormat()"><!-- --></a>
+	<h3>timeLocaleFormat</h3>
+	
+	<kbd>public any <strong>timeLocaleFormat</strong>(date date, [string style='SHORT'])</kbd>
+	
+	<br><br>
+
+	
+		<p>locale version of timeFormat. Needs object instantiation. That is your job not mine.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>date</code></dd>
+		
+		<dd><code>style</code> - FULL=0, LONG=1, MEDIUM=2, SHORT=3</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="toEpoch()"><!-- --></a>
+	<h3>toEpoch</h3>
+	
+	<kbd>public numeric <strong>toEpoch</strong>(date thisDate)</kbd>
+	
+	<br><br>
+
+	
+		<p>converts datetime to java epoch offset</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisDate</code> - datetime to convert to java epoch</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="usesDST()"><!-- --></a>
+	<h3>usesDST</h3>
+	
+	<kbd>public boolean <strong>usesDST</strong>([any tz='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>determines if a given timezone uses DST</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>tz</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="weekStarts()"><!-- --></a>
+	<h3>weekStarts</h3>
+	
+	<kbd>public string <strong>weekStarts</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Determines the first DOW.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+
+
+
+</body>
+</html>
+
