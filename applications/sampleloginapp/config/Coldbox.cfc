@@ -49,7 +49,7 @@
 		//Register interceptors as an array, we need order
 		interceptors = [
 			 //Autowire
-		 {class="#appMapwithDots#model.securityInterceptor"}
+		 {class="#appMapwithDots#models.securityInterceptor"}
 		];
 	
 		//LogBox DSL
