@@ -1,10 +1,10 @@
 {
-    "name":"",
+    "name":"coldbox-samples",
     "version":"1.0.0.0000",
     "author":"",
     "location":"",
     "directory":"",
-    "createPackageDirectory":true,
+    "createPackageDirectory":false,
     "packageDirectory":"",
     "homepage":"",
     "documentation":"",
