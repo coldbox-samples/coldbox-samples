@@ -19,6 +19,6 @@ component extends="coldbox.system.Bootstrap" {
 	this.sessionTimeout = createTimeSpan(0,0,30,0);
 	this.setClientCookies = true;
 	
-	this.mappings[ 'cbdebugger' ] = expandPath( 'modules/cbdebugger' );
+	this.mappings[ '/cbdebugger' ] = expandPath( 'modules/cbdebugger' );
 		
 }
